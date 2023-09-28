@@ -40,6 +40,8 @@ The first backend supports non-protocol interactions, such as user registration,
 
 The second backend supports beckn protocol interactions. It offers a simplified API to UI apps, and converts the request into beckn protocol format, and makes a call to send or retrieve data from the beckn network. It also takes care of signing the payloads as required by beckn.
 
+![Generic Client Layer](client-layer-architecture.png)
+
 This client layer will offer a simplified synchronous API to the UI. It will expose REST APIs for the following operations:
 
 1. Search (search)
