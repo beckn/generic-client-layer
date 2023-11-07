@@ -1,6 +1,7 @@
 import express, { Express, Router, Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import { clientLayerRoutes } from "./routes";
 interface InitAppParams {
   app: Express;
 }
@@ -36,7 +37,7 @@ const initApp = ({ app }: InitAppParams) => {
       message: "Generic Client Layer Started"
     });
   });
-
+  router.use(clientLayerRoutes());
   return app;
 };
 
