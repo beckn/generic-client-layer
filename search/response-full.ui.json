@@ -1,0 +1,85 @@
+{
+    "context": {
+        "domain": "dsep:jobs",
+        "version": "1.0.0",
+        "action": "search",
+        "bap_id": "dsep-protocol.becknprotocol.io",
+        "bap_uri": "https://dsep-protocol-network.becknprotocol.io/",
+        "transaction_id": "2bb4fe86-69bb-4749-8d7a-45a0a9cbdea1",
+        "message_id": "e76fead3-bbdb-45fd-b6e4-33baa652b6ff",
+        "ttl": "PT10M",
+        "timestamp": "2023-02-15T11:26:23.985Z"
+    },
+    "data": [
+        {
+            "context": "responses[].context",
+            "title": "responses[].message.catalog.descriptor.name",
+            "providers": [
+                {
+                    "id": "responses[].message.catalog.providers[].descriptor.id",
+                    "name": "responses[].message.catalog.providers[].descriptor.name",
+                    "images": [
+                        {
+                            "url": "responses[].message.catalog.providers[].descriptor.images[].url",
+                            "width": "responses[].message.catalog.providers[].descriptor.images[].width",
+                            "height": "responses[].message.catalog.providers[].descriptor.images[].height",
+                            "size_type": "responses[].message.catalog.providers[].descriptor.images[].size_type ENUM[xs, sm, md, lg, xl,]"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "id": "responses[].message.catalog.providers[].items[].id",
+                            "title": "responses[].message.catalog.providers[].items[].descriptor.name",
+                            "short_description": "responses[].message.catalog.providers[].items[].descriptor.short_desc",
+                            "description": "responses[].message.catalog.providers[].items[].descriptor.long_desc",
+                            "additional_description": "responses[].message.catalog.providers[].items[].descriptor.additional_desc",
+                            "images": [
+                                {
+                                    "url": "responses[].message.catalog.providers[].items[].descriptor.images[].url",
+                                    "width": "responses[].message.catalog.providers[].items[].descriptor.images[].width",
+                                    "height": "responses[].message.catalog.providers[].items[].descriptor.images[].height",
+                                    "size_type": "responses[].message.catalog.providers[].items[].descriptor.images[].size_type ENUM[xs, sm, md, lg, xl,]"
+                                }
+                            ],
+                            "locations": [
+                                {
+                                    "id": "responses[].message.catalog.providers[].locations[].id",
+                                    "map_url": "responses[].message.catalog.providers[].locations[].map_url",
+                                    "gps": "responses[].message.catalog.providers[].locations[].gps",
+                                    "address": "responses[].message.catalog.providers[].locations[].address",
+                                    "district": "responses[].message.catalog.providers[].locations[].district",
+                                    "city": {
+                                        "name": "responses[].message.catalog.providers[].locations[].city.name",
+                                        "code": "responses[].message.catalog.providers[].locations[].city.code"
+                                    },
+                                    "state": {
+                                        "name": "responses[].message.catalog.providers[].locations[].state.name",
+                                        "code": "responses[].message.catalog.providers[].locations[].state.code"
+                                    },
+                                    "country": {
+                                        "name": "responses[].message.catalog.providers[].locations[].country.name",
+                                        "code": "responses[].message.catalog.providers[].locations[].country.code"
+                                    },
+                                    "area_code": "responses[].message.catalog.providers[].locations[].area_code",
+                                    "circle": {
+                                        "radius": "responses[].message.catalog.providers[].locations[].circle.radius",
+                                        "gps": "responses[].message.catalog.providers[].locations[].circle.gps"
+                                    },
+                                    "polygon": "responses[].message.catalog.providers[].locations[].polygon",
+                                    "3dspace": "responses[].message.catalog.providers[].locations[].3dspace",
+                                    "rating": "responses[].message.catalog.providers[].locations[].rating"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "error": {
+        "description": "error.description",
+        "code": "error.code",
+        "paths": "error.paths",
+        "message": "error.message"
+    }
+}

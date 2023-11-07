@@ -1,0 +1,174 @@
+{
+    "context": {
+        "domain": "context.domain",
+        "action": "context.domain",
+        "location": {
+            "country": {
+                "name": "context.location.country.name",
+                "code": "context.location.country.code"
+            }
+        },
+        "city": "context.city",
+        "version": "context.version",
+        "bap_id": "context.bap_id",
+        "bap_url": "context.bap_url",
+        "bpp_id": "context.bpp_id",
+        "bpp_uri": "context.bpp_uri",
+        "transaction_id": "context.transaction_id",
+        "message_id": "context.message_id",
+        "timestamp": "context.timestamp"
+    },
+    "data": [
+        {
+            "context": "responses[].context",
+            "title": "responses[].message.catalog.descriptor.name",
+            "providers": [
+                {
+                    "id": "responses[].message.catalog.providers[].descriptor.id",
+                    "name": "responses[].message.catalog.providers[].descriptor.name",
+                    "short_desc": "responses[].message.catalog.providers[].descriptor.short_desc",
+                    "long_desc": "responses[].message.catalog.providers[].descriptor.long_desc",
+                    "rating": "responses[].message.catalog.providers[].rating",
+                    "images": [
+                        {
+                            "url": "responses[].message.catalog.providers[].descriptor.images[].url"
+                        }
+                    ],
+                    "media": [
+                        {
+                            "mimetype": "responses[].message.catalog.providers[].descriptor.media[].mimetype",
+                            "url": "responses[].message.catalog.providers[].descriptor.media[].url"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "id": "responses[].message.catalog.providers[].items[].id",
+                            "code": "responses[].message.catalog.providers[].items[].descriptor.code",
+                            "title": "responses[].message.catalog.providers[].items[].descriptor.name",
+                            "short_desc": "responses[].message.catalog.providers[].items[].descriptor.short_desc",
+                            "long_desc": "responses[].message.catalog.providers[].items[].descriptor.long_desc",
+                            "price": {
+                                "value": "responses[].message.catalog.providers[].items[].price",
+                                "currency": "responses[].message.catalog.providers[].items[].currency"
+                            },
+                            "categories": [
+                                {
+                                    "id": "responses[].message.catalog.providers[].categories[].id",
+                                    "title": "responses[].message.catalog.providers[].categories[].descriptor.name",
+                                    "code": "responses[].message.catalog.providers[].categories[].descriptor.code"
+                                }
+                            ],
+                            "fulfillments": [
+                                {
+                                    "id": "responses[].message.catalog.providers[].fulfillments[].id",
+                                    "type": "responses[].message.catalog.providers[].fulfillments[].type",
+                                    "tracking": "responses[].message.catalog.providers[].fulfillments[].tracking",
+                                    "contact": {
+                                        "phone": "responses[].message.catalog.providers[].fulfillments[].contact.phone",
+                                        "email": "responses[].message.catalog.providers[].fulfillments[].contact.email"
+                                    },
+                                    "agent": {
+                                        "person": {
+                                            "id": "responses[].message.catalog.providers[].fulfillments[].agent.person.id",
+                                            "name": "responses[].message.catalog.providers[].fulfillments[].agent.person.name",
+                                            "gender": "responses[].message.catalog.providers[].fulfillments[].agent.person.gender",
+                                            "creds": "responses[].message.catalog.providers[].fulfillments[].agent.person.creds",
+                                            "languages": "responses[].message.catalog.providers[].fulfillments[].agent.person.languages",
+                                            "skills": "responses[].message.catalog.providers[].fulfillments[].agent.person.skills"
+                                        },
+                                        "rating": "responses[].message.catalog.providers[].fulfillments[].agent.rating"
+                                    },
+                                    "stops": [
+                                        {
+                                            "type": "responses[].message.catalog.providers[].fulfillments[].stops[].type",
+                                            "time": {
+                                                "timestamp": "responses[].message.catalog.providers[].fulfillments[].stops[].time.timestamp"
+                                            },
+                                            "location": {
+                                                "gps": "responses[].message.catalog.providers[].fulfillments[].stops[].location.gps",
+                                                "address": "responses[].message.catalog.providers[].fulfillments[].stops[].location.address",
+                                                "city": {
+                                                    "name": "responses[].message.catalog.providers[].fulfillments[].stops[].location.city.name"
+                                                },
+                                                "state": {
+                                                    "name": "responses[].message.catalog.providers[].fulfillments[].stops[].location.state.name"
+                                                },
+                                                "area_code": "responses[].message.catalog.providers[].fulfillments[].stops[].location.area_code"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "images": [
+                                {
+                                    "url": "responses[].message.catalog.providers[].items[].descriptor.images[].url",
+                                    "width": "responses[].message.catalog.providers[].items[].descriptor.images[].width",
+                                    "height": "responses[].message.catalog.providers[].items[].descriptor.images[].height",
+                                    "size_type": "responses[].message.catalog.providers[].items[].descriptor.images[].size_type ENUM[xs, sm, md, lg, xl,]"
+                                }
+                            ],
+                            "media": [
+                                {
+                                    "url": "responses[].message.catalog.providers[].items[].descriptor.media[].url"
+                                }
+                            ],
+                            "locations": [
+                                {
+                                    "gps": "responses[].message.catalog.providers[].locations[].gps",
+                                    "address": "responses[].message.catalog.providers[].locations[].address",
+                                    "city": {
+                                        "name": "responses[].message.catalog.providers[].locations[].city.name"
+                                    },
+                                    "state": {
+                                        "name": "responses[].message.catalog.providers[].locations[].state.name"
+                                    },
+                                    "country": {
+                                        "name": "responses[].message.catalog.providers[].locations[].country.name"
+                                    },
+                                    "area_code": "responses[].message.catalog.providers[].locations[].area_code"
+                                }
+                            ],
+                            "rating": "responses[].message.catalog.providers[].item[].rating",
+                            "rateable": "responses[].message.catalog.providers[].item[].rateable",
+                            "time": {
+                                "label": "responses[].message.catalog.providers[].item[].time.label",
+                                "range": {
+                                    "start": "responses[].message.catalog.providers[].item[].time.range.start",
+                                    "end": "responses[].message.catalog.providers[].item[].time.range.end"
+                                }
+                            },
+                            "quantity": {
+                                "available": {
+                                    "count": "responses[].message.catalog.providers[].item[].quantity.available.count",
+                                    "value": "responses[].message.catalog.providers[].item[].quantity.available.measure.value",
+                                    "unit": "responses[].message.catalog.providers[].item[].quantity.available.measure.unit"
+                                },
+                                "maximum": {
+                                    "value": "responses[].message.catalog.providers[].item[].quantity.maximum.measure.value",
+                                    "unit": "responses[].message.catalog.providers[].item[].quantity.maximum.measure.unit"
+                                },
+                                "allocated": {
+                                    "count": "responses[].message.catalog.providers[].item[].quantity.allocated.count"
+                                }
+                            },
+                            "responses[].message.catalog.providers[].item[].tags[].descriptor.code": {
+                                "display": "responses[].message.catalog.providers[].item[].tags[].display",
+                                "title": "responses[].message.catalog.providers[].item[].tags[].descriptor.name",
+                                "responses[].message.catalog.providers[].item[].tags[].list[].descriptor.code": {
+                                    "title": "responses[].message.catalog.providers[].item[].tags[].list[].descriptor.name",
+                                    "value": "responses[].message.catalog.providers[].item[].tags[].list[].value"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "error": {
+        "description": "error.description",
+        "code": "error.code",
+        "paths": "error.paths",
+        "message": "error.message"
+    }
+}
