@@ -16,8 +16,8 @@ export const requestContextSchema = Joi.object({
   domain: Joi.string().required(),
   bppId: Joi.string().optional(),
   bppUri: Joi.string().optional(),
-  transactionId: Joi.string().required(),
-  messageId: Joi.string().required(),
+  transactionId: Joi.string().optional(),
+  messageId: Joi.string().optional(),
   key: Joi.string().optional()
 });
 

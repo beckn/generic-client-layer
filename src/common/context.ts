@@ -1,5 +1,6 @@
 import { IRequestContext, requestContextSchema } from "./schemaValidator";
-
+import { v4 as uuid } from "uuid";
+import moment from "moment";
 export interface IContextStructure_ver_1_1_0 {
   domain: string;
   location: {
@@ -99,8 +100,8 @@ export const buildRequestContextVer1_1_0 = (
     action: action,
     bap_uri: bapUri || `${process.env.BAP_URI}`,
     version: "1.1.0",
-    transaction_id: transactionId,
-    message_id: messageId,
+    transaction_id: transactionId || uuid(),
+    message_id: messageId || uuid(),
     location: {
       country: {
         name: `${process.env.COUNTRY_NAME}`,
@@ -113,7 +114,7 @@ export const buildRequestContextVer1_1_0 = (
     },
     ttl: "PT10M",
     key: key,
-    timestamp: `${new Date().toISOString()}`
+    timestamp: moment().toISOString()
   };
   return context;
 };
