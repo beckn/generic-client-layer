@@ -1,6 +1,6 @@
-import { buildTags } from "./domain/tag.mapping"
+import { buildTags } from "./domain/tag.mapping";
 
-export const buildResponse = (res: any): any => {
+export const buildOnSearchResponse = (res: any): any => {
     return {
         context: res.context,
         data: res.responses.map((response: any) => {
@@ -95,11 +95,12 @@ export const buildResponse = (res: any): any => {
                                 rating: item?.rating,
                                 rateable: item?.rateable,
                                 time: item?.time ? {
-                                    label: item.time.label,
-                                    range: {
-                                        start: item.time.range.start,
-                                        end: item.time.range.end
-                                    }
+                                    label: item?.time?.label,
+                                    duration: item?.time?.duration,
+                                    range: item?.time?.range ? {
+                                        start: item?.time?.range?.start,
+                                        end: item?.time?.range?.end
+                                    } : undefined
                                 } : undefined,
                                 quantity: item?.quantity ? {
                                     available: item?.quantity?.available ? {
@@ -115,6 +116,7 @@ export const buildResponse = (res: any): any => {
                                         count: item?.quantity?.allocated?.count
                                     } : undefined
                                 } : undefined,
+                                ...(buildTags(item?.tags, res?.context?.domain))
                             }
                         })
                     }
