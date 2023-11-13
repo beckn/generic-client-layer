@@ -1,0 +1,8 @@
+{
+    "context": {
+        "path": "context"
+    },
+    "message.catalog.descriptor.name": {
+        "path": "title"
+    }
+}

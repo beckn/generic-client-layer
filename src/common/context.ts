@@ -1,7 +1,7 @@
 import { IRequestContext, requestContextSchema } from "./schemaValidator";
 import { v4 as uuid } from "uuid";
 import moment from "moment";
-export interface IContextStructure_ver_1_1_0 {
+export interface IRequestContextStructure_ver_1_1_0 {
   domain: string;
   location: {
     id?: string;
@@ -78,6 +78,16 @@ export interface IContextStructure_ver_1_1_0 {
   ttl?: string;
 }
 
+interface IResponseContextStructure_ver_1_1_0 {
+  bapId?: string;
+  messageId?: string;
+  transactionId?: string;
+  bapUri?: string;
+  bppId?: string;
+  bppUri?: string;
+  domain?: string;
+}
+
 export const buildRequestContextVer1_1_0 = (
   input: IRequestContext,
   action: string
@@ -92,7 +102,7 @@ export const buildRequestContextVer1_1_0 = (
     bapUri,
     key
   } = input;
-  const context: IContextStructure_ver_1_1_0 = {
+  const context: IRequestContextStructure_ver_1_1_0 = {
     domain: domain,
     bpp_id: bppId,
     bpp_uri: bppUri,
@@ -117,4 +127,16 @@ export const buildRequestContextVer1_1_0 = (
     timestamp: moment().toISOString()
   };
   return context;
+};
+
+export const responseContextBuilderVer1_1_0 = (
+  context: IRequestContextStructure_ver_1_1_0
+): IResponseContextStructure_ver_1_1_0 => {
+  return {
+    messageId: context?.message_id,
+    transactionId: context?.transaction_id,
+    bppId: context?.bpp_id,
+    bppUri: context?.bpp_uri,
+    domain: context?.domain
+  };
 };

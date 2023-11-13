@@ -30,7 +30,7 @@ export const validateRequest = (
   res: Response,
   next: NextFunction
 ) => {
-  const { error } = requestSchema.validate(req.body);
+  const { error } = requestSchema.validate(req.body, { allowUnknown: true });
   if (error) {
     return res.status(400).send({
       message: "Invalid Request",
