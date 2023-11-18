@@ -26,6 +26,5 @@
   "category.categoryId": {
     "path": "message.intent.category.id"
   },
-  "location": { "path": "message.intent.location.circle.gps" },
-  "someItem": { "path": "message.intent.someItem[arrayIndex].name" }
+  "location": { "path": "message.intent.location.circle.gps" }
 }

@@ -1,4 +1,54 @@
-
 {
-    
+    "context":context,
+    "message":{
+        "intent":{
+            "item":{
+                "descriptor":{
+                    "name":searchString
+                },
+                "id":itemId
+            },
+            "fulfillment":{
+                "agent":{
+                    "person":{
+                        "name":fulfillment.agentName
+                    }
+                    
+                },
+                "customer":{
+                    "person":{
+                        "gender":fulfillment.customerGender
+                    }
+                }
+            },
+            "provider":{
+                "descriptor":{
+                    "name":provider.providerName
+                },
+                "locations":$map( provider.providerCity, function($location) {
+                    {"city":{
+                        "name":$location
+                    }}
+                })[],
+                "id":provider.providerId
+            },
+            "category":{
+                "descriptor":{
+                    "code":category.categoryCode,
+                    "name":category.categoryName
+                },
+                "id":category.categoryId
+            },
+            "location":{
+                "circle":{
+                    "gps":location,
+                    "radius":{
+                        "type": "CONSTANT",
+                        "value": "5",
+                        "unit": "km"
+                    }
+                }
+            }
+        }
+    }
 }
