@@ -1,89 +1,90 @@
 {
-    "context": context,
     "data": responses.{
         "context": context,
-        "name": message.catalog.descriptor.name,
-        "providers": message.catalog.providers.{
-            "id": id,
-            "name": descriptor.name,
-            "items": items.{
+        "message": {
+            "name": message.catalog.descriptor.name,
+            "providers": message.catalog.providers.{
                 "id": id,
                 "name": descriptor.name,
-                "price": { "value": price.value, "currency": price.currency },
-                "categories": $map(
-                    $filter(%.categories, function($category) { $boolean($category.id in category_ids)}),
-                    function($category) {
-                        { "id": $category.id, "name": $category.descriptor.name, "code": $category.descriptor.code }
-                    }
-                )[],
-                "locations": $map(
-                    $filter(%.locations, function($location) { $boolean($location.id in location_ids)}),
-                    function($location) { 
-                        { "id": $location.id, "city": $location.city.name, "state": $location.state.name, "country": $location.country.name }
-                    }
-                )[],
-                "fulfillments": $map(
-                    $filter(%.fulfillments, function($fulfillment) { $boolean($fulfillment.id in fulfillment_ids)}),
-                    function($fulfillment) {
-                        {
-                            "id": $fulfillment.id,
-                            "type": $fulfillment.type,
-                            "tracking": $fulfillment.tracking,
-                            "contact": { "phone": $fulfillment.contact.phone, "email": $fulfillment.contact.email },
-                            "agent": {
-                                "person": {
-                                    "id": $fulfillment.agent.person.id,
-                                    "name": $fulfillment.agent.person.name,
-                                    "gender": $fulfillment.agent.person.gender,
-                                    "creds": $fulfillment.agent.person.creds,
-                                    "languages": $fulfillment.agent.person.languages,
-                                    "skills": $fulfillment.agent.person.skills
-                                },
-                                "rating": $fulfillment.agent.rating
-                            },
-                            "stops": $fulfillment.stops.{
-                                "type": type,
-                                "location": {
-                                    "gps": location.gps,
-                                    "address": location.address,
-                                    "city": location.city.name,
-                                    "state": location.state.name,
-                                    "area_code": location.area_code
-                                }
-                            }[],
-                            "tags": tags.{
-                                "code": descriptor.code,
-                                "name": descriptor.name,
-                                "display": display,
-                                "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                            }[]
-                        }
-                    }
-                )[],
-                "images": descriptor.images.{"url": url, "size_type": size_type, "width": width, "height": height}[],
-                "media": descriptor.media.{"url": url, "mimetype": mimetype}[],
-                "rating": rating,
-                "rateable": rateable,
-                "tags": tags.{
-                    "code": descriptor.code,
+                "items": items.{
+                    "id": id,
                     "name": descriptor.name,
-                    "display": display,
-                    "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                }[],
-                "time": {
-                    "duration": time.duration,
-                    "label": time.label,
-                    "range": { "start": time.range.start, "end": time.range.end }
+                    "price": { "value": price.value, "currency": price.currency },
+                    "categories": $map(
+                        $filter(%.categories, function($category) { $boolean($category.id in category_ids)}),
+                        function($category) {
+                            { "id": $category.id, "name": $category.descriptor.name, "code": $category.descriptor.code }
+                        }
+                    )[],
+                    "locations": $map(
+                        $filter(%.locations, function($location) { $boolean($location.id in location_ids)}),
+                        function($location) { 
+                            { "id": $location.id, "city": $location.city.name, "state": $location.state.name, "country": $location.country.name }
+                        }
+                    )[],
+                    "fulfillments": $map(
+                        $filter(%.fulfillments, function($fulfillment) { $boolean($fulfillment.id in fulfillment_ids)}),
+                        function($fulfillment) {
+                            {
+                                "id": $fulfillment.id,
+                                "type": $fulfillment.type,
+                                "tracking": $fulfillment.tracking,
+                                "contact": { "phone": $fulfillment.contact.phone, "email": $fulfillment.contact.email },
+                                "agent": {
+                                    "person": {
+                                        "id": $fulfillment.agent.person.id,
+                                        "name": $fulfillment.agent.person.name,
+                                        "gender": $fulfillment.agent.person.gender,
+                                        "creds": $fulfillment.agent.person.creds,
+                                        "languages": $fulfillment.agent.person.languages,
+                                        "skills": $fulfillment.agent.person.skills
+                                    },
+                                    "rating": $fulfillment.agent.rating
+                                },
+                                "stops": $fulfillment.stops.{
+                                    "type": type,
+                                    "location": {
+                                        "gps": location.gps,
+                                        "address": location.address,
+                                        "city": location.city.name,
+                                        "state": location.state.name,
+                                        "area_code": location.area_code
+                                    }
+                                }[],
+                                "tags": tags.{
+                                    "code": descriptor.code,
+                                    "name": descriptor.name,
+                                    "display": display,
+                                    "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
+                                }[]
+                            }
+                        }
+                    )[],
+                    "images": descriptor.images.{"url": url, "size_type": size_type, "width": width, "height": height}[],
+                    "media": descriptor.media.{"url": url, "mimetype": mimetype}[],
+                    "rating": rating,
+                    "rateable": rateable,
+                    "tags": tags.{
+                        "code": descriptor.code,
+                        "name": descriptor.name,
+                        "display": display,
+                        "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
+                    }[],
+                    "time": {
+                        "duration": time.duration,
+                        "label": time.label,
+                        "range": { "start": time.range.start, "end": time.range.end }
+                    },
+                    "quantity": {
+                        "available": { "count": quantity.available.count, "value": quantity.available.measure.value, "unit": available.measure.unit },
+                        "maximum": { "value": quantity.maximum.measure.value, "unit": quantity.maximum.measure.unit },
+                        "allocated": { "count": quantity.allocated.count }
+                    }
                 },
-                "quantity": {
-                    "available": { "count": quantity.available.count, "value": quantity.available.measure.value, "unit": available.measure.unit },
-                    "maximum": { "value": quantity.maximum.measure.value, "unit": quantity.maximum.measure.unit },
-                    "allocated": { "count": quantity.allocated.count }
-                }
-            },
-            "images": descriptor.images.{"url": url}[],
-            "media": descriptor.media.{"url": url, "mimetype": mimetype}[]
-        }[]
+                "images": descriptor.images.{"url": url}[],
+                "media": descriptor.media.{"url": url, "mimetype": mimetype}[]
+            }[]
+        }
     }[],
     "error": {
         "description": error.description,
