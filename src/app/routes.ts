@@ -1,11 +1,12 @@
 import express, { Router } from "express";
 import { validateRequest } from "../common";
 import { searchController } from "../modules/search/controller";
+import { selectController } from "../modules/select/controller";
 const router: Router = express.Router();
 
 export const clientLayerRoutes = () => {
   router.post("/search", validateRequest, searchController);
-  router.post("/select", validateRequest, () => {});
+  router.post("/select", validateRequest, selectController);
   router.post("/init", validateRequest, () => {});
   router.post("/confirm", validateRequest, () => {});
   router.post("/update", validateRequest, () => {});
