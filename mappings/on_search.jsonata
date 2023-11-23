@@ -75,11 +75,7 @@
                         "label": time.label,
                         "range": { "start": time.range.start, "end": time.range.end }
                     },
-                    "quantity": {
-                        "available": { "count": quantity.available.count, "value": quantity.available.measure.value, "unit": available.measure.unit },
-                        "maximum": { "value": quantity.maximum.measure.value, "unit": quantity.maximum.measure.unit },
-                        "allocated": { "count": quantity.allocated.count }
-                    }
+                    "quantity": quantity
                 },
                 "images": descriptor.images.{"url": url}[],
                 "media": descriptor.media.{"url": url, "mimetype": mimetype}[]
