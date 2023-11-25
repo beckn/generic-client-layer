@@ -1,0 +1,35 @@
+{
+    "context":context,
+    "message":{
+        "order":{
+            "id":message.orders[0].id,
+            "items":$map(message.orders.items, function($item){
+                {
+                    "id":$item.id,
+                    "quantity":{
+                        "count":$item.quantity.count,
+                        "measure":{
+                            "value":$item.quantity.measure.value,
+                            "unit":$item.quantity.measure.unit
+                        }
+                    }
+                }
+            })[],
+            "provider":{
+                "id":message.orders[0].provider.id,
+                "locations":$map(message.orders[0].provider.locations, function($location){
+                    {
+                        "id":$location.id
+                    }
+                })[]
+            },
+            "locations":$map(message.orders[0].locations, function($location){
+                {
+                    "id":$location.id,
+                    "gps":$location.gps
+                }
+            })[]
+
+        }
+    }
+}

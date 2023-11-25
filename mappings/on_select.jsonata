@@ -1,56 +1,55 @@
-{
-    "data": responses.{
-        "order": {
-            "type": message.order.type,
-            "quote": message.order.quote,
-            "provider": {
-                "id": message.order.provider.id,
-                "name": message.order.provider.descriptor.name,
-                "short_desc": message.order.provider.descriptor.short_desc,
-                "long_desc": message.order.provider.descriptor.long_desc,
-                "rating": message.order.provider.rating,
-                "images": message.order.provider.descriptor.images.{
-                    "url": url,
-                    "size_type": size_type
-                },
-                "media": message.order.provider.descriptor.media.{
-                    "url": url
-                }
+{   
+    "context":context,
+    "order": {
+        "type": message.order.type,
+        "quote": message.order.quote,
+        "provider": {
+            "id": message.order.provider.id,
+            "name": message.order.provider.descriptor.name,
+            "short_desc": message.order.provider.descriptor.short_desc,
+            "long_desc": message.order.provider.descriptor.long_desc,
+            "rating": message.order.provider.rating,
+            "images": message.order.provider.descriptor.images.{
+                "url": url,
+                "size_type": size_type
             },
-            "items": message.order.items.{
-                "id": id,
-                "name": descriptor.name,
-                "short_desc": descriptor.short_desc,
-                "long_desc": descriptor.long_desc,
-                "price": price,
-                "rating": rating,
-                "rateable": rateable,
-                "time": time,
-                "quantity": quantity,
-                "categories": $map(
-                    $filter(%.provider.categories, function($category) { $boolean($category.id in category_ids)}),
-                    function($category) {
-                        { "id": $category.id, "name": $category.descriptor.name, "code": $category.descriptor.code }
-                    }
-                )[],
-                "locations": $map(
-                    $filter(%.provider.locations, function($location) { $boolean($location.id in location_ids)}),
-                    function($location) { 
-                        {
-                            "id": $location.id,
-                            "city": $location.city.name,
-                            "state": $location.state.name,
-                            "country": $location.country.name
-                        }
-                    }
-                )[],
-                "tags": tags.{
-                    "code": descriptor.code,
-                    "name": descriptor.name,
-                    "display": display,
-                    "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                }[]
+            "media": message.order.provider.descriptor.media.{
+                "url": url
             }
+        },
+        "items": message.order.items.{
+            "id": id,
+            "name": descriptor.name,
+            "short_desc": descriptor.short_desc,
+            "long_desc": descriptor.long_desc,
+            "price": price,
+            "rating": rating,
+            "rateable": rateable,
+            "time": time,
+            "quantity": quantity,
+            "categories": $map(
+                $filter(%.provider.categories, function($category) { $boolean($category.id in category_ids)}),
+                function($category) {
+                    { "id": $category.id, "name": $category.descriptor.name, "code": $category.descriptor.code }
+                }
+            )[],
+            "locations": $map(
+                $filter(%.provider.locations, function($location) { $boolean($location.id in location_ids)}),
+                function($location) { 
+                    {
+                        "id": $location.id,
+                        "city": $location.city.name,
+                        "state": $location.state.name,
+                        "country": $location.country.name
+                    }
+                }
+            )[],
+            "tags": tags.{
+                "code": descriptor.code,
+                "name": descriptor.name,
+                "display": display,
+                "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
+            }[]
         }
-    }[]
+    }
 }

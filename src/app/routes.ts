@@ -6,7 +6,7 @@ const router: Router = express.Router();
 
 export const clientLayerRoutes = () => {
   router.post("/search", validateRequest, searchController);
-  router.post("/select", validateRequest, selectController);
+  router.post("/select", selectController);
   router.post("/init", validateRequest, () => {});
   router.post("/confirm", validateRequest, () => {});
   router.post("/update", validateRequest, () => {});
