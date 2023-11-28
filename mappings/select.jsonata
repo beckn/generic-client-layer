@@ -1,0 +1,9 @@
+data.[
+    message.orders.[{
+        "context": $context(%.%.context, $action),
+        "message": {
+            "test": $process,
+            "order": $
+        }
+    }]
+]

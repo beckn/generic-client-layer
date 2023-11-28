@@ -1,0 +1,39 @@
+import { inject } from "inversify";
+import { controller, httpPost, requestBody } from "inversify-express-utils";
+import { GCLService } from "./gcl.service";
+
+@controller('/')
+export class GCLController {
+
+    constructor(@inject(GCLService) private service: GCLService) { }
+
+    @httpPost('search')
+    public async search(@requestBody() body: any): Promise<any> {
+        const searchResult = await this.service.search(body);
+        return searchResult;
+    }
+
+    @httpPost('select')
+    public async select(@requestBody() body: any): Promise<any> {
+        const selectResult = await this.service.select(body);
+        return selectResult;
+    }
+
+    @httpPost('init')
+    public async init(@requestBody() body: any): Promise<any> {
+        const initResult = await this.service.init(body);
+        return initResult;
+    }
+
+    @httpPost('confirm')
+    public async confirm(@requestBody() body: any): Promise<any> {
+        const confirmResult = await this.service.confirm(body);
+        return confirmResult;
+    }
+
+    @httpPost('status')
+    public async status(@requestBody() body: any): Promise<any> {
+        const statusResult = await this.service.status(body);
+        return statusResult;
+    }
+}
