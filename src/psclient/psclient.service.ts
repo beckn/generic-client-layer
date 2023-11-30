@@ -27,14 +27,8 @@ export class PSClientService {
     }
 
     async postMany(payloads: any[]): Promise<any> {
-        const psResponses: any[] = await Promise.all(payloads.map((payload: any) =>
+        return await Promise.all(payloads.map((payload: any) =>
             this.postPromise(payload)
         ));
-        const responses = [...psResponses];
-
-        return responses;
     }
-
-
-
 }
