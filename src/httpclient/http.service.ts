@@ -27,7 +27,7 @@ class HttpClient {
         // Add response interceptor
         this.client.interceptors.response.use((response: AxiosResponse) => {
             // Modify the response data if needed
-            logger.info("Response received: %o\n", response);
+            logger.info("Response received: %o\n", JSON.stringify(response.data));
             return response;
         }, (error: any) => {
             // Handle response error
