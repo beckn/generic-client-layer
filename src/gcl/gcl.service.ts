@@ -26,13 +26,11 @@ export class GCLService {
     }
 
     async init(body: any) {
-        // const payload = await this.tlService.transform(body, "select");
-        // const psResponse = await this.psClientService.postMany(payload);
-        // const response = await this.tlService.transform(psResponse, "on_select");
+        const payload = await this.tlService.transform(body, "init");
+        const psResponse = await this.psClientService.postMany(payload);
+        const response = await this.tlService.transform(psResponse, "on_init");
 
-        // return response;
-
-        return "In Progress";
+        return response;
     }
 
     async confirm(body: any) {
