@@ -1,5 +1,5 @@
 {
-    "context":context,
+    "context": $context(context, $action), 
     "message":{
         "intent":{
             "item":{
@@ -26,7 +26,8 @@
                     "name":provider.providerName
                 },
                 "locations":$map( provider.providerCity, function($location) {
-                    {"city":{
+                    {
+                        "city":{
                         "name":$location
                     }}
                 })[],

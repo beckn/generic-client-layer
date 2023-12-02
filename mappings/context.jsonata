@@ -1,0 +1,24 @@
+{
+    "domain": domain,
+    "bpp_id": bpp_id,
+    "bpp_uri": bpp_uri,
+    "bap_id": $env.PS_BAP_ID,
+    "action": $action,
+    "bap_uri": $env.PS_BAP_URI,
+    "version": "1.1.0",
+    "transaction_id": transaction_id ? transaction_id : $uuid(),
+    "message_id": message_id ? message_id : $uuid(),
+    "location": {
+      "country": {
+        "name": $env.PS_COUNTRY_NAME,
+        "code": $env.PS_COUNTRY_CODE
+      },
+      "city": {
+        "name": $env.PS_CITY_NAME,
+        "code": $env.PS_CITY_CODE
+      }
+    },
+    "ttl": "PT10M",
+    "key": key,
+    "timestamp": $moment().toISOString()
+}

@@ -1,9 +1,8 @@
-$.responses.{
-    "context": context,
+$.responses.{   
+    "context":context,
     "message": {
         "order": {
             "type": message.order.type,
-            "quote": message.order.quote,
             "provider": {
                 "id": message.order.provider.id,
                 "name": message.order.provider.descriptor.name,
@@ -51,7 +50,12 @@ $.responses.{
                     "display": display,
                     "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                 }[]
-            }
+            },
+            "fulfillments": message.order.fulfillments,
+            "quote": message.order.quote,
+            "billing": message.order.billing,
+            "payments": message.order.payments,
+            "cancellation_terms": message.order.cancellation_terms
         }
     }
 }[]
