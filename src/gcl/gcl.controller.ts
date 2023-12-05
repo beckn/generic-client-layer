@@ -36,4 +36,10 @@ export class GCLController {
         const statusResult = await this.service.status(body);
         return statusResult;
     }
+
+    @httpPost('rating')
+    public async rating(@requestBody() body: any): Promise<any> {
+        const statusResult = await this.service.rating(body);
+        return statusResult;
+    }
 }

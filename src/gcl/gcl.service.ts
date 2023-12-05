@@ -52,4 +52,12 @@ export class GCLService {
 
         return "In Progress";
     }
+
+    async rating(body: any) {
+        const payload = await this.tlService.transform(body, "rating");
+        const psResponse = await this.psClientService.post(payload);
+        const response = await this.tlService.transform(psResponse, "on_rating");
+
+        return response;
+    }
 }
