@@ -1,4 +1,4 @@
 {
-    "context": context,
+    "context": $context(context, $action),
     "message": message
 }
