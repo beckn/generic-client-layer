@@ -1,0 +1,6 @@
+{
+    "data": $.responses.{
+        "context": context,
+        "message": message
+    }[]
+}
