@@ -42,4 +42,10 @@ export class GCLController {
         const statusResult = await this.service.rating(body);
         return statusResult;
     }
+
+    @httpPost('cancel')
+    public async cancel(@requestBody() body: any): Promise<any> {
+        const statusResult = await this.service.cancel(body);
+        return statusResult;
+    }
 }
