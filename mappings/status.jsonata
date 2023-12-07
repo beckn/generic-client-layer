@@ -1,0 +1,6 @@
+$.data.{
+        "context": $context(context, $action),
+        "message": {
+            "order_id": orderId
+        }
+}[]
