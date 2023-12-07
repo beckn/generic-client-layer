@@ -1,7 +1,6 @@
 import { inject, injectable } from "inversify";
 import { TLService } from "../tl/tl.service";
 import { PSClientService } from "../psclient/psclient.service";
-import data from '../../data.json';
 
 @injectable()
 export class GCLService {
@@ -64,6 +63,14 @@ export class GCLService {
         const payload = await this.tlService.transform(body, "cancel");
         const psResponse = await this.psClientService.post(payload);
         const response = await this.tlService.transform(psResponse, "on_cancel");
+
+        return response;
+    }
+
+    async update(body: any) {
+        const payload = await this.tlService.transform(body, "update");
+        const psResponse = await this.psClientService.postMany(payload);
+        const response = await this.tlService.transform(psResponse, "on_update");
 
         return response;
     }
