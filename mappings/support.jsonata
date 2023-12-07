@@ -1,0 +1,9 @@
+$.data.{
+    "context":$context(context, $action),
+    "message":{
+        "support":{
+            "order_id":orderId,
+            "callback_phone":callbackPhone
+        }
+    }
+}[]

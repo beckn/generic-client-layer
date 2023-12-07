@@ -72,4 +72,11 @@ export class GCLService {
 
     return response;
   }
+  async support(body: any) {
+    const payload = await this.tlService.transform(body, "support");
+    const psResponse = await this.psClientService.postMany(payload);
+    const response = await this.tlService.transform(psResponse, "on_support");
+
+    return response;
+  }
 }
