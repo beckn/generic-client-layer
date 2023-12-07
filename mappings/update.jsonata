@@ -1,0 +1,11 @@
+$.data.{
+    "context":$context(context, $action),
+    "message":{
+        "order":{
+            "order_id":orderId,
+            "fulfillments":updateDetails.fulfillments,
+            "billing":updateDetails.billing
+        },
+        "update_target":updateDetails.updateTarget
+    }
+}[]
