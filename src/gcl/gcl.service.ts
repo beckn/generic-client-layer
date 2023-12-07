@@ -79,4 +79,11 @@ export class GCLService {
 
     return response;
   }
+  async track(body: any) {
+    const payload = await this.tlService.transform(body, "track");
+    const psResponse = await this.psClientService.postMany(payload);
+    const response = await this.tlService.transform(psResponse, "on_track");
+
+    return response;
+  }
 }
