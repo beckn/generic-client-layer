@@ -54,4 +54,10 @@ export class GCLController {
         const updateResult = await this.service.update(body);
         return updateResult;
     }
+
+    @httpPost('support')
+    public async support(@requestBody() body: any): Promise<any> {
+        const updateResult = await this.service.support(body);
+        return updateResult;
+    }
 }
