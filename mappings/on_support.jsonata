@@ -1,17 +1,6 @@
-$.responses.{
-    "context":context,
-    "supportDetails":{
-        "refId":message.support.ref_id,
-        "orderId":message.support.order_id,
-        "callbackPhone":message.support.callback_phone,
-        "email":message.support.email,
-        "url":message.support.url,
-        "docs":message.support.docs.{
-            "name":descriptor.name,
-            "short_desc":descriptor.short_desc,
-            "long_desc":descriptor.long_desc,
-            "url":url,
-            "mime_type":mime_type
-        }[]
-    }
-}[]
+{
+    "data": $.responses.{
+        "context":context,
+        "message": message
+    }[]
+}
