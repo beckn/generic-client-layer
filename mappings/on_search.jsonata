@@ -76,7 +76,7 @@
                         "range": { "start": time.range.start, "end": time.range.end }
                     },
                     "quantity": quantity
-                },
+                }[],
                 "images": descriptor.images.{"url": url}[],
                 "media": descriptor.media.{"url": url, "mimetype": mimetype}[]
             }[]
