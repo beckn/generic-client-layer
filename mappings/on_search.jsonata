@@ -6,7 +6,7 @@
             "providers": message.catalog.providers.{
                 "id": id,
                 "name": descriptor.name,
-                "rating":rating
+                "rating":rating,
                 "items": items.{
                     "id": id,
                     "name": descriptor.name,
