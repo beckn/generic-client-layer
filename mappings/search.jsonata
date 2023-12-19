@@ -9,6 +9,14 @@
                 "id":itemId
             },
             "fulfillment":{
+                "type": fulfillment.type,
+                "stops": $map( fulfillment.stops, function($gps) {
+                    {
+                        "location": {
+                            "gps":$gps.location
+                        }
+                    }
+                })[],
                 "agent":{
                     "person":{
                         "name":fulfillment.agentName
