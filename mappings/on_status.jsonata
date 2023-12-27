@@ -59,7 +59,7 @@
                         "name": descriptor.name, 
                         "value": value }[]
                     }[]
-                },
+                }[],
                 "fulfillments": message.order.fulfillments,
                 "quote": message.order.quote,
                 "billing": message.order.billing,
