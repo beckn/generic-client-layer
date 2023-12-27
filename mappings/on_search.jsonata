@@ -7,9 +7,13 @@
                 "id": id,
                 "name": descriptor.name,
                 "rating":rating,
+                "short_desc": descriptor.short_desc,
+                "long_desc": descriptor.long_desc,
                 "locations":locations,
                 "items": items.{
                     "id": id,
+                    "short_desc": descriptor.short_desc,
+                    "long_desc": descriptor.long_desc,
                     "name": descriptor.name,
                     "price": { "value": price.value, "currency": price.currency },
                     "categories": $map(
