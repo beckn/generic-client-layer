@@ -4,7 +4,7 @@ import path from 'path';
 import appRootPath from "app-root-path";
 import fs from 'fs';
 import { ObjectUtil } from "../util/object.util";
-import * as tlHelpers from './tl.helper'
+import * as tlHelpers from './tl.helper';
 import { AppLogger } from "../app/app.logger";
 
 @injectable()
