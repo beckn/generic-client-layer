@@ -52,6 +52,7 @@
                         "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                     }[]
                 },
+                "xinput": $xInput(message.order.xinput, $action),
                 "fulfillments": message.order.fulfillments,
                 "quote": message.order.quote,
                 "billing": message.order.billing,
