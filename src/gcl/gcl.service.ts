@@ -7,7 +7,7 @@ export class GCLService {
   constructor(
     @inject(TLService) private tlService: TLService,
     @inject(PSClientService) private psClientService: PSClientService
-  ) { }
+  ) {}
 
   async search(body: any) {
     const payload = await this.tlService.transform(body, "search");
@@ -59,7 +59,7 @@ export class GCLService {
 
   async cancel(body: any) {
     const payload = await this.tlService.transform(body, "cancel");
-    const psResponse = await this.psClientService.post(payload);
+    const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(psResponse, "on_cancel");
 
     return response;

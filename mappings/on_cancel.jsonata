@@ -28,7 +28,7 @@
                     "rateable": rateable,
                     "time": time,
                     "quantity": quantity
-                },
+                }[],
                 "fulfillments": message.order.fulfillments,
                 "quote": message.order.quote,
                 "billing": message.order.billing,
