@@ -50,7 +50,7 @@
                         "name": descriptor.name,
                         "display": display,
                         "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                    }[]
+                    }[],
                     "xinput":$xInput(xinput, $action)
                 }[],
                 "xinput": $xInput(message.order.xinput, $action),
