@@ -8,19 +8,18 @@ export class XInputService {
   constructor(
     @inject(AppLogger) private logger: AppLogger,
     @inject(HttpClient) private httpClient: HttpClient
-  ) { }
+  ) {}
 
   async getXInputForm(url: string) {
     try {
       const xInputRes = await this.httpClient.get<any>(url);
-      const xinputHTML = await this.sanatizeXInputHtml(xInputRes);
+
+      const xinputHTML = await this.sanatizeXInputHtml(xInputRes?.textHtml);
+
       return xinputHTML;
     } catch (e) {
-      this.logger.error(
-        "Error in fetching xinput form",
-        e
-      );
-      return {}
+      this.logger.error("Error in fetching xinput form", e);
+      return {};
     }
   }
 
@@ -44,9 +43,14 @@ export class XInputService {
   async submitXInputForm(body: any) {
     try {
       const actionUrl = body?.action;
+      const method = body?.method;
       delete body.action;
       delete body.method;
-      const submitFormDataResp = await this.httpClient.post(actionUrl, body);
+      const submitFormDataResp = await this.httpClient.client({
+        url: actionUrl,
+        method,
+        data: body
+      });
       return submitFormDataResp;
     } catch (error: any) {
       return { message: error.message };
