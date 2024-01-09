@@ -26,7 +26,6 @@ export async function xInput(xinput: any, action: string) {
   if (action.startsWith("on_") && xinput?.form?.url) {
     const xInputService = container.resolve<XInputService>(XInputService);
     const xInputHTML = await xInputService.getXInputForm(xinput.form.url);
-
     return {
       mime_type: xinput?.form?.mime_type,
       html: xInputHTML
