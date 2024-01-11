@@ -20,6 +20,6 @@ container.bind<PSClientService>(PSClientService).to(PSClientService);
 container.bind<AppLogger>(AppLogger).to(AppLogger);
 container.bind<HttpClient>(HttpClient).to(HttpClient);
 container.bind<XInputService>(XInputService).to(XInputService);
-// container.bind<ErrorHandlerMiddleware>(ErrorHandlerMiddleware).toSelf();
+container.bind<ErrorHandlerMiddleware>(ErrorHandlerMiddleware).toSelf();
 
 export { server, container };
