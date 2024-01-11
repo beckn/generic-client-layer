@@ -41,12 +41,12 @@ class App {
   }
 
   private setupMiddlewares() {
-    // const errorHandlerMiddleware = container.get<ErrorHandlerMiddleware>(
-    //   ErrorHandlerMiddleware
-    // );
-    // this.app.use(
-    //   errorHandlerMiddleware.handleError.bind(errorHandlerMiddleware)
-    // );
+    const errorHandlerMiddleware = container.get<ErrorHandlerMiddleware>(
+      ErrorHandlerMiddleware
+    );
+    this.app.use(
+      errorHandlerMiddleware.handleError.bind(errorHandlerMiddleware)
+    );
   }
 }
 
