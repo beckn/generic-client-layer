@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import express, { Application, NextFunction } from "express";
 import { container, server } from "./inversify/inversify.config";
 import "./gcl/gcl.controller";
@@ -40,12 +41,12 @@ class App {
   }
 
   private setupMiddlewares() {
-    const errorHandlerMiddleware = container.get<ErrorHandlerMiddleware>(
-      ErrorHandlerMiddleware
-    );
-    this.app.use(
-      errorHandlerMiddleware.handleError.bind(errorHandlerMiddleware)
-    );
+    // const errorHandlerMiddleware = container.get<ErrorHandlerMiddleware>(
+    //   ErrorHandlerMiddleware
+    // );
+    // this.app.use(
+    //   errorHandlerMiddleware.handleError.bind(errorHandlerMiddleware)
+    // );
   }
 }
 
