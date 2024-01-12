@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "eed96a3f-c780-4157-a219-09ff871ee56c",
+        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io",
+        "domain": "retail:1.1.0"
+      },
+      "message": {
+        "orders": [
+          {
+            "provider": {
+              "id": "./retail.kirana/ind.blr/33@tourism-bpp-infra2.becknprotocol.io.provider"
+            },
+            "fulfillments": [
+              {
+                "type": "Delivery",
+                "customer": {
+                  "person": {
+                    "name": "Jane Doe"
+                  },
+                  "contact": {
+                    "phone": "+91-9663088848"
+                  }
+                },
+                "stops": [
+                  {
+                    "location": {
+                      "gps": "13.2008459,77.708736",
+                      "address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+                      "city": {
+                        "name": "Gangamuthanahalli"
+                      },
+                      "state": {
+                        "name": "Karnataka"
+                      },
+                      "country": {
+                        "code": "IND"
+                      },
+                      "area_code": "75001"
+                    },
+                    "contact": {
+                      "phone": "919246394908",
+                      "email": "nc.rehman@gmail.com"
+                    }
+                  }
+                ]
+              }
+            ],
+            "items": [
+              {
+                "id": "cons-01",
+                "selected": {
+                  "quantity": {
+                    "count": 2
+                  }
+                }
+              }
+            ],
+            "billing": {
+              "name": "Rajesh Kumar",
+              "address": "Villa 5, Green Valley, Malleshwaram, 560012",
+              "state": {
+                "name": "Madhya Pradesh"
+              },
+              "city": {
+                "name": "Bhopal"
+              },
+              "email": "rajesh.kumar@example.com",
+              "phone": "+91-9999999999"
+            },
+            "payments": [
+              {
+                "params": {
+                  "amount": "350",
+                  "currency": "INR",
+                  "bank_account_number": "1234002341",
+                  "bank_code": "INB0004321"
+                },
+                "status": "PAID",
+                "type": "PRE-FULFILLMENT"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

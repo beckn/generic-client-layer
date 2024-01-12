@@ -1,0 +1,88 @@
+[
+  {
+    "context": {
+      "ttl": "PT10M",
+      "action": "support",
+      "timestamp": "2024-01-12T11:32:44.294Z",
+      "message_id": "b354b9dc-4a6a-4752-ae56-c98d0db1267b",
+      "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+      "domain": "retail:1.1.0",
+      "version": "1.1.0",
+      "bap_id": "ps-bap-network.becknprotocol.io",
+      "bap_uri": "https://ps-bap-network.becknprotocol.io",
+      "location": {
+        "country": {
+          "name": "India",
+          "code": "IND"
+        },
+        "city": {
+          "name": "Bangalore",
+          "code": "std:080"
+        }
+      },
+      "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+      "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io"
+    },
+    "responses": [
+      {
+        "context": {
+          "domain": "retail:1.1.0",
+          "action": "on_support",
+          "version": "1.1.0",
+          "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+          "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io",
+          "country": "IND",
+          "city": "std:080",
+          "location": {
+            "country": {
+              "code": "IND"
+            },
+            "city": {
+              "code": "std:080"
+            }
+          },
+          "bap_id": "ps-bap-network.becknprotocol.io",
+          "bap_uri": "https://ps-bap-network.becknprotocol.io",
+          "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+          "message_id": "b354b9dc-4a6a-4752-ae56-c98d0db1267b",
+          "ttl": "PT10M",
+          "timestamp": "2024-01-12T11:32:50.294Z"
+        },
+        "message": {
+          "support": {
+            "ref_id": "d4975df5-b18c-4772-80ad",
+            "callback_phone": "+91 8765495826",
+            "phone": "+91 9876543298",
+            "email": "abcd.support@support.com"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "context": {
+      "ttl": "PT10M",
+      "action": "support",
+      "timestamp": "2024-01-12T11:32:44.304Z",
+      "message_id": "7ed06dd2-7c61-464b-8157-3a3060044670",
+      "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
+      "domain": "retail:1.1.0",
+      "version": "1.1.0",
+      "bap_id": "ps-bap-network.becknprotocol.io",
+      "bap_uri": "https://ps-bap-network.becknprotocol.io",
+      "location": {
+        "country": {
+          "name": "India",
+          "code": "IND"
+        },
+        "city": {
+          "name": "Bangalore",
+          "code": "std:080"
+        }
+      },
+      "bpp_id": "farm-fresh-bap-id",
+      "bpp_uri": "https://4e21-124-123-32-28.ngrok-free.app"
+    },
+    "responses": []
+  }
+]

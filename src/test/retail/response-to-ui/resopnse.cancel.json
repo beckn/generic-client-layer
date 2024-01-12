@@ -1,0 +1,150 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "retail:1.1.0",
+        "action": "on_cancel",
+        "version": "1.1.0",
+        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "code": "IND"
+          },
+          "city": {
+            "code": "std:080"
+          }
+        },
+        "bap_id": "ps-bap-network.becknprotocol.io",
+        "bap_uri": "https://ps-bap-network.becknprotocol.io",
+        "transaction_id": "0bbd82ce-5a21-4e26-b402-1c1f9d954fee",
+        "message_id": "16778663-9a54-47c8-97ff-e1a3128cb1db",
+        "ttl": "PT10M",
+        "timestamp": "2024-01-12T11:11:41.593Z"
+      },
+      "message": {
+        "order": {
+          "type": "DEFAULT",
+          "provider": {
+            "id": "./retail.kirana/ind.blr/33@tourism-bpp-infra2.becknprotocol.io.provider",
+            "name": "Venky.Mahadevan@Bazaar"
+          },
+          "items": [
+            {
+              "id": "./retail.kirana/ind.blr/247@tourism-bpp-infra2.becknprotocol.io.item",
+              "name": "Isothermal Stainless Steel Hiking Flask MH500 Yellow - Water bottle",
+              "short_desc": "InstaCuppa Stainless Steel Thermos Flask Water Bottle with Sports Sipper Lid, Double Walled Vacuum Insulation",
+              "long_desc": "<div> <ul> <li>ULTRA MODERN DESIGN - Our thermos bottle is crafted with a unique and modern design. Gone are the days of old and boring flasks. Guaranteed to impress your colleagues, friends & family.</li> <li>ADVANCED TEMPERATURE CONTROL – A double-wall, vacuum-insulated design helps lock in heat for up to 12 hours and cold for up to 24!</li> <li>ELIMINATES CONDENSATION – Offering improved grip and control, these innovative dual-layer bottles offer a slip-resistant surface that’s free of sweat and condensation..</li> <li>LEAK-PROOF and ECO-FRIENDLY – Remove, and clean, the large, screw on lid provides faster access to water inside and won’t spill a drop even when it’s tipped upside or put in your gym bag.</li> <li>The distress quilted jacket is a versatile fashion choice you can wear on any occasion. A style essential piece for Women which will reveal your strong sense of personality</li> </ul> <div> <p><b>Product Details</b></p> <ul> <li>Advanced Temperature Retention.This thermos water bottle ensures your beverages will remain hot or cold for a long time.Hot for up to 12 hours.Cold for up to 24 hours.</li> <li>Retains Original Flavors.Vacuum insulation ensures this travel thermos water bottle is airtight and retains the original flavor of your beverages.Also, this bottle is B.P.A Free.</li> <li>Premium Quality Materials.This stylish bottle is a double-walled vacuum insulated and made from premium 304-grade stainless steel - which makes this flask bottle.</li> </ul> </div>",
+              "price": {
+                "listed_value": "1200.0",
+                "currency": "INR",
+                "value": "1200.0"
+              }
+            }
+          ],
+          "fulfillments": [
+            {
+              "type": "Delivery",
+              "stops": [
+                {
+                  "location": {
+                    "gps": "13.2008459,77.708736",
+                    "address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+                    "city": {
+                      "name": "Gangamuthanahalli"
+                    },
+                    "state": {
+                      "name": "Karnataka"
+                    },
+                    "country": {
+                      "code": "IND"
+                    },
+                    "area_code": "75001"
+                  },
+                  "contact": {
+                    "phone": "919246394908",
+                    "email": "nc.rehman@gmail.com"
+                  }
+                }
+              ],
+              "customer": {
+                "person": {
+                  "name": "Motiur Rehman"
+                },
+                "contact": {
+                  "phone": "919122343344"
+                }
+              },
+              "state": {
+                "descriptor": {
+                  "code": "CANCELLED",
+                  "short_desc": "Cancelled due to ..."
+                },
+                "updated_at": "2023-05-26T05:23:04.443Z"
+              },
+              "tracking": false
+            }
+          ],
+          "quote": {
+            "price": {
+              "currency": "INR",
+              "value": "1500.0"
+            },
+            "breakup": [
+              {
+                "title": "base-price",
+                "price": {
+                  "currency": "INR",
+                  "value": "1200.0"
+                }
+              },
+              {
+                "title": "taxes",
+                "price": {
+                  "currency": "INR",
+                  "value": "300.0"
+                }
+              }
+            ]
+          },
+          "billing": {
+            "name": "Motiur Rehman",
+            "phone": "9191223433",
+            "email": "nc.rehman@gmail.com",
+            "address": "123, Terminal 1, Kempegowda Int'l Airport Rd, A - Block, Gangamuthanahalli, Karnataka 560300, India",
+            "city": {
+              "name": "Gangamuthanahalli"
+            },
+            "state": {
+              "name": "Karnataka"
+            }
+          },
+          "payments": [
+            {
+              "status": "NOT-PAID",
+              "type": "PRE-FULFILLMENT",
+              "params": {
+                "amount": "1500",
+                "currency": "INR",
+                "bank_code": "INB0004321",
+                "bank_account_number": "1234002341"
+              }
+            }
+          ],
+          "cancellation_terms": [
+            {
+              "cancellation_fee": {
+                "amount": {
+                  "currency": "INR",
+                  "value": "100"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
