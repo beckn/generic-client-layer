@@ -14,21 +14,6 @@
           "email": "me@gmail.com"
         }
       }
-    },
-    {
-      "context": {
-        "domain": "retail:1.1.0",
-        "bpp_id": "farm-fresh-bap-id",
-        "bpp_uri": "https://4e21-124-123-32-28.ngrok-free.app",
-        "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09"
-      },
-      "message": {
-        "support": {
-          "ref_id": "894789-43954",
-          "phone": "+91 4444444444",
-          "email": "me@gmail.com"
-        }
-      }
     }
   ]
 }

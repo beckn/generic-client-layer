@@ -19,10 +19,10 @@
         },
         "bap_id": "ps-bap-network.becknprotocol.io",
         "bap_uri": "https://ps-bap-network.becknprotocol.io",
-        "transaction_id": "8100d125-76a7-4588-88be-81b97657cd09",
-        "message_id": "b354b9dc-4a6a-4752-ae56-c98d0db1267b",
+        "transaction_id": "1d824b78-e078-44db-9b48-161644107173",
+        "message_id": "5d4bfac0-6f45-4b0f-af4c-e5bd6edd168a",
         "ttl": "PT10M",
-        "timestamp": "2024-01-12T11:32:50.294Z"
+        "timestamp": "2024-01-12T12:27:35.887Z"
       },
       "message": {
         "support": {
