@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "retail:1.1.0",
+        "action": "on_search",
+        "version": "1.1.0",
+        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "code": "IND"
+          },
+          "city": {
+            "code": "std:080"
+          }
+        },
+        "bap_id": "ps-bap-network.becknprotocol.io",
+        "bap_uri": "https://ps-bap-network.becknprotocol.io",
+        "transaction_id": "f649c6aa-d845-4874-9c9c-6020d9140bf7",
+        "message_id": "a5d31306-c976-4f0d-8d3a-3a377965144f",
+        "ttl": "PT10M",
+        "timestamp": "2024-01-12T07:20:34.016Z"
+      },
+      "message": {
+        "name": "HBO",
+        "providers": [
+          {
+            "id": "./retail.kirana/ind.blr/33@tourism-bpp-infra2.becknprotocol.io.provider",
+            "name": "Venky.Mahadevan@Bazaar",
+            "locations": [
+              {
+                "id": "./retail.kirana/ind.blr/1@tourism-bpp-infra2.becknprotocol.io.provider_location",
+                "gps": "12.909955,77.596316"
+              }
+            ],
+            "items": [
+              {
+                "id": "./retail.kirana/ind.blr/247@tourism-bpp-infra2.becknprotocol.io.item",
+                "short_desc": "InstaCuppa Stainless Steel Thermos Flask Water Bottle with Sports Sipper Lid, Double Walled Vacuum Insulation",
+                "long_desc": "<div> <ul> <li>ULTRA MODERN DESIGN - Our thermos bottle is crafted with a unique and modern design. Gone are the days of old and boring flasks. Guaranteed to impress your colleagues, friends & family.</li> <li>ADVANCED TEMPERATURE CONTROL – A double-wall, vacuum-insulated design helps lock in heat for up to 12 hours and cold for up to 24!</li> <li>ELIMINATES CONDENSATION – Offering improved grip and control, these innovative dual-layer bottles offer a slip-resistant surface that’s free of sweat and condensation..</li> <li>LEAK-PROOF and ECO-FRIENDLY – Remove, and clean, the large, screw on lid provides faster access to water inside and won’t spill a drop even when it’s tipped upside or put in your gym bag.</li> <li>The distress quilted jacket is a versatile fashion choice you can wear on any occasion. A style essential piece for Women which will reveal your strong sense of personality</li> </ul> <div> <p><b>Product Details</b></p> <ul> <li>Advanced Temperature Retention.This thermos water bottle ensures your beverages will remain hot or cold for a long time.Hot for up to 12 hours.Cold for up to 24 hours.</li> <li>Retains Original Flavors.Vacuum insulation ensures this travel thermos water bottle is airtight and retains the original flavor of your beverages.Also, this bottle is B.P.A Free.</li> <li>Premium Quality Materials.This stylish bottle is a double-walled vacuum insulated and made from premium 304-grade stainless steel - which makes this flask bottle.</li> </ul> </div>",
+                "name": "Isothermal Stainless Steel Hiking Flask MH500 Yellow - Water bottle",
+                "price": {
+                  "value": "1200.0",
+                  "currency": "INR"
+                },
+                "images": [
+                  {
+                    "url": "https://tourism-bpp-infra2.becknprotocol.io/attachments/view/253.jpg"
+                  }
+                ],
+                "tags": [
+                  {
+                    "name": "item-cataegory",
+                    "display": true,
+                    "list": [
+                      {
+                        "name": "category",
+                        "value": "retail"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "item-properties",
+                    "display": true,
+                    "list": [
+                      {
+                        "name": "waterbottle",
+                        "value": "y"
+                      },
+                      {
+                        "name": "Trekking",
+                        "value": "y"
+                      },
+                      {
+                        "name": "Sipper",
+                        "value": "y"
+                      },
+                      {
+                        "name": "Hiking",
+                        "value": "y"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { inject } from "inversify";
+import { inject, injectable } from "inversify";
 import { controller, httpPost, requestBody } from "inversify-express-utils";
 import { GCLService } from "./gcl.service";
 import { XInputService } from "../x-input/x-input.service";
@@ -8,7 +8,7 @@ export class GCLController {
   constructor(
     @inject(GCLService) private service: GCLService,
     @inject(XInputService) private xinputService: XInputService
-  ) { }
+  ) {}
 
   @httpPost("search")
   public async search(@requestBody() body: any): Promise<any> {
