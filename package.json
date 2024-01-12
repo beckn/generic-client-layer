@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "NODE_ENV=dev jest --watch",
+    "test:watch": "jest --testTimeout=20000 --watch",
     "test:coverage": "jest --testTimeout=20000 --coverage",
     "dev": "nodemon src/index.ts",
     "start": "node dist/index.js",
