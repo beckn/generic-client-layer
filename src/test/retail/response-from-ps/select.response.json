@@ -4,7 +4,7 @@
       "ttl": "PT10M",
       "action": "select",
       "timestamp": "2024-01-12T09:32:46.310Z",
-      "message_id": "b88f3a03-54e0-429b-863c-ec00a374486e",
+      "message_id": "2042a0f1-9b71-48a3-91c4-c4f3874e156b",
       "transaction_id": "eed96a3f-c780-4157-a219-09ff871ee56c",
       "domain": "retail:1.1.0",
       "version": "1.1.0",
@@ -44,9 +44,9 @@
           "bap_id": "ps-bap-network.becknprotocol.io",
           "bap_uri": "https://ps-bap-network.becknprotocol.io",
           "transaction_id": "eed96a3f-c780-4157-a219-09ff871ee56c",
-          "message_id": "b88f3a03-54e0-429b-863c-ec00a374486e",
+          "message_id": "2042a0f1-9b71-48a3-91c4-c4f3874e156b",
           "ttl": "PT10M",
-          "timestamp": "2024-01-12T09:32:53.320Z"
+          "timestamp": "2024-01-12T09:14:00.481Z"
         },
         "message": {
           "order": {
