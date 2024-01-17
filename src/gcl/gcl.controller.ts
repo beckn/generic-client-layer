@@ -72,6 +72,7 @@ export class GCLController {
   @httpPost("x-input/submit")
   public async submitXInputForm(@requestBody() body: any): Promise<any> {
     const submitFormResp = await this.xinputService.submitXInputForm(body);
+
     return submitFormResp;
   }
 }
