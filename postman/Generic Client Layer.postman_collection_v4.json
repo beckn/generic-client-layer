@@ -1,9 +1,9 @@
 {
   "info": {
-    "_postman_id": "e5d25f33-c740-49d4-b131-a5be0ac8ed90",
+    "_postman_id": "fb31fa50-5999-4d3f-894b-e046409000d0",
     "name": "Generic Client Layer",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "26726166"
+    "_exporter_id": "23690031"
   },
   "item": [
     {
@@ -325,7 +325,7 @@
           ]
         },
         {
-          "name": "[NW] Rating",
+          "name": "Rating",
           "request": {
             "method": "POST",
             "header": [],
@@ -6025,13 +6025,13 @@
           "response": []
         },
         {
-          "name": "Rating[nw]",
+          "name": "Rating",
           "request": {
             "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"bpp_id\": \"alpha-odr-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://alpha-odr-network-bpp.becknprotocol.io\",\n                \"domain\": \"online-dispute-resolution:0.1.0\"\n            },\n            \"message\": {\n                \"ratings\": [\n                    {\n                        \"id\": \"a9aaecca-10b7-4d19-b640-b047a7c621961676906777032\",\n                        \"rating_category\": \"Provider\"\n                    }\n                ]\n            }\n        }\n    ]\n}",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n               \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"domain\": \"online-dispute-resolution:0.1.0\"\n            },\n            \"message\": {\n                \"ratings\": [\n                    {\n                        \"id\": \"a9aaecca-10b7-4d19-b640-b047a7c621961676906777032\",\n                        \"rating_category\": \"Provider\"\n                    }\n                ]\n            }\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -6047,13 +6047,13 @@
           "response": []
         },
         {
-          "name": "Cancel[NW]",
+          "name": "Cancel",
           "request": {
             "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n                \"bpp_id\": \"alpha-odr-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://alpha-odr-network-bpp.becknprotocol.io\",\n                \"domain\": \"online-dispute-resolution:0.1.0\"\n            },\n            \"message\": {\n                \"order_id\": \"572BHD23HD\",\n                \"cancellation_reason_id\": \"5\",\n                \"descriptor\": {\n                    \"short_desc\": \"Dispute dropped\"\n                }\n            }\n        }\n    ]\n}",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"domain\": \"online-dispute-resolution:0.1.0\"\n            },\n            \"message\": {\n                \"order_id\": \"572BHD23HD\",\n                \"cancellation_reason_id\": \"5\",\n                \"descriptor\": {\n                    \"short_desc\": \"Dispute dropped\"\n                }\n            }\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -6556,7 +6556,7 @@
               ]
             },
             {
-              "name": "Rating[NW]",
+              "name": "Rating",
               "request": {
                 "method": "POST",
                 "header": [],
@@ -7214,7 +7214,7 @@
               ]
             },
             {
-              "name": "Rating[NW]",
+              "name": "Rating",
               "request": {
                 "method": "POST",
                 "header": [],
@@ -7959,7 +7959,7 @@
               ]
             },
             {
-              "name": "Rating[NW]",
+              "name": "Rating",
               "request": {
                 "method": "POST",
                 "header": [],

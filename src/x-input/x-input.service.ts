@@ -46,12 +46,13 @@ export class XInputService {
       const method = body?.method;
       delete body.action;
       delete body.method;
+
       const submitFormDataResp = await this.httpClient.client({
         url: actionUrl,
         method,
         data: body
       });
-      return submitFormDataResp;
+      return submitFormDataResp.data;
     } catch (error: any) {
       return { message: error.message };
     }
