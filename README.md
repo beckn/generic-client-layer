@@ -1,5 +1,10 @@
 # BB Generic Client Layer
 
+| Name                          | Version | Release Note                              |
+|-------------------------------|---------|-------------------------------------------|
+| Generic Client Layer          | v1.1.0  | Minor Bug fixes                           |
+
+
 ## Overall Architecture
 
 Objective is to build domain-agnostic, reusable components for beckn applications, that  can be configured and used across various domains. This requires a flexible and modular architecture, that can adapt to various domains with minimal code changes.
