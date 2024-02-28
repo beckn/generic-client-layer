@@ -35,6 +35,7 @@ class App {
           methods: ["GET", "PUT", "POST", "PATCH", "DELETE", "OPTIONS"]
         })
       );
+      app.set("trust proxy", true);
     });
 
     this.app.use(server.build());
