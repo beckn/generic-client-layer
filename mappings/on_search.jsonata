@@ -56,12 +56,6 @@
                                         "state": location.state.name,
                                         "area_code": location.area_code
                                     }
-                                }[],
-                                "tags": tags.{
-                                    "code": descriptor.code,
-                                    "name": descriptor.name,
-                                    "display": display,
-                                    "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                                 }[]
                             }
                         }
