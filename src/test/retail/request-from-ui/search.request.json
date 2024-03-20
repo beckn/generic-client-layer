@@ -1,0 +1,17 @@
+{
+  "context": {
+    "domain": "retail:1.1.0"
+  },
+  "searchString": "earphone",
+  "category": {
+    "categoryCode": "electronics"
+  },
+  "fulfillment": {
+    "type": "Delivery",
+    "stops": [
+      {
+        "location": "28.4594965,77.0266383"
+      }
+    ]
+  }
+}
