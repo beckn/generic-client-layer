@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "context": {
+        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io",
+        "domain": "retail:1.1.0"
+      },
+      "message": { "order_id": "b989c9a9-f603-4d44-b38d-26fd72286b38" }
+    }
+  ]
+}
