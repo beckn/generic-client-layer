@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "bpp_id": "shreyvishalnew.bpp",
+        "bpp_uri": "https://e099-2401-4900-1c2c-8fff-00-98-aead.ngrok-free.app",
+        "domain": "online-dispute-resolution:0.1.0"
+      },
+      "message": {
+        "orders": {
+          "provider": {
+            "id": "ODR001"
+          },
+          "items": [
+            {
+              "id": "ALPHA-ARB-01",
+              "category_ids": ["ODRCAT001"]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

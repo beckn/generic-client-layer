@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "bpp_id": "{{bpp_id}}",
+        "bpp_uri": "{{bpp_uri}}",
+        "domain": "online-dispute-resolution:0.1.0"
+      },
+      "message": {
+        "order_id": "66b7b9bad166"
+      }
+    }
+  ]
+}

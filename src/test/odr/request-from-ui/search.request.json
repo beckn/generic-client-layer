@@ -1,0 +1,10 @@
+{
+  "context": {
+    "domain": "online-dispute-resolution:0.1.0",
+    "bpp_id": "{{bpp_id}}",
+    "bpp_uri": "{{bpp_uri}}"
+  },
+  "category": {
+    "categoryCode": "arbitration-service"
+  }
+}

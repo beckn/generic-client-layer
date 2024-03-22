@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "online-dispute-resolution:0.1.0",
+        "action": "on_rating",
+        "version": "1.1.0",
+        "bpp_id": "shreyvishalnew.bpp",
+        "bpp_uri": "https://e099-2401-4900-1c2c-8fff-00-98-aead.ngrok-free.app",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "code": "IND"
+          }
+        },
+        "bap_id": "shivani-bap",
+        "bap_uri": "https://4328-2401-4900-1c2d-6cc8-f4a6-dedb-8e42-f3d8.ngrok-free.app",
+        "transaction_id": "f0d52a56-6aa3-4522-affd-a757e3f12de3",
+        "message_id": "0c3b8ad6-9fd6-4277-8032-8f27eeb89996",
+        "ttl": "PT10M",
+        "timestamp": "2024-03-22T11:26:16.012Z"
+      },
+      "message": {
+        "feedback_form": {
+          "xinput": {
+            "form": {
+              "url": "https://alpha-odr-network-bpp.becknprotocol.io/feedback/portal"
+            },
+            "required": "false"
+          }
+        }
+      }
+    }
+  ]
+}
