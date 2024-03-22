@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "bpp_id": "{{bpp_id}}",
+        "bpp_uri": "{{bpp_uri}}",
+        "domain": "online-dispute-resolution:0.1.0"
+      },
+      "message": {
+        "orders": {
+          "provider": {
+            "id": "ODR001"
+          },
+          "items": [
+            {
+              "id": "ALPHA-ARB-01",
+              "category_ids": ["ODRCAT001"],
+              "xinput": {
+                "form_response": {
+                  "status": true,
+                  "submission_id": "c844d5f4-29c3-4398-b594-8b4716ef5dbf"
+                }
+              }
+            }
+          ],
+          "billing": {
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "address": "21A, ABC Appartments, HSR Layout, Bengaluru"
+          },
+          "fulfillments": [
+            {
+              "customer": {
+                "person": {
+                  "name": "John Doe"
+                },
+                "contact": {
+                  "phone": "+91-9999999999",
+                  "email": "john.doe@example.com"
+                }
+              }
+            }
+          ],
+          "tags": [
+            {
+              "descriptor": {
+                "name": "consent-form"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

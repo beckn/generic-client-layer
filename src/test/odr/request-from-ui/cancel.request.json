@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "bpp_id": "alpha-odr-bpp.becknprotocol.io",
+        "bpp_uri": "https://alpha-odr-network-bpp.becknprotocol.io",
+        "domain": "online-dispute-resolution:0.1.0"
+      },
+      "message": {
+        "order_id": "572BHD23HD",
+        "cancellation_reason_id": "5",
+        "descriptor": {
+          "short_desc": "Dispute dropped"
+        }
+      }
+    }
+  ]
+}

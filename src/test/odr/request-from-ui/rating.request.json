@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "context": {
+        "bpp_id": "{{bpp_id}}",
+        "bpp_uri": "{{bpp_uri}}",
+        "domain": "online-dispute-resolution:0.1.0"
+      },
+      "message": {
+        "ratings": [
+          {
+            "id": "a9aaecca-10b7-4d19-b640-b047a7c621961676906777032",
+            "rating_category": "Provider"
+          }
+        ]
+      }
+    }
+  ]
+}
