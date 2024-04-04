@@ -58,7 +58,14 @@
                 "quote": message.order.quote,
                 "billing": message.order.billing,
                 "payments": message.order.payments,
-                "cancellation_terms": message.order.cancellation_terms
+                "cancellation_terms": message.order.cancellation_terms,
+
+                "tags": tags.{
+                        "code": descriptor.code,
+                        "name": descriptor.name,
+                        "display": display,
+                        "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
+                    }[]
             }
         }
     }[]
