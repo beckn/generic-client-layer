@@ -59,7 +59,7 @@
                 "payments": message.order.payments,
                 "cancellation_terms": message.order.cancellation_terms,
 
-                "tags": tags.{
+                "tags": message.order.tags.{
                         "code": descriptor.code,
                         "name": descriptor.name,
                         "display": display,
