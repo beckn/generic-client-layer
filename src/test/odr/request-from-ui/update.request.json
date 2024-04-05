@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "bpp_id": "{{bpp_id}}",
+        "bpp_uri": "{{bpp_uri}}",
+        "domain": "online-dispute-resolution:0.1.0"
+      },
+      "orderId": "2ab2ebf6-02b9-47b3-9a82-b8f7aa80f5b2",
+      "updateDetails": {
+        "updateTarget": "order.fulfillments[0].agent",
+        "fulfillments": [
+          {
+            "agent": {
+              "person": {
+                "id": "ca063dc9d321",
+                "name": "Mr Adam Smith"
+              }
+            }
+          }
+        ],
+        "tags": [
+          {
+            "descriptor": {
+              "name": "agent"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

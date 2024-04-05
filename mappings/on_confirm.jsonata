@@ -20,6 +20,7 @@
                 "code":descriptor.code,
                 "short_desc":descriptor.short_desc,
                 "long_desc":descriptor.long_desc,
+                "images": descriptor.images.{"url": url, "size_type": size_type, "width": width, "height": height}[],
                 "price": price,
                 "rating": rating,
                 "rateable": rateable,
@@ -48,12 +49,19 @@
                         "display": display,
                         "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                     }[]
-            },
+            }[],
                 "fulfillments": message.order.fulfillments,
                 "quote": message.order.quote,
                 "billing": message.order.billing,
                 "payments": message.order.payments,
-                "cancellation_terms": message.order.cancellation_terms
+                "cancellation_terms": message.order.cancellation_terms,
+
+                "tags": message.order.tags.{
+                        "code": descriptor.code,
+                        "name": descriptor.name,
+                        "display": display,
+                        "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
+                    }[]
         }
     }[]
 }
