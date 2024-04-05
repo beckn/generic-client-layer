@@ -23,6 +23,7 @@
                     "name": descriptor.name,
                     "short_desc": descriptor.short_desc,
                     "long_desc": descriptor.long_desc,
+                    "images": descriptor.images.{"url": url, "size_type": size_type, "width": width, "height": height}[],
                     "price": price,
                     "rating": rating,
                     "rateable": rateable,
