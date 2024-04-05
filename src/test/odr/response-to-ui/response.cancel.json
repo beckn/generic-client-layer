@@ -1,0 +1,154 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "online-dispute-resolution:0.1.0",
+        "action": "on_cancel",
+        "version": "1.1.0",
+        "bpp_id": "shreyvishalnew.bpp",
+        "bpp_uri": "https://e099-2401-4900-1c2c-8fff-00-98-aead.ngrok-free.app",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "code": "IND"
+          }
+        },
+        "bap_id": "shivani-bap",
+        "bap_uri": "https://4328-2401-4900-1c2d-6cc8-f4a6-dedb-8e42-f3d8.ngrok-free.app",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "message_id": "a6d0df0c-e7dc-4ce5-b698-92d4d4532c8e",
+        "ttl": "PT10M",
+        "timestamp": "2024-03-22T08:46:12.519Z"
+      },
+      "message": {
+        "order": {
+          "type": "DEFAULT",
+          "provider": {
+            "id": "ODR001",
+            "name": "Alpha",
+            "short_desc": "Alpha Pvt Ltd., India.",
+            "long_desc": "Alpha Pvt Ltd., India. provides online dispute resolution services. Out platform facilitates easy access to high quality service providers which helps avoid hassles of court, saving time and money and relationships.",
+            "images": {
+              "url": "https://www.alpha.com/content/dam/alpha/india/assets/images/header/logo.png",
+              "size_type": "xs"
+            }
+          },
+          "items": [
+            {
+              "id": "ALPHA-ARB-01",
+              "name": "Arbitration Services"
+            }
+          ],
+          "fulfillments": [
+            {
+              "customer": {
+                "person": {
+                  "name": "John Doe"
+                },
+                "contact": {
+                  "phone": "+91-9999999999",
+                  "email": "john.doe@example.com"
+                }
+              },
+              "agent": {
+                "person": {
+                  "id": "fsjks743DGS",
+                  "name": "Mr Adam Smith"
+                },
+                "contact": {
+                  "phone": "+91-7898765665",
+                  "email": "adam.smith@odr.com"
+                }
+              },
+              "state": {
+                "descriptor": {
+                  "code": "dispute-cancelled",
+                  "name": "Dispute Order Cancelled"
+                },
+                "updated_at": "2023-11-26T05:23:03.443Z"
+              },
+              "tracking": false
+            }
+          ],
+          "quote": {
+            "price": {
+              "currency": "INR",
+              "value": "12500"
+            },
+            "breakup": [
+              {
+                "title": "Base fee",
+                "price": {
+                  "value": "7000",
+                  "currency": "INR"
+                }
+              },
+              {
+                "title": "Agent fees",
+                "price": {
+                  "value": "5000",
+                  "currency": "INR"
+                }
+              },
+              {
+                "title": "Fee per hearing",
+                "price": {
+                  "value": "500",
+                  "currency": "INR"
+                }
+              },
+              {
+                "title": "Cancellation fees",
+                "price": {
+                  "value": "5000",
+                  "currency": "INR"
+                }
+              }
+            ]
+          },
+          "billing": {
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "address": "21A, ABC Appartments, HSR Layout, Bengaluru",
+            "city": {
+              "name": "Bengaluru"
+            }
+          },
+          "payments": [
+            {
+              "type": "PRE-ORDER",
+              "params": {
+                "amount": "12000",
+                "currency": "INR"
+              },
+              "status": "PAID",
+              "time": {
+                "range": {
+                  "start": "2023-06-01T00:00:00.000Z",
+                  "end": "2023-06-30T23:59:59.000Z"
+                }
+              }
+            }
+          ],
+          "cancellation_terms": [
+            {
+              "fulfillment_state": {
+                "descriptor": {
+                  "code": "dispute-hearing-in-progress"
+                }
+              },
+              "cancellation_fee": {
+                "percentage": "30%"
+              },
+              "external_ref": {
+                "mimetype": "text/html",
+                "url": "https://alpha.in/charge/tnc.html"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

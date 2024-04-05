@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "online-dispute-resolution:0.1.0",
+        "action": "on_select",
+        "version": "1.1.0",
+        "bpp_id": "shreyvishalnew.bpp",
+        "bpp_uri": "https://e099-2401-4900-1c2c-8fff-00-98-aead.ngrok-free.app",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "code": "IND"
+          }
+        },
+        "bap_id": "shivani-bap",
+        "bap_uri": "https://4328-2401-4900-1c2d-6cc8-f4a6-dedb-8e42-f3d8.ngrok-free.app",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "message_id": "ee37f166-f31b-4b8f-b868-950a36ea9e95",
+        "ttl": "PT10M",
+        "timestamp": "2024-03-22T09:40:00.143Z"
+      },
+      "message": {
+        "order": {
+          "type": "DEFAULT",
+          "quote": {
+            "price": {
+              "currency": "INR",
+              "value": "2500"
+            },
+            "breakup": [
+              {
+                "title": "Base fee",
+                "price": {
+                  "value": "2000",
+                  "currency": "INR"
+                }
+              },
+              {
+                "title": "Fee per hearing",
+                "price": {
+                  "value": "500",
+                  "currency": "INR"
+                }
+              }
+            ]
+          },
+          "provider": {
+            "id": "ODR001",
+            "name": "Alpha",
+            "short_desc": "Alpha Pvt Ltd., India.",
+            "long_desc": "Alpha Pvt Ltd., India. provides online dispute resolution services. Out platform facilitates easy access to high quality service providers which helps avoid hassles of court, saving time and money and relationships.",
+            "images": {
+              "url": "https://www.alpha.com/content/dam/alpha/india/assets/images/header/logo.png",
+              "size_type": "xs"
+            }
+          },
+          "items": [
+            {
+              "id": "ALPHA-ARB-01",
+              "name": "Arbitration Services",
+              "short_desc": "Seamless resolution for disputes. Our expert arbitration services ensure fairness and harmony in legal matters, fostering peaceful settlements.",
+              "long_desc": "<html><body><p>HarmonyArbitrators specializes in comprehensive arbitration services for civil, family, employment, commercial, and financial disputes.</p><p>Our seasoned arbitrators prioritize efficiency, ensuring fair and impartial resolutions. With a commitment to transparency and client satisfaction, we navigate complexities with professionalism, adhering to ethical standards. Trust HarmonyArbitrators for streamlined processes, timely outcomes, and tailored solutions. We strive not only to resolve disputes but also to leave parties with a sense of harmony and justice. Experience dedicated and effective dispute resolution with HarmonyArbitrators.</p></body></html>",
+              "categories": [
+                {
+                  "id": "ODRCAT001",
+                  "name": "Civil Dispute",
+                  "code": "civil-dispute"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

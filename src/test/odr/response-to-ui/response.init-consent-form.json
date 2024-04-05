@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "online-dispute-resolution:0.1.0",
+        "action": "on_init",
+        "version": "1.1.0",
+        "bpp_id": "shreyvishalnew.bpp",
+        "bpp_uri": "https://e099-2401-4900-1c2c-8fff-00-98-aead.ngrok-free.app",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "code": "IND"
+          }
+        },
+        "bap_id": "shivani-bap",
+        "bap_uri": "https://4328-2401-4900-1c2d-6cc8-f4a6-dedb-8e42-f3d8.ngrok-free.app",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "message_id": "5f813e7f-e2c3-4157-9d83-0bb8b1d3b766",
+        "ttl": "PT10M",
+        "timestamp": "2024-03-22T10:08:36.104Z"
+      },
+      "message": {
+        "order": {
+          "type": "DEFAULT",
+          "provider": {
+            "id": "ODR001",
+            "name": "Alpha",
+            "short_desc": "Alpha Pvt Ltd., India.",
+            "long_desc": "Alpha Pvt Ltd., India. provides online dispute resolution services. Out platform facilitates easy access to high quality service providers which helps avoid hassles of court, saving time and money and relationships.",
+            "images": {
+              "url": "https://www.alpha.com/content/dam/alpha/india/assets/images/header/logo.png",
+              "size_type": "xs"
+            }
+          },
+          "items": [
+            {
+              "id": "ALPHA-ARB-01",
+              "name": "Arbitration Services",
+              "xinput": {
+                "url": "https://6vs8xnx5i7.alpha.co.in/agreement/xinput/formid/a23f2fdfbbb8ac402bfd54f",
+                "mime_type": "text/html"
+              }
+            }
+          ],
+          "fulfillments": [
+            {
+              "customer": {
+                "person": {
+                  "name": "John Doe"
+                },
+                "contact": {
+                  "phone": "+91-9999999999",
+                  "email": "john.doe@example.com"
+                }
+              },
+              "tracking": false
+            }
+          ],
+          "quote": {
+            "price": {
+              "currency": "INR",
+              "value": "2500"
+            },
+            "breakup": [
+              {
+                "title": "Base fee",
+                "price": {
+                  "value": "2000",
+                  "currency": "INR"
+                }
+              },
+              {
+                "title": "Fee per hearing",
+                "price": {
+                  "value": "500",
+                  "currency": "INR"
+                }
+              }
+            ]
+          },
+          "billing": {
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "address": "21A, ABC Appartments, HSR Layout, Bengaluru",
+            "city": {
+              "name": "Bengaluru"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
