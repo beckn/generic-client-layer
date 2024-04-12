@@ -28,7 +28,13 @@
                     "rating": rating,
                     "rateable": rateable,
                     "time": time,
-                    "quantity": quantity
+                    "quantity": quantity,
+                     "tags": tags.{
+                        "code": descriptor.code,
+                        "name": descriptor.name,
+                        "display": display,
+                        "list": list.{ "code": code, "name": name, "value": value }[]
+                    }[]
                 }[],
                 "fulfillments": message.order.fulfillments,
                 "quote": message.order.quote,
