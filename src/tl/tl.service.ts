@@ -16,6 +16,12 @@ export class TLService {
         this.logger.info("Transforming %s data: \n%o", action, JSON.stringify(data));
         let transformed = await expression.evaluate(data, { action, ...tlHelpers });
         transformed = ObjectUtil.removeEmptyObjectKeys(transformed)
+        // If no response from BPP, return empty/defult response
+        if (!Object.keys(transformed).length) {
+            transformed = {
+                data: []
+            };
+        }
         this.logger.info("Transformed %s data: \n%o", action, JSON.stringify(transformed));
 
         return transformed;
