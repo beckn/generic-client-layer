@@ -1,6 +1,7 @@
 {
     "data": $.responses.{
         "context": context,
-        "message": message
+        "message": message,
+        "rawResponse": $includeRawResponse ? $ :{}
     }[]
 }
