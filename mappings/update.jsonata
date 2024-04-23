@@ -2,9 +2,9 @@ $.data.{
     "context":$context(context, $action),
     "message":{
         "order":{
-            "id": orderId,
-            "fulfillments": updateDetails.fulfillments,
-            "billing": updateDetails.billing
+            "id":orderId,
+            "fulfillments":updateDetails.fulfillments,
+            "billing":updateDetails.billing
         },
         "update_target":updateDetails.updateTarget
     }
