@@ -86,7 +86,8 @@
                 "images": descriptor.images.{"url": url}[],
                 "media": descriptor.media.{"url": url, "mimetype": mimetype}[]
             }[]
-        }
+        },
+        "rawResponse": $includeRawResponse ? $ :{}
     }[],
     "error": {
         "description": error.description,

@@ -62,6 +62,7 @@
                         "display": display,
                         "list": list.{ "code": code, "name": name, "value": value }[]
                     }[]
-        }
+        },
+        "rawResponse": $includeRawResponse ? $ :{}
     }[]
 }

@@ -8,6 +8,7 @@
                      "id": message.tracking.id,
                     "location": message.tracking.location
                 }
-            }
+        },
+        "rawResponse": $includeRawResponse ? $ :{}
     }[]
 }

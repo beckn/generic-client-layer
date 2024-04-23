@@ -12,7 +12,12 @@ export class GCLService {
   async search(body: any) {
     const payload = await this.tlService.transform(body, "search");
     const psResponse = await this.psClientService.post(payload);
-    const response = await this.tlService.transform(psResponse, "on_search");
+
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_search",
+      body?.includeRawResponse
+    );
 
     return response;
   }
@@ -20,7 +25,11 @@ export class GCLService {
   async select(body: any) {
     const payload = await this.tlService.transform(body, "select");
     const psResponse = await this.psClientService.postMany(payload);
-    const response = await this.tlService.transform(psResponse, "on_select");
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_select",
+      body?.includeRawResponse
+    );
 
     return response;
   }
@@ -28,7 +37,11 @@ export class GCLService {
   async init(body: any) {
     const payload = await this.tlService.transform(body, "init");
     const psResponse = await this.psClientService.postMany(payload);
-    const response = await this.tlService.transform(psResponse, "on_init");
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_init",
+      body?.includeRawResponse
+    );
 
     return response;
   }
@@ -36,7 +49,11 @@ export class GCLService {
   async confirm(body: any) {
     const payload = await this.tlService.transform(body, "confirm");
     const psResponse = await this.psClientService.postMany(payload);
-    const response = await this.tlService.transform(psResponse, "on_confirm");
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_confirm",
+      body?.includeRawResponse
+    );
 
     return response;
   }
@@ -44,7 +61,11 @@ export class GCLService {
   async status(body: any) {
     const payload = await this.tlService.transform(body, "status");
     const psResponse = await this.psClientService.postMany(payload);
-    const response = await this.tlService.transform(psResponse, "on_status");
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_status",
+      body?.includeRawResponse
+    );
 
     return response;
   }
@@ -52,7 +73,11 @@ export class GCLService {
   async rating(body: any) {
     const payload = await this.tlService.transform(body, "rating");
     const psResponse = await this.psClientService.postMany(payload);
-    const response = await this.tlService.transform(psResponse, "on_rating");
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_rating",
+      body?.includeRawResponse
+    );
 
     return response;
   }
@@ -60,7 +85,11 @@ export class GCLService {
   async cancel(body: any) {
     const payload = await this.tlService.transform(body, "cancel");
     const psResponse = await this.psClientService.postMany(payload);
-    const response = await this.tlService.transform(psResponse, "on_cancel");
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_cancel",
+      body?.includeRawResponse
+    );
 
     return response;
   }
@@ -68,21 +97,33 @@ export class GCLService {
   async update(body: any) {
     const payload = await this.tlService.transform(body, "update");
     const psResponse = await this.psClientService.postMany(payload);
-    const response = await this.tlService.transform(psResponse, "on_update");
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_update",
+      body?.includeRawResponse
+    );
 
     return response;
   }
   async support(body: any) {
     const payload = await this.tlService.transform(body, "support");
     const psResponse = await this.psClientService.postMany(payload);
-    const response = await this.tlService.transform(psResponse, "on_support");
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_support",
+      body?.includeRawResponse
+    );
 
     return response;
   }
   async track(body: any) {
     const payload = await this.tlService.transform(body, "track");
     const psResponse = await this.psClientService.postMany(payload);
-    const response = await this.tlService.transform(psResponse, "on_track");
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_track",
+      body?.includeRawResponse
+    );
 
     return response;
   }

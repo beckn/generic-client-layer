@@ -72,7 +72,8 @@
                         "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                     }[]
             }
-        }
+        },
+        "rawResponse": $includeRawResponse ? $ :{}
     }[]
 }
 
