@@ -9395,6 +9395,263 @@
           "response": []
         }
       ]
+    },
+    {
+      "name": "Tourism",
+      "item": [
+        {
+          "name": "Search",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json, text/plain, */*"
+              },
+              {
+                "key": "accept-language",
+                "value": "en-GB,en-US;q=0.9,en;q=0.8"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "origin",
+                "value": "https://tourism-cityoflights-dev.becknprotocol.io"
+              },
+              {
+                "key": "referer",
+                "value": "https://tourism-cityoflights-dev.becknprotocol.io/"
+              },
+              {
+                "key": "sec-fetch-dest",
+                "value": "empty"
+              },
+              {
+                "key": "sec-fetch-mode",
+                "value": "cors"
+              },
+              {
+                "key": "sec-fetch-site",
+                "value": "same-site"
+              },
+              {
+                "key": "user-agent",
+                "value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"context\": {\n        \"domain\": \"tourism\"\n    },\n    \"searchString\": \"Himalayas\",\n    \"fulfillment\": {\n        \"type\": \"Delivery\",\n        \"stops\": [\n            {\n                \"location\": \"28.4594965,77.0266383\"\n            }\n        ]\n    }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/search",
+              "host": ["{{base_url}}"],
+              "path": ["search"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Select",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n           \"context\": {\n                \"transaction_id\": \"0ac9a230-745b-4667-b316-5b704e300685\",\n                \"bpp_id\": \"{{bpp_vendure_id}}\",\n                \"bpp_uri\": \"{{bpp_vendure_uri}}\",\n                \"domain\": \"tourism\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"items\": [\n                            {\n                                \"id\": \"8\",\n                                \"quantity\": {\n                                    \"selected\": {\n                                        \"count\": 1\n                                    }\n                                }\n                            }\n                        ],\n                        \"provider\": {\n                            \"id\": \"worldhikes-token\"\n                        }\n                    }\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/select",
+              "host": ["{{base_url}}"],
+              "path": ["select"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Init",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"0ac9a230-745b-4667-b316-5b704e300685\",\n                \"bpp_id\": \"{{bpp_vendure_id}}\",\n                \"bpp_uri\": \"{{bpp_vendure_uri}}\",\n                \"domain\": \"tourism\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"provider\": {\n                            \"id\": \"worldhikes-token\"\n                        },\n                        \"items\": [\n                            {\n                                \"id\": \"8\",\n                                \"quantity\": {\n                                    \"selected\": {\n                                        \"count\": 1\n                                    }\n                                }\n                            }\n                        ],\n                        \"fulfillments\": [\n                            {\n                                \"id\": \"5\",\n                                \"type\": \"worldhikes-shipping\",\n                                \"stops\": [\n                                    {\n                                        \"location\": {\n                                            \"gps\": \"28.6805926,77.4587239\",\n                                            \"address\": \"15 Rue du Soleil, Paris, France\",\n                                            \"city\": {\n                                                \"name\": \"Ghaziabad\"\n                                            },\n                                            \"state\": {\n                                                \"name\": \"Uttar Pradesh\"\n                                            },\n                                            \"country\": {\n                                                \"code\": \"IND\"\n                                            },\n                                            \"area_code\": \"201002\"\n                                        },\n                                        \"contact\": {\n                                            \"phone\": \"0612345678\",\n                                            \"email\": \"antoine.dubois@gmail.com\"\n                                        }\n                                    }\n                                ]\n                            }\n                        ],\n                        \"customer\": {\n                            \"person\": {\n                                \"name\": \"Antoine Dubois\"\n                            },\n                            \"contact\": {\n                                \"phone\": \"0612345678\"\n                            }\n                        },\n                        \"billing\": {\n                            \"name\": \"Antoine Dubois\",\n                            \"phone\": \"0612345678\",\n                            \"address\": \"15 Rue du Soleil, Paris, France\",\n                            \"email\": \"antoine.dubois@gmail.com\",\n                            \"city\": {\n                                \"name\": \"Ghaziabad\"\n                            },\n                            \"state\": {\n                                \"name\": \"Uttar Pradesh\"\n                            }\n                        }\n                    }\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/init",
+              "host": ["{{base_url}}"],
+              "path": ["init"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Confirm",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"0ac9a230-745b-4667-b316-5b704e300685\",\n                \"bpp_id\": \"{{bpp_vendure_id}}\",\n                \"bpp_uri\": \"{{bpp_vendure_uri}}\",\n                \"domain\": \"tourism\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"provider\": {\n                            \"id\": \"worldhikes-token\"\n                        },\n                        \"items\": [\n                            {\n                                \"id\": \"8\",\n                                \"quantity\": {\n                                    \"selected\": {\n                                        \"count\": 1\n                                    }\n                                }\n                            }\n                        ],\n                        \"fulfillments\": [\n                            {\n                                \"id\": \"5\",\n                                \"type\": \"worldhikes-shipping\",\n                                \"stops\": [\n                                    {\n                                        \"location\": {\n                                            \"gps\": \"28.6805926,77.4587239\",\n                                            \"address\": \"15 Rue du Soleil, Paris, France\",\n                                            \"city\": {\n                                                \"name\": \"Ghaziabad\"\n                                            },\n                                            \"state\": {\n                                                \"name\": \"Uttar Pradesh\"\n                                            },\n                                            \"country\": {\n                                                \"code\": \"IND\"\n                                            },\n                                            \"area_code\": \"201002\"\n                                        },\n                                        \"contact\": {\n                                            \"phone\": \"0612345678\",\n                                            \"email\": \"antoine.dubois@gmail.com\"\n                                        }\n                                    }\n                                ],\n                                \"tracking\": false\n                            }\n                        ],\n                        \"billing\": {\n                            \"name\": \"Antoine Dubois\",\n                            \"phone\": \"0612345678\",\n                            \"email\": \"antoine.dubois@gmail.com\",\n                            \"address\": \"15 Rue du Soleil, Paris, France\",\n                            \"city\": {\n                                \"name\": \"Ghaziabad\"\n                            },\n                            \"state\": {\n                                \"name\": \"Uttar Pradesh\"\n                            }\n                        },\n                        \"payments\": [\n                            {\n                                \"id\": \"4\",\n                                \"params\": {\n                                    \"amount\": \"677.50\",\n                                    \"currency\": \"INR\"\n                                },\n                                \"status\": \"PAID\",\n                                \"type\": \"ON-FULFILLMENT\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/confirm",
+              "host": ["{{base_url}}"],
+              "path": ["confirm"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Status",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"0ac9a230-745b-4667-b316-5b704e300685\",\n                \"bpp_id\": \"{{bpp_vendure_id}}\",\n                \"bpp_uri\": \"{{bpp_vendure_uri}}\",\n                \"domain\": \"tourism\"\n            },\n            \"message\": {\n                \"order_id\": \"3425b2b8b13eb0132cde313de9895916b30eb9fac8df04ce05e3115fe790bccd\"\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/status",
+              "host": ["{{base_url}}"],
+              "path": ["status"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Track",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"tourism\",\n                \"bpp_id\": \"{{bpp_vendure_id}}\",\n                \"bpp_uri\": \"{{bpp_vendure_uri}}\",\n                \"transaction_id\": \"0ac9a230-745b-4667-b316-5b704e300685\"\n            },\n            \"orderId\": \"3425b2b8b13eb0132cde313de9895916b30eb9fac8df04ce05e3115fe790bccd\",\n            \"callbackUrl\": \"https://dhp-network-bap.becknprotocol.io/track/callback\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/track",
+              "host": ["{{base_url}}"],
+              "path": ["track"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"0ac9a230-745b-4667-b316-5b704e300685\",\n                \"bpp_id\": \"{{bpp_vendure_id}}\",\n                \"bpp_uri\": \"{{bpp_vendure_uri}}\",\n                \"domain\": \"tourism\"\n            },\n            \"message\": {\n                \"order_id\": \"3425b2b8b13eb0132cde313de9895916b30eb9fac8df04ce05e3115fe790bccd\",\n                \"cancellation_reason_id\": \"4\",\n                \"descriptor\": {\n                    \"short_desc\": \"I’ve changed my mind\"\n                }\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/cancel",
+              "host": ["{{base_url}}"],
+              "path": ["cancel"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Rating",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n               \"bpp_id\": \"{{bpp_vendure_id}}\",\n                \"bpp_uri\": \"{{bpp_vendure_uri}}\",\n                \"domain\": \"tourism\"\n            },\n            \"message\": {\n                \"ratings\": [\n                    {\n                        \"id\": \"8\",\n                        \"rating_category\": \"Item\",\n                        \"value\": \"3\"\n                    }\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/rating",
+              "host": ["{{base_url}}"],
+              "path": ["rating"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                 \"bpp_id\": \"{{bpp_vendure_id}}\",\n                \"bpp_uri\": \"{{bpp_vendure_uri}}\",\n                \"domain\": \"tourism\",\n                \"transaction_id\": \"6743e9e2-4fb5-487c-92b7-13ba8018f176\"\n            },\n            \"orderId\": \"3425b2b8b13eb0132cde313de9895916b30eb9fac8df04ce05e3115fe790bccd\",\n            \"updateDetails\": {\n                \"updateTarget\": \"order.fulfillments[0].customer.contact.phone\",\n                \"fulfillments\": [\n                    {\n                        \"customer\": {\n                            \"contact\": {\n                                \"phone\": \"+91-8056475647\"\n                            }\n                        }\n                    }\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/update",
+              "host": ["{{base_url}}"],
+              "path": ["update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Support",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"tourism\",\n                \"bpp_id\": \"{{bpp_vendure_id}}\",\n                \"bpp_uri\": \"{{bpp_vendure_uri}}\",\n                \"transaction_id\": \"8100d125-76a7-4588-88be-81b97657cd09\"\n            },\n            \"message\": {\n                \"support\": {\n                    \"ref_id\": \"894789-43954\",\n                    \"phone\": \"+91 4444444444\",\n                    \"email\": \"me@gmail.com\"\n                }\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/support",
+              "host": ["{{base_url}}"],
+              "path": ["support"]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ],
   "event": [
