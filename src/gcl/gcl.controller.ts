@@ -1,7 +1,13 @@
 import { inject, injectable } from "inversify";
-import { controller, httpPost, requestBody } from "inversify-express-utils";
+import {
+  controller,
+  httpPost,
+  requestBody,
+  response
+} from "inversify-express-utils";
 import { GCLService } from "./gcl.service";
 import { XInputService } from "../x-input/x-input.service";
+import { Response } from "express";
 
 @controller("/")
 export class GCLController {
@@ -11,32 +17,62 @@ export class GCLController {
   ) {}
 
   @httpPost("search")
-  public async search(@requestBody() body: any): Promise<any> {
+  public async search(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
     const searchResult = await this.service.search(body);
+    if (!Object.keys(searchResult).length) {
+      return res?.status(400).json({});
+    }
     return searchResult;
   }
 
   @httpPost("select")
-  public async select(@requestBody() body: any): Promise<any> {
+  public async select(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
     const selectResult = await this.service.select(body);
+    if (!Object.keys(selectResult).length) {
+      return res?.status(400).json({});
+    }
     return selectResult;
   }
 
   @httpPost("init")
-  public async init(@requestBody() body: any): Promise<any> {
+  public async init(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
     const initResult = await this.service.init(body);
+    if (!Object.keys(initResult).length) {
+      return res?.status(400).json({});
+    }
     return initResult;
   }
 
   @httpPost("confirm")
-  public async confirm(@requestBody() body: any): Promise<any> {
+  public async confirm(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
     const confirmResult = await this.service.confirm(body);
+    if (!Object.keys(confirmResult).length) {
+      return res?.status(400).json({});
+    }
     return confirmResult;
   }
 
   @httpPost("status")
-  public async status(@requestBody() body: any): Promise<any> {
+  public async status(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
     const statusResult = await this.service.status(body);
+    if (!Object.keys(statusResult).length) {
+      return res?.status(400).json({});
+    }
     return statusResult;
   }
 
@@ -47,25 +83,49 @@ export class GCLController {
   }
 
   @httpPost("cancel")
-  public async cancel(@requestBody() body: any): Promise<any> {
+  public async cancel(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
     const statusResult = await this.service.cancel(body);
+    if (!Object.keys(statusResult).length) {
+      return res?.status(400).json({});
+    }
     return statusResult;
   }
 
   @httpPost("update")
-  public async update(@requestBody() body: any): Promise<any> {
+  public async update(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
     const updateResult = await this.service.update(body);
+    if (!Object.keys(updateResult).length) {
+      return res?.status(400).json({});
+    }
     return updateResult;
   }
 
   @httpPost("support")
-  public async support(@requestBody() body: any): Promise<any> {
+  public async support(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
     const updateResult = await this.service.support(body);
+    if (!Object.keys(updateResult).length) {
+      return res?.status(400).json({});
+    }
     return updateResult;
   }
   @httpPost("track")
-  public async track(@requestBody() body: any): Promise<any> {
+  public async track(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
     const trackResult = await this.service.track(body);
+    if (!Object.keys(trackResult).length) {
+      return res?.status(400).json({});
+    }
     return trackResult;
   }
 
