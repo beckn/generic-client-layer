@@ -1,0 +1,196 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "select",
+    "timestamp": "2024-04-25T13:55:57.512Z",
+    "message_id": "9a3df966-9db4-483f-bb10-70f408e0de89",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-022723112309",
+    "domain": "dsep:scholarships",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dsep:scholarships",
+        "action": "on_select",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-022723112309",
+        "message_id": "9a3df966-9db4-483f-bb10-70f408e0de89",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T13:56:02.587Z"
+      },
+      "message": {
+        "order": {
+          "provider": {
+            "id": "20",
+            "descriptor": {
+              "name": "GLA University Admission Scholarship",
+              "short_desc": "The GLA university grants the GLA university scholarship to the academically brilliant students studying in M.Tech courses",
+              "long_desc": "Scholarship Details: The candidates who qualify for the M.Tech scholarship will be awarded INR 1,33,000 (GATE qualified candidates) and INR 1,05,000 (Non-GATE and GLAET qualified candidates)\n\nEligibility Criteria: The candidate must enroll in B.Tech/ B.Pharma/ M.Tech/ M.Pharma/ Ph.D. courses in GLA university. Additionally, the applicants must have cleared the entrance examinations of JEE Mains/ GATE/ GLAET with the required marks.",
+              "additional_desc": {
+                "url": "https://www.gla.ac.in/admissions/scholorship"
+              },
+              "images": [
+                {
+                  "url": "https://www.gla.ac.in/images/gla-university-logo.png",
+                  "size_type": "sm"
+                }
+              ]
+            },
+            "categories": [
+              { "id": "26", "descriptor": { "name": "GLA University" } },
+              { "id": "6", "descriptor": { "name": "Management" } },
+              { "id": "5", "descriptor": { "name": "Master Degree" } },
+              { "id": "7", "descriptor": { "name": "MBA" } }
+            ],
+            "locations": [
+              {
+                "id": "9",
+                "gps": "18.5401344, 77.5945370",
+                "address": "17km Stone, NH-19,\\nMathura-Delhi Road\\nP.O. Chaumuhan,\\nMathura-281 406 (U.P.) India",
+                "city": { "name": "Mathura" },
+                "country": { "name": "India" },
+                "state": { "name": "UP" },
+                "area_code": "281406"
+              },
+              { "id": "undefined", "area_code": "undefined" }
+            ],
+            "fulfillments": [
+              {
+                "id": "11",
+                "type": "scholarship",
+                "rating": "3.4",
+                "rateable": true,
+                "tracking": false
+              }
+            ],
+            "rateable": true
+          },
+          "items": [
+            {
+              "id": "26",
+              "descriptor": {
+                "name": "GLA University Admission Scholarship",
+                "short_desc": "The GLA university grants the GLA university scholarship to the academically brilliant students studying in M.Tech courses",
+                "long_desc": "Scholarship Details: The candidates who qualify for the M.Tech scholarship will be awarded INR 1,33,000 (GATE qualified candidates) and INR 1,05,000 (Non-GATE and GLAET qualified candidates)\n\nEligibility Criteria: The candidate must enroll in B.Tech/ B.Pharma/ M.Tech/ M.Pharma/ Ph.D. courses in GLA university. Additionally, the applicants must have cleared the entrance examinations of JEE Mains/ GATE/ GLAET with the required marks.",
+                "images": [
+                  {
+                    "url": "https://www.gla.ac.in/images/gla-university-logo.png",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "rating": "null",
+              "rateable": true,
+              "price": { "value": "0" },
+              "quantity": {
+                "available": { "measure": { "value": "0", "unit": "kWh" } }
+              },
+              "category_ids": ["26"],
+              "fulfillment_ids": ["11"],
+              "tags": [
+                {
+                  "display": true,
+                  "descriptor": { "description": "scholarships" },
+                  "list": [
+                    {
+                      "descriptor": { "description": "Scholarship" },
+                      "value": "scholarship",
+                      "code": "scholarship",
+                      "display": true
+                    }
+                  ]
+                },
+                {
+                  "display": true,
+                  "descriptor": { "description": "scholarships" },
+                  "list": [
+                    {
+                      "descriptor": { "description": "Ramaiah" },
+                      "display": true
+                    }
+                  ]
+                },
+                {
+                  "display": true,
+                  "descriptor": { "description": "DSEP" },
+                  "list": [
+                    {
+                      "descriptor": { "description": "Entrance" },
+                      "display": true
+                    }
+                  ]
+                }
+              ],
+              "xinput": {
+                "form": {
+                  "url": "https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/form?form_id=itemDetailsForm",
+                  "mime_type": "text/html"
+                }
+              }
+            }
+          ],
+          "quote": { "price": { "value": "0" } },
+          "categories": [
+            {
+              "id": "26",
+              "value": "GLA University",
+              "createdAt": "2023-09-29T15:45:21.069Z",
+              "updatedAt": "2023-09-29T15:45:23.765Z",
+              "publishedAt": "2023-09-29T15:45:23.754Z"
+            },
+            {
+              "id": "6",
+              "value": "Management",
+              "createdAt": "2023-09-14T11:50:24.692Z",
+              "updatedAt": "2023-09-14T11:50:26.013Z",
+              "publishedAt": "2023-09-14T11:50:26.009Z"
+            },
+            {
+              "id": "5",
+              "value": "Master Degree",
+              "createdAt": "2023-09-14T11:50:10.904Z",
+              "updatedAt": "2023-09-18T17:13:41.921Z",
+              "publishedAt": "2023-09-14T11:50:12.227Z"
+            },
+            {
+              "id": "7",
+              "value": "MBA",
+              "createdAt": "2023-09-14T11:50:40.680Z",
+              "updatedAt": "2023-09-14T11:50:42.066Z",
+              "publishedAt": "2023-09-14T11:50:42.061Z"
+            }
+          ],
+          "fulfillments": [
+            {
+              "id": "11",
+              "type": "scholarship",
+              "rating": "3.4",
+              "rateable": true,
+              "tracking": false
+            }
+          ],
+          "type": "DEFAULT"
+        }
+      }
+    }
+  ]
+}

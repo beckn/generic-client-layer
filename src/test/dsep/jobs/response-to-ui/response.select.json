@@ -1,0 +1,270 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dsep:jobs",
+        "action": "on_select",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "message_id": "6dbdb38e-25b3-4db1-b3a0-a8a8c85a6c1d",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T12:23:11.429Z"
+      },
+      "message": {
+        "order": {
+          "type": "DEFAULT",
+          "quote": { "price": { "value": "0" } },
+          "provider": {
+            "id": "13",
+            "name": "Accenture",
+            "images": {
+              "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg",
+              "size_type": "sm"
+            }
+          },
+          "items": [
+            {
+              "id": "6",
+              "xinput": {
+                "url": "https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/form?form_id=itemDetailsForm",
+                "mime_type": "text/html",
+                "html": "<html><head>\n    <title>XInput Form</title>\n</head>\n\n<body>\n    <form id=\"xinputform\">\n        <label for=\"plength\">Name: </label>\n        <input type=\"text\" name=\"name\" value=\"\">\n        <br><br>\n        <label for=\"itemCount\">Number of items: </label>\n        <input type=\"number\" name=\"number_of_items\" value=\"0\">\n        <br><br>\n        <button type=\"button\">Submit</button>\n    <input type=\"hidden\" value=\"https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/submit\" id=\"action\" name=\"action\"><input type=\"hidden\" value=\"post\" id=\"method\" name=\"method\"></form>\n\n\n</body></html>"
+              },
+              "name": "Analytics - Senior Analys",
+              "long_desc": "Job Description:\n\nYou will be part of the team which partners with the business leaders to provide data driven strategies to grow business KPIs like acquisition, customer engagement & retention, campaign optimization, personalized offering, etc.\nLeverage all the traditional and alternate data sources like credit bureau, digital data, partner data, social media and banking data to develop impactful strategies to drive business goals for marketing/product/customer/collections\nAnalyse large amounts of data and build solutions based on insights captured from data\nInnovate with a focus on developing newer and better approaches using big data & machine learning solution\nDevelop portfolio MIS and track the portfolio performance and recommend course of action\nAlign closely with the client's business teams to deliver on the business goals through strong analytics driven strategies.\n\nRole: Analytics - Senior Analyst\nIndustry Type: IT Services & Consulting\nDepartment: Data Science & Analytics\nEmployment Type: Full Time, Permanent\nEducation: Masters or Bachelor's in Computer Science, Mathematics, Statistics or Engineering\nExperience Required: 3-6 years\nLocation: Chennai\n",
+              "images": [
+                {
+                  "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg",
+                  "size_type": "sm"
+                }
+              ],
+              "price": { "value": "0" },
+              "rating": "null",
+              "rateable": true,
+              "quantity": {
+                "available": { "measure": { "value": "0", "unit": "kWh" } }
+              },
+              "categories": [{ "id": "16", "name": "Analytics" }],
+              "tags": [{ "display": true, "list": [null] }]
+            }
+          ],
+          "fulfillments": [
+            {
+              "id": "10",
+              "type": "job-type",
+              "rating": "4",
+              "rateable": true,
+              "tags": [
+                {
+                  "display": true,
+                  "list": [
+                    {
+                      "descriptor": { "description": "job-type" },
+                      "value": "job-type",
+                      "display": true
+                    }
+                  ]
+                }
+              ],
+              "tracking": false
+            },
+            {
+              "id": "10",
+              "type": "job-type",
+              "rating": "4",
+              "rateable": true,
+              "tracking": false
+            }
+          ]
+        }
+      },
+      "rawResponse": {
+        "context": {
+          "domain": "dsep:jobs",
+          "action": "on_select",
+          "version": "1.1.0",
+          "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+          "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+          "country": "IND",
+          "city": "std:080",
+          "location": {
+            "country": { "name": "India", "code": "IND" },
+            "city": { "name": "Bangalore", "code": "std:080" }
+          },
+          "bap_id": "bap-ps-network-dev.becknprotocol.io",
+          "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+          "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+          "message_id": "6dbdb38e-25b3-4db1-b3a0-a8a8c85a6c1d",
+          "ttl": "PT10M",
+          "timestamp": "2024-04-25T12:23:11.429Z"
+        },
+        "message": {
+          "order": {
+            "provider": {
+              "id": "13",
+              "descriptor": {
+                "name": "Accenture",
+                "images": [
+                  {
+                    "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "categories": [
+                { "id": "1", "descriptor": { "name": "IT" } },
+                { "id": "2", "descriptor": { "name": "Programming" } },
+                { "id": "16", "descriptor": { "name": "Analytics" } }
+              ],
+              "locations": [
+                {
+                  "id": "4",
+                  "gps": "18.5401344, 73.8295808",
+                  "address": "Building B-1, Magarpatta City (SEZ, Mundhwa Rd, Magarpatta, Hadapsar, ",
+                  "city": { "name": "Pune" },
+                  "country": { "name": "India" },
+                  "state": { "name": "Maharashtra" },
+                  "area_code": "411013"
+                },
+                { "id": "undefined", "area_code": "undefined" }
+              ],
+              "fulfillments": [
+                {
+                  "id": "10",
+                  "type": "job-type",
+                  "rating": "4",
+                  "rateable": true,
+                  "tags": [
+                    {
+                      "display": true,
+                      "list": [
+                        {
+                          "descriptor": { "description": "job-type" },
+                          "value": "job-type",
+                          "display": true
+                        }
+                      ]
+                    }
+                  ],
+                  "tracking": false
+                },
+                {
+                  "id": "10",
+                  "type": "job-type",
+                  "rating": "4",
+                  "rateable": true,
+                  "tracking": false
+                }
+              ],
+              "rateable": true
+            },
+            "items": [
+              {
+                "id": "6",
+                "descriptor": {
+                  "name": "Analytics - Senior Analys",
+                  "long_desc": "Job Description:\n\nYou will be part of the team which partners with the business leaders to provide data driven strategies to grow business KPIs like acquisition, customer engagement & retention, campaign optimization, personalized offering, etc.\nLeverage all the traditional and alternate data sources like credit bureau, digital data, partner data, social media and banking data to develop impactful strategies to drive business goals for marketing/product/customer/collections\nAnalyse large amounts of data and build solutions based on insights captured from data\nInnovate with a focus on developing newer and better approaches using big data & machine learning solution\nDevelop portfolio MIS and track the portfolio performance and recommend course of action\nAlign closely with the client's business teams to deliver on the business goals through strong analytics driven strategies.\n\nRole: Analytics - Senior Analyst\nIndustry Type: IT Services & Consulting\nDepartment: Data Science & Analytics\nEmployment Type: Full Time, Permanent\nEducation: Masters or Bachelor's in Computer Science, Mathematics, Statistics or Engineering\nExperience Required: 3-6 years\nLocation: Chennai\n",
+                  "images": [
+                    {
+                      "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg",
+                      "size_type": "sm"
+                    }
+                  ]
+                },
+                "rating": "null",
+                "rateable": true,
+                "price": { "value": "0" },
+                "quantity": {
+                  "available": { "measure": { "value": "0", "unit": "kWh" } }
+                },
+                "category_ids": ["16"],
+                "fulfillment_ids": ["10"],
+                "tags": [
+                  {
+                    "display": true,
+                    "descriptor": { "description": "DSEP" },
+                    "list": [
+                      {
+                        "descriptor": { "description": "Data Analytics Jobs" },
+                        "display": true
+                      }
+                    ]
+                  }
+                ],
+                "xinput": {
+                  "form": {
+                    "url": "https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/form?form_id=itemDetailsForm",
+                    "mime_type": "text/html"
+                  }
+                }
+              }
+            ],
+            "quote": { "price": { "value": "0" } },
+            "categories": [
+              {
+                "id": "1",
+                "value": "IT",
+                "createdAt": "2023-09-11T16:27:00.112Z",
+                "updatedAt": "2023-09-11T16:27:01.640Z",
+                "publishedAt": "2023-09-11T16:27:01.607Z"
+              },
+              {
+                "id": "2",
+                "value": "Programming",
+                "createdAt": "2023-09-11T16:27:11.658Z",
+                "updatedAt": "2023-09-11T16:27:13.352Z",
+                "publishedAt": "2023-09-11T16:27:13.349Z"
+              },
+              {
+                "id": "16",
+                "value": "Analytics",
+                "createdAt": "2023-09-28T18:54:57.851Z",
+                "updatedAt": "2023-09-28T18:54:59.753Z",
+                "publishedAt": "2023-09-28T18:54:59.749Z"
+              }
+            ],
+            "fulfillments": [
+              {
+                "id": "10",
+                "type": "job-type",
+                "rating": "4",
+                "rateable": true,
+                "tags": [
+                  {
+                    "display": true,
+                    "list": [
+                      {
+                        "descriptor": { "description": "job-type" },
+                        "value": "job-type",
+                        "display": true
+                      }
+                    ]
+                  }
+                ],
+                "tracking": false
+              },
+              {
+                "id": "10",
+                "type": "job-type",
+                "rating": "4",
+                "rateable": true,
+                "tracking": false
+              }
+            ],
+            "type": "DEFAULT"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "support",
+    "timestamp": "2024-04-25T13:39:17.672Z",
+    "message_id": "deb7183c-0467-4622-a258-34ac091017d0",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+    "domain": "dsep:jobs",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dsep:jobs",
+        "action": "on_support",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "message_id": "deb7183c-0467-4622-a258-34ac091017d0",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T13:39:22.275Z"
+      },
+      "message": {
+        "support": {
+          "ref_id": "1677140405881",
+          "phone": "+919843937283",
+          "email": "support@strapibpp.com",
+          "url": "https://www.strapibpp.com"
+        }
+      }
+    }
+  ]
+}

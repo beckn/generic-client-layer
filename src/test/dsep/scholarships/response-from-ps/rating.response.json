@@ -1,0 +1,20 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "rating",
+    "timestamp": "2024-04-26T05:40:42.092Z",
+    "message_id": "6bb3122b-ba12-496a-96d7-1444f0b1ddf2",
+    "transaction_id": "70d25962-8786-4d95-ba5e-57a89f6ffe4c",
+    "domain": "dsep:scholarships",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": []
+}

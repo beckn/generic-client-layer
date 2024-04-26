@@ -1,0 +1,241 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dsep:jobs",
+        "action": "on_confirm",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "message_id": "cfd212ee-541c-43ee-9493-761b724f466b",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T13:03:52.748Z"
+      },
+      "message": {
+        "orderId": "508",
+        "provider": {
+          "id": "13",
+          "name": "Accenture",
+          "images": [
+            {
+              "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg",
+              "size_type": "sm"
+            }
+          ]
+        },
+        "items": [
+          {
+            "id": "6",
+            "name": "Analytics - Senior Analys",
+            "long_desc": "Job Description:\n\nYou will be part of the team which partners with the business leaders to provide data driven strategies to grow business KPIs like acquisition, customer engagement & retention, campaign optimization, personalized offering, etc.\nLeverage all the traditional and alternate data sources like credit bureau, digital data, partner data, social media and banking data to develop impactful strategies to drive business goals for marketing/product/customer/collections\nAnalyse large amounts of data and build solutions based on insights captured from data\nInnovate with a focus on developing newer and better approaches using big data & machine learning solution\nDevelop portfolio MIS and track the portfolio performance and recommend course of action\nAlign closely with the client's business teams to deliver on the business goals through strong analytics driven strategies.\n\nRole: Analytics - Senior Analyst\nIndustry Type: IT Services & Consulting\nDepartment: Data Science & Analytics\nEmployment Type: Full Time, Permanent\nEducation: Masters or Bachelor's in Computer Science, Mathematics, Statistics or Engineering\nExperience Required: 3-6 years\nLocation: Chennai\n",
+            "images": [
+              {
+                "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg",
+                "size_type": "sm"
+              }
+            ],
+            "price": { "value": "0" },
+            "rating": "null",
+            "rateable": true,
+            "quantity": {
+              "available": { "measure": { "value": "0", "unit": "kWh" } }
+            },
+            "categories": [{ "id": "16", "name": "Analytics" }],
+            "tags": [{ "display": true, "list": [null] }]
+          }
+        ],
+        "fulfillments": [
+          {
+            "id": "1",
+            "customer": {
+              "person": {
+                "name": "Sanjay",
+                "gender": "M",
+                "creds": [
+                  {
+                    "id": "claimId:af7e0b1b5c4858eb",
+                    "type": "GenderData",
+                    "url": "https://cloud-wallet-api.prod.affinity-project.org/api/v1/share/b8a2c0cbc5a02da03d2aecb59094672a8e0b16a1c845456bd18678529d6901df?key=beda347c431e02319bd31c63e5f5f5f5e14939efdb6697ce4d93c87eade27c47"
+                  },
+                  {
+                    "id": "claimId:af7e0b1b5c4858eb",
+                    "type": "ResumeVC",
+                    "url": "https://cloud-wallet-api.prod.affinity-project.org/api/v1/share/b8a2c0cbc5a02da03d2aecb59094672a8e0b16a1c845456bd18678529d6901df?key=beda347c431e02319bd31c63e5f5f5f5e14939efdb6697ce4d93c87eade27c47"
+                  }
+                ],
+                "tags": [
+                  {
+                    "code": "func_skills",
+                    "list": [{ "code": "Android" }, { "code": "AWS" }],
+                    "display": true
+                  }
+                ]
+              },
+              "contact": { "phone": "9999999999999", "email": "abc@abc.bc" }
+            },
+            "tracking": false
+          }
+        ],
+        "quote": { "price": { "value": "0" } }
+      },
+      "rawResponse": {
+        "context": {
+          "domain": "dsep:jobs",
+          "action": "on_confirm",
+          "version": "1.1.0",
+          "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+          "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+          "country": "IND",
+          "city": "std:080",
+          "location": {
+            "country": { "name": "India", "code": "IND" },
+            "city": { "name": "Bangalore", "code": "std:080" }
+          },
+          "bap_id": "bap-ps-network-dev.becknprotocol.io",
+          "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+          "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+          "message_id": "cfd212ee-541c-43ee-9493-761b724f466b",
+          "ttl": "PT10M",
+          "timestamp": "2024-04-25T13:03:52.748Z"
+        },
+        "message": {
+          "order": {
+            "id": "508",
+            "provider": {
+              "id": "13",
+              "descriptor": {
+                "name": "Accenture",
+                "images": [
+                  {
+                    "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "categories": [
+                { "id": "1", "descriptor": { "name": "IT" } },
+                { "id": "2", "descriptor": { "name": "Programming" } },
+                { "id": "16", "descriptor": { "name": "Analytics" } }
+              ],
+              "locations": [
+                {
+                  "id": "4",
+                  "gps": "18.5401344, 73.8295808",
+                  "address": "Building B-1, Magarpatta City (SEZ, Mundhwa Rd, Magarpatta, Hadapsar, ",
+                  "city": { "name": "Pune" },
+                  "country": { "name": "India" },
+                  "state": { "name": "Maharashtra" },
+                  "area_code": "411013"
+                },
+                { "id": "undefined", "area_code": "undefined" }
+              ],
+              "fulfillments": [
+                {
+                  "id": "10",
+                  "type": "job-type",
+                  "rating": "4",
+                  "rateable": true,
+                  "tracking": false
+                },
+                {
+                  "id": "10",
+                  "type": "job-type",
+                  "rating": "4",
+                  "rateable": true,
+                  "tracking": false
+                },
+                {
+                  "id": "1",
+                  "rating": "null",
+                  "rateable": true,
+                  "state": {
+                    "description": "PAYMENT RECEIVED",
+                    "descriptor": {
+                      "code": "PAYMENT_RECEIVED",
+                      "name": "PAYMENT RECEIVED"
+                    }
+                  },
+                  "tracking": false
+                }
+              ],
+              "rateable": true
+            },
+            "items": [
+              {
+                "id": "6",
+                "descriptor": {
+                  "name": "Analytics - Senior Analys",
+                  "long_desc": "Job Description:\n\nYou will be part of the team which partners with the business leaders to provide data driven strategies to grow business KPIs like acquisition, customer engagement & retention, campaign optimization, personalized offering, etc.\nLeverage all the traditional and alternate data sources like credit bureau, digital data, partner data, social media and banking data to develop impactful strategies to drive business goals for marketing/product/customer/collections\nAnalyse large amounts of data and build solutions based on insights captured from data\nInnovate with a focus on developing newer and better approaches using big data & machine learning solution\nDevelop portfolio MIS and track the portfolio performance and recommend course of action\nAlign closely with the client's business teams to deliver on the business goals through strong analytics driven strategies.\n\nRole: Analytics - Senior Analyst\nIndustry Type: IT Services & Consulting\nDepartment: Data Science & Analytics\nEmployment Type: Full Time, Permanent\nEducation: Masters or Bachelor's in Computer Science, Mathematics, Statistics or Engineering\nExperience Required: 3-6 years\nLocation: Chennai\n",
+                  "images": [
+                    {
+                      "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg",
+                      "size_type": "sm"
+                    }
+                  ]
+                },
+                "rating": "null",
+                "rateable": true,
+                "price": { "value": "0" },
+                "quantity": {
+                  "available": { "measure": { "value": "0", "unit": "kWh" } }
+                },
+                "category_ids": ["16"],
+                "fulfillment_ids": ["10"],
+                "tags": [
+                  {
+                    "display": true,
+                    "descriptor": { "description": "DSEP" },
+                    "list": [{ "display": true }]
+                  }
+                ]
+              }
+            ],
+            "quote": { "price": { "value": "0" } },
+            "fulfillments": [
+              {
+                "id": "1",
+                "customer": {
+                  "person": {
+                    "name": "Sanjay",
+                    "gender": "M",
+                    "creds": [
+                      {
+                        "id": "claimId:af7e0b1b5c4858eb",
+                        "type": "GenderData",
+                        "url": "https://cloud-wallet-api.prod.affinity-project.org/api/v1/share/b8a2c0cbc5a02da03d2aecb59094672a8e0b16a1c845456bd18678529d6901df?key=beda347c431e02319bd31c63e5f5f5f5e14939efdb6697ce4d93c87eade27c47"
+                      },
+                      {
+                        "id": "claimId:af7e0b1b5c4858eb",
+                        "type": "ResumeVC",
+                        "url": "https://cloud-wallet-api.prod.affinity-project.org/api/v1/share/b8a2c0cbc5a02da03d2aecb59094672a8e0b16a1c845456bd18678529d6901df?key=beda347c431e02319bd31c63e5f5f5f5e14939efdb6697ce4d93c87eade27c47"
+                      }
+                    ],
+                    "tags": [
+                      {
+                        "code": "func_skills",
+                        "list": [{ "code": "Android" }, { "code": "AWS" }],
+                        "display": true
+                      }
+                    ]
+                  },
+                  "contact": { "phone": "9999999999999", "email": "abc@abc.bc" }
+                },
+                "tracking": false
+              }
+            ],
+            "type": "DEFAULT"
+          }
+        }
+      }
+    }
+  ]
+}

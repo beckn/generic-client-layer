@@ -1,0 +1,35 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "domain": "dsep:courses"
+      },
+      "orderId": "504",
+      "updateDetails": {
+        "updateTarget": "order.fulfillments[0].customer.person.name",
+        "fulfillments": [
+          {
+            "customer": {
+              "person": {
+                "name": "shreya vishal"
+              },
+              "contact": {
+                "phone": "9801223567",
+                "email": "abcd@test.com"
+              }
+            }
+          }
+        ],
+        "billing": {
+          "name": "John Doe",
+          "address": "Villa 5, Green Valley, Malleshwaram, 560012",
+          "email": "john.doe@example.com",
+          "phone": "+91-9999999999"
+        }
+      }
+    }
+  ]
+}

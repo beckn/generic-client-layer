@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dsep:scholarships",
+        "action": "on_support",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-022723112309",
+        "message_id": "bc6c01d8-ecfe-4695-9a35-2b7622f26813",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-26T05:38:53.608Z"
+      },
+      "message": {
+        "support": {
+          "ref_id": "APP_79194572",
+          "phone": "+919843937283",
+          "email": "support@strapibpp.com",
+          "url": "https://www.strapibpp.com"
+        }
+      }
+    }
+  ]
+}

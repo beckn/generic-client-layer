@@ -1,0 +1,98 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "search",
+    "timestamp": "2024-04-26T05:58:33.139Z",
+    "message_id": "603fe89e-97c3-4f99-86a4-fc5d6cdcad95",
+    "transaction_id": "73f9d2e6-2c2b-4dbe-9b2e-e15fd339d2ae",
+    "domain": "dsep:mentoring",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    }
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dsep:mentoring",
+        "action": "on_search",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "73f9d2e6-2c2b-4dbe-9b2e-e15fd339d2ae",
+        "message_id": "603fe89e-97c3-4f99-86a4-fc5d6cdcad95",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-26T05:58:40.694Z"
+      },
+      "message": {
+        "catalog": {
+          "descriptor": {
+            "name": "BPP",
+            "code": "bpp",
+            "short_desc": "Unified Strapi BPP"
+          },
+          "providers": [
+            {
+              "id": "43",
+              "descriptor": {
+                "name": "Upgrad",
+                "short_desc": "UpGrad is an Indian online education platform offering professional courses and degree programs in collaboration with universities, specializing in industry-relevant skills.",
+                "long_desc": " UpGrad is an Indian online education platform that specializes in offering a wide range of professional courses and degree programs in collaboration with universities and industry partners. It focuses on providing industry-relevant skills in areas such as data science, business, technology, and more. Please verify with the latest sources for any updates or changes since then.",
+                "additional_desc": { "url": "www.becknprotocol.io" },
+                "images": [
+                  {
+                    "url": "https://makerspace/assembly/makerspace_logo.png",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "short_desc": "UpGrad is an Indian online education platform offering professional courses and degree programs in collaboration with universities, specializing in industry-relevant skills.",
+              "locations": [
+                {
+                  "id": "13",
+                  "gps": "50.311674, 11.90335",
+                  "address": "154/9, Bannerghatta Rd, opposite IIM-B, Sahyadri Layout, Panduranga Nagar, Bengaluru, Karnataka 560076",
+                  "city": { "name": "Bangalore F" },
+                  "country": { "name": "India" },
+                  "state": { "name": "Karnataka" },
+                  "area_code": "560076"
+                }
+              ],
+              "rateable": true,
+              "items": [
+                {
+                  "id": "64",
+                  "descriptor": {
+                    "name": "MERN Stack Developer",
+                    "code": "MERNSD",
+                    "short_desc": "UpGrad's MERN Stack Developer course equips learners with expertise in MongoDB, Express.js, React, and Node.js, fostering proficiency in full-stack web development.",
+                    "long_desc": "The MERN Stack Developer course by UpGrad is a immersive program designed to empower learners with the essential skills for full-stack web development. Covering MongoDB, Express.js, React, and Node.js, this hands-on curriculum delves into database management, server-side scripting, front-end development, and seamless integration of technologies. With a focus on real-world applications, project work, and industry-relevant tools, participants gain practical experience and the ability to build dynamic, scalable web applications. Whether you're a beginner or seeking to enhance your expertise, this course provides a comprehensive journey into the MERN stack, preparing you for a successful career in web development.",
+                    "images": [
+                      {
+                        "url": "https://blog.nextideatech.com/wp-content/uploads/2022/12/1_FVtCyRdJ6KOr4YswTtwMeA-1024x586.jpeg"
+                      }
+                    ]
+                  },
+                  "rateable": true,
+                  "rating": "null",
+                  "price": { "value": "1000" }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

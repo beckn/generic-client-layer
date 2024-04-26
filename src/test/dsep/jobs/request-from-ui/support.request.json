@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "domain": "dsep:jobs"
+      },
+      "message": {
+        "support": {
+          "ref_id": "1677140405881"
+        }
+      }
+    }
+  ],
+  "includeRawResponse": true
+}
