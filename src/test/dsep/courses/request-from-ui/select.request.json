@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "domain": "dsep:courses"
+      },
+      "message": {
+        "orders": [
+          {
+            "provider": {
+              "id": "17"
+            },
+            "items": [
+              {
+                "id": "21"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "bdb5ba09-2241-4f00-b434-73466cd06228",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "domain": "dsep:mentoring"
+      },
+      "orderId": "523",
+      "updateDetails": {
+        "updateTarget": "order.fulfillments[0].customer.name",
+        "fulfillments": [
+          {
+            "customer": {
+              "person": {
+                "name": "Shrey Vishal"
+              },
+              "contact": {
+                "phone": "1234567890",
+                "email": "test@1234.com"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
