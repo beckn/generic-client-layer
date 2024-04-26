@@ -84,32 +84,7 @@
                   "recommended": true,
                   "location_id": "./retail.kirana/ind.blr/1@tourism-bpp-infra2.becknprotocol.io.provider_location",
                   "category_id": "c1",
-                  "fulfillment_id": "f1",
-                  "tags": [
-                    {
-                      "descriptor": { "name": "item-cataegory" },
-                      "list": [
-                        {
-                          "descriptor": { "name": "category" },
-                          "value": "retail"
-                        }
-                      ],
-                      "display": true
-                    },
-                    {
-                      "descriptor": { "name": "item-properties" },
-                      "list": [
-                        {
-                          "descriptor": { "name": "waterbottle" },
-                          "value": "y"
-                        },
-                        { "descriptor": { "name": "Trekking" }, "value": "y" },
-                        { "descriptor": { "name": "Sipper" }, "value": "y" },
-                        { "descriptor": { "name": "Hiking" }, "value": "y" }
-                      ],
-                      "display": true
-                    }
-                  ]
+                  "fulfillment_id": "f1"
                 }
               ]
             }
