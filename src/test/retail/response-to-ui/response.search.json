@@ -50,40 +50,6 @@
                   {
                     "url": "https://tourism-bpp-infra2.becknprotocol.io/attachments/view/253.jpg"
                   }
-                ],
-                "tags": [
-                  {
-                    "name": "item-cataegory",
-                    "display": true,
-                    "list": [
-                      {
-                        "name": "category",
-                        "value": "retail"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "item-properties",
-                    "display": true,
-                    "list": [
-                      {
-                        "name": "waterbottle",
-                        "value": "y"
-                      },
-                      {
-                        "name": "Trekking",
-                        "value": "y"
-                      },
-                      {
-                        "name": "Sipper",
-                        "value": "y"
-                      },
-                      {
-                        "name": "Hiking",
-                        "value": "y"
-                      }
-                    ]
-                  }
                 ]
               }
             ]
