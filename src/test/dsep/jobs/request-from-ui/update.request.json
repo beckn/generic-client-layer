@@ -1,0 +1,43 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dsep:jobs",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "transaction_id": "60d05629-e382-476b-bf2e-27cb0c503e5c"
+      },
+      "orderId": "508",
+      "updateDetails": {
+        "updateTarget": "order.fulfillments[0].stops[0]",
+        "fulfillments": [
+          {
+            "id": "1",
+            "stops": [
+              {
+                "location": {
+                  "address": "43, Residency Road, Bengaluru - 560025",
+                  "city": {
+                    "name": "Bengaluru"
+                  },
+                  "state": {
+                    "name": "Karnataka"
+                  },
+                  "country": {
+                    "code": "IND"
+                  },
+                  "area_code": "560025"
+                },
+                "contact": {
+                  "name": "Waheeda Rehman",
+                  "phone": "919845998459"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "includeRawResponse": true
+}

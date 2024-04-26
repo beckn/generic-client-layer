@@ -1,0 +1,35 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-022723112309",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "domain": "dsep:scholarships"
+      },
+      "orderId": "364",
+      "updateDetails": {
+        "updateTarget": "order.fulfillments[0].contact",
+        "fulfillments": [
+          {
+            "customer": {
+              "person": {
+                "name": "Shrey Vishal"
+              },
+              "contact": {
+                "phone": "1234567890",
+                "email": "test@1234.com"
+              }
+            }
+          }
+        ],
+        "billing": {
+          "name": "John Doe",
+          "address": "Villa 5, Green Valley, Malleshwaram, 560012",
+          "email": "maryofficial@xyz.com",
+          "phone": "+91-9999999999"
+        }
+      }
+    }
+  ]
+}

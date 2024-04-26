@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "bdb5ba09-2241-4f00-b434-73466cd06228",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "domain": "dsep:mentoring"
+      },
+      "message": {
+        "order_id": "523",
+        "cancellation_reason_id": "12"
+      }
+    }
+  ]
+}

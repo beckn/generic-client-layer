@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dsep:courses",
+        "action": "on_select",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "message_id": "5dadb05a-944e-4e20-9639-efc8b25d8a4c",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T07:58:18.470Z"
+      },
+      "message": {
+        "order": {
+          "type": "DEFAULT",
+          "quote": { "price": { "value": "4000", "currency": "INR" } },
+          "provider": {
+            "id": "17",
+            "name": "Udemy",
+            "short_desc": "udemy e learning platform",
+            "long_desc": "udemy e learning platform",
+            "images": {
+              "url": "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+              "size_type": "sm"
+            }
+          },
+          "items": [
+            {
+              "id": "21",
+              "xinput": {
+                "url": "https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/form?form_id=itemDetailsForm",
+                "mime_type": "text/html",
+                "html": "<html><head>\n    <title>XInput Form</title>\n</head>\n\n<body>\n    <form id=\"xinputform\">\n        <label for=\"plength\">Name: </label>\n        <input type=\"text\" name=\"name\" value=\"\">\n        <br><br>\n        <label for=\"itemCount\">Number of items: </label>\n        <input type=\"number\" name=\"number_of_items\" value=\"0\">\n        <br><br>\n        <button type=\"button\">Submit</button>\n    <input type=\"hidden\" value=\"https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/submit\" id=\"action\" name=\"action\"><input type=\"hidden\" value=\"post\" id=\"method\" name=\"method\"></form>\n\n\n</body></html>"
+              },
+              "name": "Amazon Web Services (AWS) - Zero to Hero",
+              "short_desc": "A high paced hands on course on AWS, complete with in depth professional courses notes.",
+              "long_desc": "About the courses:\nThis course will help you set up WordPress on AWS EC2, and link to RDS database, build reliable NodeJS backend using Elastic Beanstalk, manage files via AWS S3, send emails with SES, and set CloudWatch alarms. \n\nCourse details:\nCourse Provider: Udemy\nCourse Instructor: BackSpace Academy\nCourse Length: 3 hours\nModules: 14\nSkills taught: AWS, NodeJS\nLevel: Beginner\nSchedule: Flexible\nCourse delivery: Online",
+              "images": [
+                {
+                  "url": "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+                  "size_type": "sm"
+                }
+              ],
+              "price": { "value": "4000", "currency": "INR" },
+              "rating": "4.5",
+              "rateable": true,
+              "quantity": {
+                "available": {
+                  "count": 100000,
+                  "measure": { "value": "100000", "unit": "kWh" }
+                }
+              },
+              "tags": [
+                {
+                  "display": true,
+                  "list": [{ "code": "course-brand-name", "value": "Amazon" }]
+                },
+                {
+                  "display": true,
+                  "list": [{ "code": "course-name", "value": "AWS" }]
+                },
+                {
+                  "display": true,
+                  "list": [{ "code": "course-duration", "value": "30 days" }]
+                },
+                {
+                  "display": true,
+                  "list": [
+                    {
+                      "code": "course-url",
+                      "value": "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/?couponCode=LETSLEARNNOWPP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fulfillments": [
+            {
+              "id": "8",
+              "type": "RECORDED COURSE",
+              "rating": "4.5",
+              "rateable": true,
+              "tags": [
+                {
+                  "display": true,
+                  "descriptor": { "description": "DSEP" },
+                  "list": [
+                    {
+                      "descriptor": { "description": "Full Stack" },
+                      "value": "fullstack",
+                      "display": true
+                    }
+                  ]
+                },
+                {
+                  "display": true,
+                  "descriptor": { "description": "scholarships" },
+                  "list": [
+                    {
+                      "descriptor": { "description": "Scholarship" },
+                      "value": "scholarship",
+                      "display": true
+                    }
+                  ]
+                },
+                {
+                  "display": true,
+                  "descriptor": { "description": "online courses" },
+                  "list": [
+                    {
+                      "descriptor": { "description": "Backend Development" },
+                      "value": "backend_development",
+                      "display": true
+                    }
+                  ]
+                }
+              ],
+              "tracking": false
+            },
+            {
+              "id": "8",
+              "type": "RECORDED COURSE",
+              "rating": "4.5",
+              "rateable": true,
+              "tracking": false
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

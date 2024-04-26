@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dsep:courses",
+        "action": "on_confirm",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "message_id": "4db3a974-a3eb-456b-b2ff-5854763fce28",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T09:26:56.161Z"
+      },
+      "message": {
+        "orderId": "504",
+        "provider": {
+          "id": "17",
+          "name": "Udemy",
+          "short_desc": "udemy e learning platform",
+          "long_desc": "udemy e learning platform",
+          "images": [
+            {
+              "url": "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+              "size_type": "sm"
+            }
+          ]
+        },
+        "items": [
+          {
+            "id": "21",
+            "name": "Amazon Web Services (AWS) - Zero to Hero",
+            "short_desc": "A high paced hands on course on AWS, complete with in depth professional courses notes.",
+            "long_desc": "About the courses:\\nThis course will help you set up WordPress on AWS EC2, and link to RDS database, build reliable NodeJS backend using Elastic Beanstalk, manage files via AWS S3, send emails with SES, and set CloudWatch alarms. \\n\\nCourse details:\\nCourse Provider: Udemy\\nCourse Instructor: BackSpace Academy\\nCourse Length: 3 hours\\nModules: 14\\nSkills taught: AWS, NodeJS\\nLevel: Beginner\\nSchedule: Flexible\\nCourse delivery: Online",
+            "images": [
+              {
+                "url": "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+                "size_type": "sm"
+              }
+            ],
+            "price": { "value": "4000", "currency": "INR" },
+            "rating": "4.5",
+            "rateable": true,
+            "quantity": {
+              "available": {
+                "count": 100000,
+                "measure": { "value": "100000", "unit": "kWh" }
+              }
+            },
+            "tags": [
+              {
+                "display": true,
+                "list": [{ "code": "course-brand-name", "value": "Amazon" }]
+              },
+              {
+                "display": true,
+                "list": [{ "code": "course-name", "value": "AWS" }]
+              },
+              {
+                "display": true,
+                "list": [{ "code": "course-duration", "value": "30 days" }]
+              },
+              {
+                "display": true,
+                "list": [
+                  {
+                    "code": "course-url",
+                    "value": "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/?couponCode=LETSLEARNNOWPP"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "fulfillments": [
+          {
+            "id": "1",
+            "customer": {
+              "person": {
+                "name": "Sanjay",
+                "gender": "M",
+                "creds": [
+                  {
+                    "id": "claimId:af7e0b1b5c4858eb",
+                    "type": "GenderData",
+                    "url": "https://cloud-wallet-api.prod.affinity-project.org/api/v1/share/b8a2c0cbc5a02da03d2aecb59094672a8e0b16a1c845456bd18678529d6901df?key=beda347c431e02319bd31c63e5f5f5f5e14939efdb6697ce4d93c87eade27c47"
+                  },
+                  {
+                    "id": "claimId:af7e0b1b5c4858eb",
+                    "type": "ResumeVC",
+                    "url": "https://cloud-wallet-api.prod.affinity-project.org/api/v1/share/b8a2c0cbc5a02da03d2aecb59094672a8e0b16a1c845456bd18678529d6901df?key=beda347c431e02319bd31c63e5f5f5f5e14939efdb6697ce4d93c87eade27c47"
+                  }
+                ],
+                "tags": [
+                  {
+                    "code": "func_skills",
+                    "list": [{ "code": "Android" }, { "code": "AWS" }],
+                    "display": true
+                  }
+                ]
+              },
+              "contact": { "phone": "9999999999999", "email": "abc@abc.bc" }
+            },
+            "tracking": false
+          }
+        ],
+        "quote": { "price": { "value": "4000", "currency": "INR" } }
+      }
+    }
+  ]
+}

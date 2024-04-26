@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dsep:scholarships",
+        "action": "on_init",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-022723112309",
+        "message_id": "16cde5b6-c764-437c-ba4f-7c2b211b41fc",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T14:02:55.992Z"
+      },
+      "message": {
+        "order": {
+          "type": "DEFAULT",
+          "provider": {
+            "id": "20",
+            "name": "GLA University Admission Scholarship",
+            "short_desc": "The GLA university grants the GLA university scholarship to the academically brilliant students studying in M.Tech courses",
+            "long_desc": "Scholarship Details: The candidates who qualify for the M.Tech scholarship will be awarded INR 1,33,000 (GATE qualified candidates) and INR 1,05,000 (Non-GATE and GLAET qualified candidates)\\n\\nEligibility Criteria: The candidate must enroll in B.Tech/ B.Pharma/ M.Tech/ M.Pharma/ Ph.D. courses in GLA university. Additionally, the applicants must have cleared the entrance examinations of JEE Mains/ GATE/ GLAET with the required marks.",
+            "images": {
+              "url": "https://www.gla.ac.in/images/gla-university-logo.png",
+              "size_type": "sm"
+            }
+          },
+          "items": [
+            {
+              "id": "26",
+              "name": "GLA University Admission Scholarship",
+              "short_desc": "The GLA university grants the GLA university scholarship to the academically brilliant students studying in M.Tech courses",
+              "long_desc": "Scholarship Details: The candidates who qualify for the M.Tech scholarship will be awarded INR 1,33,000 (GATE qualified candidates) and INR 1,05,000 (Non-GATE and GLAET qualified candidates)\\n\\nEligibility Criteria: The candidate must enroll in B.Tech/ B.Pharma/ M.Tech/ M.Pharma/ Ph.D. courses in GLA university. Additionally, the applicants must have cleared the entrance examinations of JEE Mains/ GATE/ GLAET with the required marks.",
+              "images": [
+                {
+                  "url": "https://www.gla.ac.in/images/gla-university-logo.png",
+                  "size_type": "sm"
+                }
+              ],
+              "price": { "value": "0" },
+              "rating": "null",
+              "rateable": true,
+              "quantity": {
+                "available": { "measure": { "value": "0", "unit": "kWh" } }
+              },
+              "categories": [{ "id": "26", "name": "GLA University" }],
+              "tags": [
+                {
+                  "display": true,
+                  "list": [{ "code": "scholarship", "value": "scholarship" }]
+                },
+                { "display": true, "list": [null] },
+                { "display": true, "list": [null] }
+              ]
+            }
+          ],
+          "fulfillments": [
+            {
+              "id": "11",
+              "type": "scholarship",
+              "rating": "3.4",
+              "rateable": true,
+              "tracking": false
+            }
+          ],
+          "quote": { "price": { "value": "0" } }
+        }
+      }
+    }
+  ]
+}

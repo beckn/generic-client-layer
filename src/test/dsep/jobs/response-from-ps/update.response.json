@@ -1,0 +1,100 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "update",
+    "timestamp": "2024-04-25T13:27:30.412Z",
+    "message_id": "a7a6ecc2-8434-4a83-a591-f8c87be3d1eb",
+    "transaction_id": "83b909f1-17b5-4f3d-82a5-26ee4238ec39",
+    "domain": "dsep:jobs",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dsep:jobs",
+        "action": "on_update",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "83b909f1-17b5-4f3d-82a5-26ee4238ec39",
+        "message_id": "a7a6ecc2-8434-4a83-a591-f8c87be3d1eb",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T13:27:35.678Z"
+      },
+      "message": {
+        "order": {
+          "id": "508",
+          "provider": {
+            "id": "13",
+            "descriptor": {
+              "name": "Accenture",
+              "images": [{ "url": "https://abc.com", "size_type": "sm" }]
+            }
+          },
+          "items": [
+            {
+              "id": "6",
+              "descriptor": {
+                "name": "Analytics - Senior Analys",
+                "long_desc": "Job Description:\n\nYou will be part of the team which partners with the business leaders to provide data driven strategies to grow business KPIs like acquisition, customer engagement & retention, campaign optimization, personalized offering, etc.\nLeverage all the traditional and alternate data sources like credit bureau, digital data, partner data, social media and banking data to develop impactful strategies to drive business goals for marketing/product/customer/collections\nAnalyse large amounts of data and build solutions based on insights captured from data\nInnovate with a focus on developing newer and better approaches using big data & machine learning solution\nDevelop portfolio MIS and track the portfolio performance and recommend course of action\nAlign closely with the client's business teams to deliver on the business goals through strong analytics driven strategies.\n\nRole: Analytics - Senior Analyst\nIndustry Type: IT Services & Consulting\nDepartment: Data Science & Analytics\nEmployment Type: Full Time, Permanent\nEducation: Masters or Bachelor's in Computer Science, Mathematics, Statistics or Engineering\nExperience Required: 3-6 years\nLocation: Chennai\n",
+                "images": [
+                  {
+                    "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "category_ids": ["16"],
+              "location_ids": ["4"],
+              "fulfillment_ids": ["10"],
+              "tags": [
+                {
+                  "display": true,
+                  "descriptor": { "description": "DSEP" },
+                  "list": [{ "display": true }]
+                }
+              ],
+              "price": { "value": "0", "currency": "INR" }
+            }
+          ],
+          "fulfillments": [
+            {
+              "id": "1",
+              "state": {
+                "descriptor": {
+                  "code": "USER CANCELLED",
+                  "short_desc": "cancelled by user"
+                }
+              },
+              "customer": {
+                "contact": { "email": "abc@abc.bc", "phone": "9999999999999" },
+                "person": { "name": "Sanjay" }
+              },
+              "stops": [{ "type": "end" }],
+              "tracking": false
+            }
+          ],
+          "payments": [{ "collected_by": "BPP", "type": "PRE-ORDER" }],
+          "quote": { "price": { "value": "0" } },
+          "type": "DEFAULT"
+        }
+      }
+    }
+  ]
+}

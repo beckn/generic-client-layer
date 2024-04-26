@@ -1,0 +1,124 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "search",
+    "timestamp": "2024-04-25T11:51:34.511Z",
+    "message_id": "ec4684de-887d-4e4c-b153-bc03bfe35e64",
+    "transaction_id": "abcd6ddb-c220-4aae-9148-e92772c168db",
+    "domain": "dsep:jobs",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    }
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dsep:jobs",
+        "action": "on_search",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "abcd6ddb-c220-4aae-9148-e92772c168db",
+        "message_id": "ec4684de-887d-4e4c-b153-bc03bfe35e64",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T11:51:42.115Z"
+      },
+      "message": {
+        "catalog": {
+          "descriptor": {
+            "name": "BPP",
+            "code": "bpp",
+            "short_desc": "Unified Strapi BPP"
+          },
+          "providers": [
+            {
+              "id": "13",
+              "descriptor": {
+                "name": "Accenture",
+                "additional_desc": { "url": "www.becknprotocol.io" },
+                "images": [
+                  {
+                    "url": "https://makerspace/assembly/makerspace_logo.png",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "categories": [
+                { "id": "1", "descriptor": { "name": "IT" } },
+                { "id": "2", "descriptor": { "name": "Programming" } },
+                { "id": "16", "descriptor": { "name": "Analytics" } }
+              ],
+              "fulfillments": [
+                {
+                  "id": "10",
+                  "type": "job-type",
+                  "rating": "4",
+                  "rateable": true,
+                  "tracking": false
+                },
+                {
+                  "id": "10",
+                  "type": "job-type",
+                  "rating": "4",
+                  "rateable": true,
+                  "tracking": false
+                }
+              ],
+              "locations": [
+                {
+                  "id": "4",
+                  "gps": "18.5401344, 73.8295808",
+                  "address": "Building B-1, Magarpatta City (SEZ, Mundhwa Rd, Magarpatta, Hadapsar, ",
+                  "city": { "name": "Pune" },
+                  "country": { "name": "India" },
+                  "state": { "name": "Maharashtra" },
+                  "area_code": "411013"
+                },
+                { "id": "undefined", "area_code": "undefined" }
+              ],
+              "rateable": true,
+              "items": [
+                {
+                  "id": "6",
+                  "descriptor": {
+                    "name": "Analytics - Senior Analys",
+                    "long_desc": "Job Description:\n\nYou will be part of the team which partners with the business leaders to provide data driven strategies to grow business KPIs like acquisition, customer engagement & retention, campaign optimization, personalized offering, etc.\nLeverage all the traditional and alternate data sources like credit bureau, digital data, partner data, social media and banking data to develop impactful strategies to drive business goals for marketing/product/customer/collections\nAnalyse large amounts of data and build solutions based on insights captured from data\nInnovate with a focus on developing newer and better approaches using big data & machine learning solution\nDevelop portfolio MIS and track the portfolio performance and recommend course of action\nAlign closely with the client's business teams to deliver on the business goals through strong analytics driven strategies.\n\nRole: Analytics - Senior Analyst\nIndustry Type: IT Services & Consulting\nDepartment: Data Science & Analytics\nEmployment Type: Full Time, Permanent\nEducation: Masters or Bachelor's in Computer Science, Mathematics, Statistics or Engineering\nExperience Required: 3-6 years\nLocation: Chennai\n",
+                    "images": [
+                      {
+                        "url": "https://www.shutterstock.com/image-photo/analyst-working-business-analytics-data-600nw-1857484450.jpg"
+                      }
+                    ]
+                  },
+                  "rateable": true,
+                  "rating": "null",
+                  "price": { "value": "0" },
+                  "category_ids": ["16"],
+                  "fulfillment_ids": ["10"],
+                  "tags": [
+                    {
+                      "display": true,
+                      "descriptor": { "description": "DSEP" },
+                      "list": [{ "display": true }]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
