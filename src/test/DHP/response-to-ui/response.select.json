@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dhp:pharmacy:0.1.0",
+        "action": "on_select",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "0bbd82ce-5a21-4e26-b402-1c1f9d954fee",
+        "message_id": "9976df46-0bfd-41fd-8a7e-50aadf323327",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T11:44:57.797Z"
+      },
+      "message": {
+        "order": {
+          "type": "DEFAULT",
+          "quote": { "price": { "value": "40", "currency": "INR" } },
+          "provider": {
+            "id": "8",
+            "name": "PharmEasy",
+            "short_desc": "PharmEasy is an Indian multinational e-pharmacy company that sells medicines, diagnostics and telehealth online.",
+            "long_desc": "PharmEasy delivers medicines in 1000+ cities in India, covering 22000+ pin codes, and also offers diagnostic test services across Mumbai including Thane, Navi Mumbai, Kalyan & Dombivali, Delhi with Noida, Gurgaon, Faridabad & Ghaziabad, Chennai, Pune, Ahmedabad, and Gandhi Nagar, Surat, Vadodara, Lucknow, Kolkata, Hyderabad, Bengaluru, and Jaipur."
+          },
+          "items": [
+            {
+              "id": "10",
+              "xinput": {
+                "url": "https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/form?form_id=itemDetailsForm",
+                "mime_type": "text/html",
+                "html": "<html><head>\n    <title>XInput Form</title>\n</head>\n\n<body>\n    <form id=\"xinputform\">\n        <label for=\"plength\">Name: </label>\n        <input type=\"text\" name=\"name\" value=\"\">\n        <br><br>\n        <label for=\"itemCount\">Number of items: </label>\n        <input type=\"number\" name=\"number_of_items\" value=\"0\">\n        <br><br>\n        <button type=\"button\">Submit</button>\n    <input type=\"hidden\" value=\"https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/submit\" id=\"action\" name=\"action\"><input type=\"hidden\" value=\"post\" id=\"method\" name=\"method\"></form>\n\n\n</body></html>"
+              },
+              "name": "Cheston Syrup",
+              "short_desc": "Cheston Cold Tablet is used in the treatment of common cold symptoms ",
+              "long_desc": "About the Product:\nMANUFACTURER- Cipla Ltd\nSALT COMPOSITION - Cetirizine (5mg) + Paracetamol (325mg) + Phenylephrine (10mg)\nSTORAGE - Store below 30°C\nUses:\nCheston Cold Tablet is used in the treatment of common cold symptoms like runny nose, stuffy nose, sneezing, watery eyes, and congestion or stuffiness. It is also used to relieve pain and fever..\nHow it works\nCheston Cold Tablet is a combination of three medicines: Cetirizine, Paracetamol and Phenylephrine, which relieves common cold symptoms. Cetirizine is an antiallergic which blocks histamine (a chemical messenger) to relieve allergy symptoms like runny nose, watery eyes and sneezing. Paracetamol is an analgesic (pain reliever) and antipyretic (fever reducer). It blocks the release of certain chemical messengers in the brain that are responsible for pain and fever. Phenylephrine is a decongestant which narrows the small blood vessels providing relief from congestion or stuffiness in the nose.\nCommon side effects\nNausea, Vomiting, Headache, Fatigue, Dizziness, Dryness in mouth, Sleepiness, Allergic reaction",
+              "price": { "value": "40", "currency": "INR" },
+              "rating": "null",
+              "rateable": true,
+              "quantity": {
+                "available": {
+                  "count": 100,
+                  "measure": { "value": "100", "unit": "kWh" }
+                }
+              },
+              "categories": [{ "id": "9", "name": "Medicine" }]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
