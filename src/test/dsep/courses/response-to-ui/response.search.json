@@ -10,8 +10,14 @@
         "country": "IND",
         "city": "std:080",
         "location": {
-          "country": { "name": "India", "code": "IND" },
-          "city": { "name": "Bangalore", "code": "std:080" }
+          "country": {
+            "name": "India",
+            "code": "IND"
+          },
+          "city": {
+            "name": "Bangalore",
+            "code": "std:080"
+          }
         },
         "bap_id": "bap-ps-network-dev.becknprotocol.io",
         "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
@@ -33,12 +39,21 @@
                 "id": "2",
                 "gps": "44.6616,111.1001",
                 "address": "Max pvt lmtd",
-                "city": { "name": "Delhi" },
-                "country": { "name": "India" },
-                "state": { "name": "Delhi" },
+                "city": {
+                  "name": "Delhi"
+                },
+                "country": {
+                  "name": "India"
+                },
+                "state": {
+                  "name": "Delhi"
+                },
                 "area_code": "110000"
               },
-              { "id": "undefined", "area_code": "undefined" }
+              {
+                "id": "undefined",
+                "area_code": "undefined"
+              }
             ],
             "items": [
               {
@@ -46,20 +61,48 @@
                 "short_desc": "A high paced hands on course on AWS, complete with in depth professional courses notes.",
                 "long_desc": "About the courses:\nThis course will help you set up WordPress on AWS EC2, and link to RDS database, build reliable NodeJS backend using Elastic Beanstalk, manage files via AWS S3, send emails with SES, and set CloudWatch alarms. \n\nCourse details:\nCourse Provider: Udemy\nCourse Instructor: BackSpace Academy\nCourse Length: 3 hours\nModules: 14\nSkills taught: AWS, NodeJS\nLevel: Beginner\nSchedule: Flexible\nCourse delivery: Online",
                 "name": "Amazon Web Services (AWS) - Zero to Hero",
-                "price": { "value": "4000", "currency": "INR" },
+                "price": {
+                  "value": "4000",
+                  "currency": "INR"
+                },
                 "fulfillments": [
                   {
                     "id": "8",
                     "type": "RECORDED COURSE",
                     "tracking": false,
                     "tags": [
-                      { "display": true, "list": [{ "value": "Amazon" }] },
-                      { "display": true, "list": [{ "value": "AWS" }] },
-                      { "display": true, "list": [{ "value": "30 days" }] },
                       {
                         "display": true,
                         "list": [
                           {
+                            "code": "course-brand-name",
+                            "value": "Amazon"
+                          }
+                        ]
+                      },
+                      {
+                        "display": true,
+                        "list": [
+                          {
+                            "code": "course-name",
+                            "value": "AWS"
+                          }
+                        ]
+                      },
+                      {
+                        "display": true,
+                        "list": [
+                          {
+                            "code": "course-duration",
+                            "value": "30 days"
+                          }
+                        ]
+                      },
+                      {
+                        "display": true,
+                        "list": [
+                          {
+                            "code": "course-url",
                             "value": "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/?couponCode=LETSLEARNNOWPP"
                           }
                         ]
@@ -71,13 +114,38 @@
                     "type": "RECORDED COURSE",
                     "tracking": false,
                     "tags": [
-                      { "display": true, "list": [{ "value": "Amazon" }] },
-                      { "display": true, "list": [{ "value": "AWS" }] },
-                      { "display": true, "list": [{ "value": "30 days" }] },
                       {
                         "display": true,
                         "list": [
                           {
+                            "code": "course-brand-name",
+                            "value": "Amazon"
+                          }
+                        ]
+                      },
+                      {
+                        "display": true,
+                        "list": [
+                          {
+                            "code": "course-name",
+                            "value": "AWS"
+                          }
+                        ]
+                      },
+                      {
+                        "display": true,
+                        "list": [
+                          {
+                            "code": "course-duration",
+                            "value": "30 days"
+                          }
+                        ]
+                      },
+                      {
+                        "display": true,
+                        "list": [
+                          {
+                            "code": "course-url",
                             "value": "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/?couponCode=LETSLEARNNOWPP"
                           }
                         ]
@@ -95,15 +163,30 @@
                 "tags": [
                   {
                     "display": true,
-                    "list": [{ "code": "course-brand-name", "value": "Amazon" }]
+                    "list": [
+                      {
+                        "code": "course-brand-name",
+                        "value": "Amazon"
+                      }
+                    ]
                   },
                   {
                     "display": true,
-                    "list": [{ "code": "course-name", "value": "AWS" }]
+                    "list": [
+                      {
+                        "code": "course-name",
+                        "value": "AWS"
+                      }
+                    ]
                   },
                   {
                     "display": true,
-                    "list": [{ "code": "course-duration", "value": "30 days" }]
+                    "list": [
+                      {
+                        "code": "course-duration",
+                        "value": "30 days"
+                      }
+                    ]
                   },
                   {
                     "display": true,
@@ -115,11 +198,17 @@
                     ]
                   }
                 ],
-                "quantity": { "available": { "count": 100000 } }
+                "quantity": {
+                  "available": {
+                    "count": 100000
+                  }
+                }
               }
             ],
             "images": [
-              { "url": "https://makerspace/assembly/makerspace_logo.png" }
+              {
+                "url": "https://makerspace/assembly/makerspace_logo.png"
+              }
             ]
           }
         ]
