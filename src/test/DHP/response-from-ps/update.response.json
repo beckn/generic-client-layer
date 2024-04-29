@@ -1,0 +1,158 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "update",
+    "timestamp": "2024-04-29T12:19:06.506Z",
+    "message_id": "2e8a4e01-87a9-41b5-90d7-9a184ca5c231",
+    "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176",
+    "domain": "dhp:pharmacy:0.1.0",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": {
+        "name": "India",
+        "code": "IND"
+      },
+      "city": {
+        "name": "Bangalore",
+        "code": "std:080"
+      }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dhp:pharmacy:0.1.0",
+        "action": "on_update",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "name": "India",
+            "code": "IND"
+          },
+          "city": {
+            "name": "Bangalore",
+            "code": "std:080"
+          }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176",
+        "message_id": "2e8a4e01-87a9-41b5-90d7-9a184ca5c231",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T12:19:11.680Z"
+      },
+      "message": {
+        "order": {
+          "id": "572",
+          "provider": {
+            "id": "8",
+            "descriptor": {
+              "name": "PharmEasy",
+              "short_desc": "PharmEasy is an Indian multinational e-pharmacy company that sells medicines, diagnostics and telehealth online.",
+              "long_desc": "PharmEasy delivers medicines in 1000+ cities in India, covering 22000+ pin codes, and also offers diagnostic test services across Mumbai including Thane, Navi Mumbai, Kalyan & Dombivali, Delhi with Noida, Gurgaon, Faridabad & Ghaziabad, Chennai, Pune, Ahmedabad, and Gandhi Nagar, Surat, Vadodara, Lucknow, Kolkata, Hyderabad, Bengaluru, and Jaipur.",
+              "additional_desc": {
+                "url": "https://pharmeasy.in"
+              },
+              "images": [
+                {
+                  "url": "https://abc.com",
+                  "size_type": "sm"
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "id": "10",
+              "descriptor": {
+                "name": "Cheston Syrup",
+                "long_desc": "About the Product:\\nMANUFACTURER- Cipla Ltd\\nSALT COMPOSITION - Cetirizine (5mg) + Paracetamol (325mg) + Phenylephrine (10mg)\\nSTORAGE - Store below 30°C\\n\\nUses:\\nCheston Cold Tablet is used in the treatment of common cold symptoms like runny nose, stuffy nose, sneezing, watery eyes, and congestion or stuffiness. It is also used to relieve pain and fever..\\n\\nHow it works\\nCheston Cold Tablet is a combination of three medicines: Cetirizine, Paracetamol and Phenylephrine, which relieves common cold symptoms. Cetirizine is an antiallergic which blocks histamine (a chemical messenger) to relieve allergy symptoms like runny nose, watery eyes and sneezing. Paracetamol is an analgesic (pain reliever) and antipyretic (fever reducer). It blocks the release of certain chemical messengers in the brain that are responsible for pain and fever. Phenylephrine is a decongestant which narrows the small blood vessels providing relief from congestion or stuffiness in the nose.\\n\\nCommon side effects\\nNausea, Vomiting, Headache, Fatigue, Dizziness, Dryness in mouth, Sleepiness, Allergic reaction",
+                "short_desc": "Cheston Cold Tablet is used in the treatment of common cold symptoms "
+              },
+              "category_ids": ["9"],
+              "location_ids": ["5"],
+              "price": {
+                "value": "40",
+                "currency": "INR"
+              }
+            }
+          ],
+          "fulfillments": [
+            {
+              "id": "3",
+              "state": {
+                "descriptor": {
+                  "code": "USER CANCELLED",
+                  "short_desc": "Prescription Change"
+                }
+              },
+              "customer": {
+                "contact": {
+                  "email": "jane.doe@example.com",
+                  "phone": "+91-9663088848"
+                },
+                "person": {
+                  "name": "Jane"
+                }
+              },
+              "stops": [
+                {
+                  "type": "end",
+                  "location": {
+                    "address": "Villa 5, Green Valley, Malleshwaram, 560012",
+                    "city": {
+                      "name": "Bhopal"
+                    },
+                    "state": {
+                      "code": "Madhya Pradesh"
+                    }
+                  }
+                }
+              ],
+              "tracking": false
+            }
+          ],
+          "billing": {
+            "name": "John Doe",
+            "address": "Villa 67, Green Valley, Malleshwaram, 560012",
+            "city": {
+              "name": "Bhopal"
+            },
+            "state": {
+              "name": "Madhya Pradesh"
+            },
+            "email": "john.doe@example.com",
+            "phone": "+91-9999999999"
+          },
+          "payments": [
+            {
+              "collected_by": "BPP",
+              "params": {
+                "price": {
+                  "value": 40,
+                  "currency": "INR"
+                }
+              },
+              "type": "PRE-ORDER"
+            }
+          ],
+          "quote": {
+            "price": {
+              "value": "40",
+              "currency": "INR"
+            }
+          },
+          "type": "DEFAULT"
+        }
+      }
+    }
+  ]
+}

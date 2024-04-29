@@ -1,0 +1,153 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "select",
+    "timestamp": "2024-04-29T13:41:45.563Z",
+    "message_id": "46ccb3d6-0fc0-42bb-89bb-d24f2e75f087",
+    "transaction_id": "b1a7e6b5-36d3-4c08-ae52-8450cdd079b2",
+    "domain": "supply-chain-services:assembly",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "supply-chain-services:assembly",
+        "action": "on_select",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "b1a7e6b5-36d3-4c08-ae52-8450cdd079b2",
+        "message_id": "46ccb3d6-0fc0-42bb-89bb-d24f2e75f087",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T13:41:50.720Z"
+      },
+      "message": {
+        "order": {
+          "provider": {
+            "id": "41",
+            "descriptor": {
+              "name": "Makerspace - S",
+              "short_desc": "Makerspace",
+              "long_desc": "Makerspace, Hof",
+              "additional_desc": { "url": "www.makerspace.com" },
+              "images": [
+                {
+                  "url": "https://i.pinimg.com/474x/42/8e/08/428e08c7c632d41fbd44d484c6c24616.jpg",
+                  "size_type": "sm"
+                }
+              ]
+            },
+            "categories": [
+              { "id": "68", "descriptor": { "name": "Intermittent" } },
+              { "id": "69", "descriptor": { "name": "Lean" } },
+              { "id": "65", "descriptor": { "name": "Assembly" } },
+              { "id": "66", "descriptor": { "name": "Classic" } }
+            ],
+            "rating": "4.7",
+            "locations": [
+              {
+                "id": "13",
+                "gps": "50.311674, 11.90335",
+                "address": "154/9, Bannerghatta Rd, opposite IIM-B, Sahyadri Layout, Panduranga Nagar, Bengaluru, Karnataka 560076",
+                "city": { "name": "Bangalore F" },
+                "country": { "name": "India" },
+                "state": { "name": "Karnataka" },
+                "area_code": "560076"
+              }
+            ],
+            "rateable": true
+          },
+          "items": [
+            {
+              "id": "62",
+              "descriptor": {
+                "name": "Packaging",
+                "code": "PCK",
+                "short_desc": "Packaging",
+                "images": [
+                  {
+                    "url": "https://i.pinimg.com/474x/42/8e/08/428e08c7c632d41fbd44d484c6c24616.jpg",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "rating": "null",
+              "rateable": true,
+              "price": { "value": "1000" },
+              "quantity": {
+                "available": { "measure": { "value": "0", "unit": "kWh" } }
+              },
+              "tags": [
+                {
+                  "display": true,
+                  "descriptor": { "description": "online courses" },
+                  "list": [
+                    { "descriptor": { "description": "java" }, "display": true }
+                  ]
+                }
+              ],
+              "xinput": {
+                "form": {
+                  "url": "https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/form?form_id=itemDetailsForm",
+                  "mime_type": "text/html"
+                }
+              }
+            }
+          ],
+          "quote": { "price": { "value": "1000" } },
+          "categories": [
+            {
+              "id": "68",
+              "value": "Intermittent",
+              "createdAt": "2024-01-10T21:17:09.630Z",
+              "updatedAt": "2024-01-10T21:17:10.646Z",
+              "publishedAt": "2024-01-10T21:17:10.642Z",
+              "category_code": "intermittent"
+            },
+            {
+              "id": "69",
+              "value": "Lean",
+              "createdAt": "2024-01-10T21:17:28.428Z",
+              "updatedAt": "2024-01-10T21:17:29.335Z",
+              "publishedAt": "2024-01-10T21:17:29.330Z",
+              "category_code": "lean"
+            },
+            {
+              "id": "65",
+              "value": "Assembly",
+              "createdAt": "2024-01-10T21:12:55.470Z",
+              "updatedAt": "2024-01-10T21:16:07.264Z",
+              "publishedAt": "2024-01-10T21:12:56.698Z",
+              "category_code": "assembly"
+            },
+            {
+              "id": "66",
+              "value": "Classic",
+              "createdAt": "2024-01-10T21:16:33.743Z",
+              "updatedAt": "2024-01-10T21:16:34.699Z",
+              "publishedAt": "2024-01-10T21:16:34.694Z",
+              "category_code": "classic"
+            }
+          ],
+          "type": "DEFAULT"
+        }
+      }
+    }
+  ]
+}

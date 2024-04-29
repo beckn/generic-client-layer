@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dhp:pharmacy:0.1.0",
+        "action": "on_track",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "name": "India",
+            "code": "IND"
+          },
+          "city": {
+            "name": "Bangalore",
+            "code": "std:080"
+          }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "0bbd82ce-5a21-4e26-b402-1c1f9d954fee",
+        "message_id": "3f0fd7c9-a16e-406d-9c0b-1ce136da4396",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T12:24:04.400Z"
+      },
+      "message": {
+        "tracking": {
+          "url": "https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/tracking/572",
+          "status": "active",
+          "id": "272",
+          "location": {
+            "id": "300",
+            "descriptor": {
+              "name": "Villa 5, Green Valley, Malleshwaram, 560012"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

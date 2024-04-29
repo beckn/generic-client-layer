@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "supply-chain-services:assembly",
+        "bpp_id": "{{bpp_id_strapi}}",
+        "bpp_uri": "{{bpp_uri_strapi}}",
+        "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176"
+      },
+      "orderId": "570",
+      "callbackUrl": "https://dhp-network-bap.becknprotocol.io/track/callback"
+    }
+  ]
+}
