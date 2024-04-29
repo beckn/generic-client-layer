@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dhp:pharmacy:0.1.0",
+        "action": "on_support",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "name": "India",
+            "code": "IND"
+          },
+          "city": {
+            "name": "Bangalore",
+            "code": "std:080"
+          }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176",
+        "message_id": "3bbb40aa-affa-4bf7-ab99-8a676a2c1af3",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T12:21:39.601Z"
+      },
+      "message": {
+        "support": {
+          "callback_phone": "+91-8858150053",
+          "phone": "+919843937283",
+          "email": "support@strapibpp.com",
+          "url": "https://www.strapibpp.com"
+        }
+      }
+    }
+  ]
+}

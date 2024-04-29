@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "eed96a3f-c780-4157-a219-09ff871ee56c",
+        "bpp_id": "{{bpp_id_strapi}}",
+        "bpp_uri": "{{bpp_uri_strapi}}",
+        "domain": "supply-chain-services:assembly"
+      },
+      "message": {
+        "orders": [
+          {
+            "provider": {
+              "id": "41"
+            },
+            "items": [
+              {
+                "id": "62"
+              }
+            ],
+            "fulfillments": [
+              {
+                "id": "3",
+                "customer": {
+                  "contact": {
+                    "email": "fox.judie@abc.org",
+                    "phone": "+91-9999999999"
+                  },
+                  "person": {
+                    "name": "Judie Fox"
+                  }
+                }
+              }
+            ],
+            "billing": {
+              "name": "Industry buyer",
+              "address": "B005 aspire heights, Jurong East, SGP, 680230",
+              "state": {
+                "name": "Jurong East"
+              },
+              "city": {
+                "name": "Jurong East"
+              },
+              "email": "nobody@nomail.com",
+              "phone": "9886098860"
+            },
+            "payments": [
+              {
+                "collected_by": "BPP",
+                "params": {
+                  "amount": "250",
+                  "currency": "EUR",
+                  "bank_account_number": "1234002341",
+                  "bank_code": "INB0004321",
+                  "bank_account_name": "Makerspace Assembly Ltd"
+                },
+                "status": "PAID",
+                "type": "PRE-ORDER",
+                "transaction_id": "a35b56cf-e5cf-41f1-9b5d-fa99d8d5ac8c"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

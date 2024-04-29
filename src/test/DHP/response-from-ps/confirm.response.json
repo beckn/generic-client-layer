@@ -1,0 +1,187 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "confirm",
+    "timestamp": "2024-04-29T11:52:51.403Z",
+    "message_id": "01b4ebcc-515c-45f4-8b83-9799330b580b",
+    "transaction_id": "eed96a3f-c780-4157-a219-09ff871ee56c",
+    "domain": "dhp:pharmacy:0.1.0",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": {
+        "name": "India",
+        "code": "IND"
+      },
+      "city": {
+        "name": "Bangalore",
+        "code": "std:080"
+      }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dhp:pharmacy:0.1.0",
+        "action": "on_confirm",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "name": "India",
+            "code": "IND"
+          },
+          "city": {
+            "name": "Bangalore",
+            "code": "std:080"
+          }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "eed96a3f-c780-4157-a219-09ff871ee56c",
+        "message_id": "01b4ebcc-515c-45f4-8b83-9799330b580b",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T11:52:56.300Z"
+      },
+      "message": {
+        "order": {
+          "id": "573",
+          "provider": {
+            "id": "8",
+            "descriptor": {
+              "name": "PharmEasy",
+              "short_desc": "PharmEasy is an Indian multinational e-pharmacy company that sells medicines, diagnostics and telehealth online.",
+              "long_desc": "PharmEasy delivers medicines in 1000+ cities in India, covering 22000+ pin codes, and also offers diagnostic test services across Mumbai including Thane, Navi Mumbai, Kalyan & Dombivali, Delhi with Noida, Gurgaon, Faridabad & Ghaziabad, Chennai, Pune, Ahmedabad, and Gandhi Nagar, Surat, Vadodara, Lucknow, Kolkata, Hyderabad, Bengaluru, and Jaipur.",
+              "additional_desc": {
+                "url": "https://pharmeasy.in"
+              }
+            },
+            "categories": [
+              {
+                "id": "9",
+                "descriptor": {
+                  "name": "Medicine"
+                }
+              }
+            ],
+            "short_desc": "PharmEasy is an Indian multinational e-pharmacy company that sells medicines, diagnostics and telehealth online.",
+            "locations": [
+              {
+                "id": "5",
+                "gps": "13.0827, 80.2707",
+                "address": "Old Mahabalipuram road, Rajiv gandhi salai,Sholinganallur",
+                "city": {
+                  "name": "Chennai"
+                },
+                "country": {
+                  "name": "India"
+                },
+                "state": {
+                  "name": "Tamil Nadu"
+                },
+                "area_code": "600016"
+              }
+            ],
+            "fulfillments": [
+              {
+                "id": "3",
+                "type": "HOME-DELIVERY",
+                "rating": "5",
+                "state": {
+                  "description": "PAYMENT RECEIVED",
+                  "descriptor": {
+                    "code": "PAYMENT_RECEIVED",
+                    "name": "PAYMENT RECEIVED"
+                  }
+                },
+                "tracking": false
+              }
+            ],
+            "rateable": true
+          },
+          "items": [
+            {
+              "id": "10",
+              "descriptor": {
+                "name": "Cheston Syrup",
+                "code": "CSS",
+                "short_desc": "Cheston Cold Tablet is used in the treatment of common cold symptoms ",
+                "long_desc": "About the Product:\\nMANUFACTURER- Cipla Ltd\\nSALT COMPOSITION - Cetirizine (5mg) + Paracetamol (325mg) + Phenylephrine (10mg)\\nSTORAGE - Store below 30°C\\n\\nUses:\\nCheston Cold Tablet is used in the treatment of common cold symptoms like runny nose, stuffy nose, sneezing, watery eyes, and congestion or stuffiness. It is also used to relieve pain and fever..\\n\\nHow it works\\nCheston Cold Tablet is a combination of three medicines: Cetirizine, Paracetamol and Phenylephrine, which relieves common cold symptoms. Cetirizine is an antiallergic which blocks histamine (a chemical messenger) to relieve allergy symptoms like runny nose, watery eyes and sneezing. Paracetamol is an analgesic (pain reliever) and antipyretic (fever reducer). It blocks the release of certain chemical messengers in the brain that are responsible for pain and fever. Phenylephrine is a decongestant which narrows the small blood vessels providing relief from congestion or stuffiness in the nose.\\n\\nCommon side effects\\nNausea, Vomiting, Headache, Fatigue, Dizziness, Dryness in mouth, Sleepiness, Allergic reaction"
+              },
+              "rating": "null",
+              "rateable": true,
+              "price": {
+                "value": "40",
+                "currency": "INR"
+              },
+              "quantity": {
+                "available": {
+                  "count": 100,
+                  "measure": {
+                    "value": "100",
+                    "unit": "kWh"
+                  }
+                }
+              },
+              "category_ids": ["9"]
+            }
+          ],
+          "quote": {
+            "price": {
+              "value": "40",
+              "currency": "INR"
+            }
+          },
+          "billing": {
+            "name": "Rajesh Kumar",
+            "address": "Villa 5, Green Valley, Malleshwaram, 560012",
+            "state": {
+              "name": "Madhya Pradesh"
+            },
+            "city": {
+              "name": "Bhopal"
+            },
+            "email": "rajesh.kumar@example.com",
+            "phone": "+91-9999999999"
+          },
+          "fulfillments": [
+            {
+              "id": "3",
+              "customer": {
+                "person": {
+                  "name": "Jane Doe",
+                  "age": "13",
+                  "gender": "female",
+                  "dob": "1995-09-11"
+                },
+                "contact": {
+                  "phone": "+91-9663088848",
+                  "email": "jane.doe@example.com"
+                }
+              },
+              "stops": [
+                {
+                  "time": {
+                    "label": "Booking Slots",
+                    "range": {
+                      "start": "2023-07-16T04:41:16Z",
+                      "end": "2023-07-16T04:41:16Z"
+                    }
+                  }
+                }
+              ],
+              "tracking": false
+            }
+          ],
+          "type": "DEFAULT"
+        }
+      }
+    }
+  ]
+}

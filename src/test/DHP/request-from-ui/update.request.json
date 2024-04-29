@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "dhp:pharmacy:0.1.0",
+        "bpp_id": "{{bpp_id_strapi}}",
+        "bpp_uri": "{{bpp_uri_strapi}}",
+        "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176"
+      },
+      "orderId": "572",
+      "updateDetails": {
+        "updateTarget": "order.billing",
+        "billing": {
+          "name": "John Doe",
+          "address": "Villa 67, Green Valley, Malleshwaram, 560012",
+          "email": "john.doe@example.com",
+          "phone": "+91-9999999999"
+        }
+      }
+    }
+  ]
+}
