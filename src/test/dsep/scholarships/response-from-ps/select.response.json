@@ -112,9 +112,8 @@
                   "descriptor": { "description": "scholarships" },
                   "list": [
                     {
-                      "descriptor": { "description": "Scholarship" },
                       "value": "scholarship",
-                      "code": "scholarship",
+                      "descriptor": { "code": "scholarship" },
                       "display": true
                     }
                   ]
@@ -122,22 +121,12 @@
                 {
                   "display": true,
                   "descriptor": { "description": "scholarships" },
-                  "list": [
-                    {
-                      "descriptor": { "description": "Ramaiah" },
-                      "display": true
-                    }
-                  ]
+                  "list": [{ "display": true }]
                 },
                 {
                   "display": true,
                   "descriptor": { "description": "DSEP" },
-                  "list": [
-                    {
-                      "descriptor": { "description": "Entrance" },
-                      "display": true
-                    }
-                  ]
+                  "list": [{ "display": true }]
                 }
               ],
               "xinput": {

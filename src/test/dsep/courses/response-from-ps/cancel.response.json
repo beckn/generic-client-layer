@@ -105,7 +105,7 @@
                   "list": [
                     {
                       "value": "Amazon",
-                      "code": "course-brand-name",
+                      "descriptor": { "code": "course-brand-name" },
                       "display": true
                     }
                   ]
@@ -114,7 +114,11 @@
                   "display": true,
                   "descriptor": { "description": "DSEP" },
                   "list": [
-                    { "value": "AWS", "code": "course-name", "display": true }
+                    {
+                      "value": "AWS",
+                      "descriptor": { "code": "course-name" },
+                      "display": true
+                    }
                   ]
                 },
                 {
@@ -122,7 +126,7 @@
                   "list": [
                     {
                       "value": "30 days",
-                      "code": "course-duration",
+                      "descriptor": { "code": "course-duration" },
                       "display": true
                     }
                   ]
@@ -132,7 +136,7 @@
                   "list": [
                     {
                       "value": "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/?couponCode=LETSLEARNNOWPP",
-                      "code": "course-url",
+                      "descriptor": { "code": "course-url" },
                       "display": true
                     }
                   ]

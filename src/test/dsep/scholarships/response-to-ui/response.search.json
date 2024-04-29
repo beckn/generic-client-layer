@@ -54,7 +54,12 @@
                     "type": "scholarship",
                     "tracking": false,
                     "tags": [
-                      { "display": true, "list": [{ "value": "scholarship" }] },
+                      {
+                        "display": true,
+                        "list": [
+                          { "code": "scholarship", "value": "scholarship" }
+                        ]
+                      },
                       { "display": true, "list": [null] },
                       { "display": true, "list": [null] }
                     ]
