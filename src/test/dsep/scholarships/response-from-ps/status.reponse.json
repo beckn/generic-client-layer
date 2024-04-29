@@ -106,7 +106,7 @@
                   "list": [
                     {
                       "value": "scholarship",
-                      "code": "scholarship",
+                      "descriptor": { "code": "scholarship" },
                       "display": true
                     }
                   ]
