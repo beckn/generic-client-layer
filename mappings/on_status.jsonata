@@ -5,6 +5,7 @@
             "order":{
                 "id": message.order.id,
                 "status": message.order.status,
+                "created_at": message.order.created_at,
                 "provider":{
                     "id": message.order.provider.id,
                     "name": message.order.provider.descriptor.name,
