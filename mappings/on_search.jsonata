@@ -74,7 +74,7 @@
                         "code": descriptor.code,
                         "name": descriptor.name,
                         "display": display,
-                        "list": list.{ "code": code, "name": name, "value": value }[]
+                        "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                     }[],
                     "time": {
                         "duration": time.duration,
@@ -86,7 +86,8 @@
                 "images": descriptor.images.{"url": url}[],
                 "media": descriptor.media.{"url": url, "mimetype": mimetype}[]
             }[]
-        }
+        },
+        "rawResponse": $includeRawResponse ? $ :{}
     }[],
     "error": {
         "description": error.description,

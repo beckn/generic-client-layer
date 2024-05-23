@@ -1,0 +1,166 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "search",
+    "timestamp": "2024-04-29T13:40:04.083Z",
+    "message_id": "c706bd28-2eb0-476a-9714-4b7426216722",
+    "transaction_id": "1b64dbbe-488b-4ccc-bd04-d6ee060fbe1e",
+    "domain": "supply-chain-services:assembly",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": {
+        "name": "India",
+        "code": "IND"
+      },
+      "city": {
+        "name": "Bangalore",
+        "code": "std:080"
+      }
+    }
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "supply-chain-services:assembly",
+        "action": "on_search",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "name": "India",
+            "code": "IND"
+          },
+          "city": {
+            "name": "Bangalore",
+            "code": "std:080"
+          }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "1b64dbbe-488b-4ccc-bd04-d6ee060fbe1e",
+        "message_id": "c706bd28-2eb0-476a-9714-4b7426216722",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T13:40:11.204Z"
+      },
+      "message": {
+        "catalog": {
+          "descriptor": {
+            "name": "BPP",
+            "code": "bpp",
+            "short_desc": "Unified Strapi BPP"
+          },
+          "providers": [
+            {
+              "id": "41",
+              "descriptor": {
+                "name": "Makerspace - S",
+                "short_desc": "Makerspace",
+                "long_desc": "Makerspace, Hof",
+                "additional_desc": {
+                  "url": "www.makerspace.com"
+                },
+                "images": [
+                  {
+                    "url": "https://makerspace/assembly/makerspace_logo.png",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "categories": [
+                {
+                  "id": "68",
+                  "descriptor": {
+                    "name": "Intermittent",
+                    "code": "intermittent"
+                  }
+                },
+                {
+                  "id": "69",
+                  "descriptor": {
+                    "name": "Lean",
+                    "code": "lean"
+                  }
+                },
+                {
+                  "id": "65",
+                  "descriptor": {
+                    "name": "Assembly",
+                    "code": "assembly"
+                  }
+                },
+                {
+                  "id": "66",
+                  "descriptor": {
+                    "name": "Classic",
+                    "code": "classic"
+                  }
+                }
+              ],
+              "rating": "4.7",
+              "short_desc": "Makerspace",
+              "locations": [
+                {
+                  "id": "13",
+                  "gps": "50.311674, 11.90335",
+                  "address": "154/9, Bannerghatta Rd, opposite IIM-B, Sahyadri Layout, Panduranga Nagar, Bengaluru, Karnataka 560076",
+                  "city": {
+                    "name": "Bangalore F"
+                  },
+                  "country": {
+                    "name": "India"
+                  },
+                  "state": {
+                    "name": "Karnataka"
+                  },
+                  "area_code": "560076"
+                }
+              ],
+              "rateable": true,
+              "items": [
+                {
+                  "id": "62",
+                  "descriptor": {
+                    "name": "Packaging",
+                    "code": "PCK",
+                    "short_desc": "Packaging",
+                    "images": [
+                      {
+                        "url": "https://i.pinimg.com/474x/42/8e/08/428e08c7c632d41fbd44d484c6c24616.jpg"
+                      }
+                    ]
+                  },
+                  "rateable": true,
+                  "rating": "null",
+                  "price": {
+                    "value": "1000"
+                  },
+                  "tags": [
+                    {
+                      "display": true,
+                      "descriptor": {
+                        "description": "online courses"
+                      },
+                      "list": [
+                        {
+                          "descriptor": {
+                            "description": "java"
+                          },
+                          "display": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

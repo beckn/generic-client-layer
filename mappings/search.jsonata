@@ -12,6 +12,7 @@
                 "type": fulfillment.type,
                 "stops": $map( fulfillment.stops, function($gps) {
                     {
+                        "type": $gps.type,
                         "location": {
                             "gps":$gps.location
                         }

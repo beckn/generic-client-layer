@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "supply-chain-services:assembly",
+        "action": "on_confirm",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "name": "India",
+            "code": "IND"
+          },
+          "city": {
+            "name": "Bangalore",
+            "code": "std:080"
+          }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "eed96a3f-c780-4157-a219-09ff871ee56c",
+        "message_id": "97003c31-3a9a-433e-8aae-bce9866ac9d0",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T13:47:13.410Z"
+      },
+      "message": {
+        "orderId": "574",
+        "provider": {
+          "id": "41",
+          "name": "Makerspace - S",
+          "short_desc": "Makerspace",
+          "long_desc": "Makerspace, Hof",
+          "rating": "4.7",
+          "images": [
+            {
+              "url": "https://i.pinimg.com/474x/42/8e/08/428e08c7c632d41fbd44d484c6c24616.jpg",
+              "size_type": "sm"
+            }
+          ]
+        },
+        "items": [
+          {
+            "id": "62",
+            "name": "Packaging",
+            "code": "PCK",
+            "short_desc": "Packaging",
+            "images": [
+              {
+                "url": "https://i.pinimg.com/474x/42/8e/08/428e08c7c632d41fbd44d484c6c24616.jpg",
+                "size_type": "sm"
+              }
+            ],
+            "price": {
+              "value": "1000"
+            },
+            "rating": "null",
+            "rateable": true,
+            "quantity": {
+              "available": {
+                "measure": {
+                  "value": "0",
+                  "unit": "kWh"
+                }
+              }
+            },
+            "tags": [
+              {
+                "display": true,
+                "list": [null]
+              }
+            ]
+          }
+        ],
+        "fulfillments": [
+          {
+            "id": "3",
+            "customer": {
+              "contact": {
+                "email": "fox.judie@abc.org",
+                "phone": "+91-9999999999"
+              },
+              "person": {
+                "name": "Judie Fox"
+              }
+            },
+            "tracking": false
+          }
+        ],
+        "quote": {
+          "price": {
+            "value": "1000"
+          }
+        },
+        "billing": {
+          "name": "Industry buyer",
+          "address": "B005 aspire heights, Jurong East, SGP, 680230",
+          "state": {
+            "name": "Jurong East"
+          },
+          "city": {
+            "name": "Jurong East"
+          },
+          "email": "nobody@nomail.com",
+          "phone": "9886098860"
+        },
+        "payments": [
+          {
+            "collected_by": "BPP",
+            "params": {
+              "bank_account_name": "Makerspace Assembly Ltd",
+              "bank_account": "1234002341",
+              "bank_code": "INB0004321",
+              "price": "1000"
+            },
+            "status": "PAID",
+            "type": "PRE-ORDER"
+          }
+        ]
+      }
+    }
+  ]
+}

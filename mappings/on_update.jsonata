@@ -54,7 +54,8 @@
                 "billing": message.order.billing,
                 "payments": message.order.payments,
                 "cancellation_terms": message.order.cancellation_terms
-        }
+    },
+    "rawResponse": $includeRawResponse ? $ :{}
 
     }[]
 }

@@ -35,18 +35,20 @@
             }
           ]
         },
-        "items": {
-          "id": "ALPHA-ARB-01",
-          "name": "Arbitration Services",
-          "code": "arbitration-service",
-          "categories": [
-            {
-              "id": "ODRCAT001",
-              "name": "Civil Dispute",
-              "code": "civil-dispute"
-            }
-          ]
-        },
+        "items": [
+          {
+            "id": "ALPHA-ARB-01",
+            "name": "Arbitration Services",
+            "code": "arbitration-service",
+            "categories": [
+              {
+                "id": "ODRCAT001",
+                "name": "Civil Dispute",
+                "code": "civil-dispute"
+              }
+            ]
+          }
+        ],
         "fulfillments": [
           {
             "customer": {

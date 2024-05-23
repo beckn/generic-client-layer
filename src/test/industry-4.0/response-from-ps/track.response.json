@@ -1,0 +1,55 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "track",
+    "timestamp": "2024-04-29T13:51:08.005Z",
+    "message_id": "bfa864d7-b103-4b3e-a0c6-47a658550ec1",
+    "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176",
+    "domain": "supply-chain-services:assembly",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "supply-chain-services:assembly",
+        "action": "on_track",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176",
+        "message_id": "bfa864d7-b103-4b3e-a0c6-47a658550ec1",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T13:51:12.209Z"
+      },
+      "message": {
+        "tracking": {
+          "id": "270",
+          "status": "active",
+          "url": "https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/tracking/570",
+          "location": {
+            "id": "298",
+            "descriptor": {
+              "name": "B005 aspire heights, Jurong East, SGP, 680230"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

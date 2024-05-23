@@ -1,0 +1,140 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "search",
+    "timestamp": "2024-04-25T13:53:00.945Z",
+    "message_id": "86e21f0d-483e-4075-9b0d-e4ebca349a55",
+    "transaction_id": "40ee696a-af8f-45c5-b17d-f7a4896e962b",
+    "domain": "dsep:scholarships",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    }
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dsep:scholarships",
+        "action": "on_search",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "40ee696a-af8f-45c5-b17d-f7a4896e962b",
+        "message_id": "86e21f0d-483e-4075-9b0d-e4ebca349a55",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T13:53:05.879Z"
+      },
+      "message": {
+        "catalog": {
+          "descriptor": {
+            "name": "BPP",
+            "code": "bpp",
+            "short_desc": "Unified Strapi BPP"
+          },
+          "providers": [
+            {
+              "id": "20",
+              "descriptor": {
+                "name": "GLA University Admission Scholarship",
+                "short_desc": "The GLA university grants the GLA university scholarship to the academically brilliant students studying in M.Tech courses",
+                "long_desc": "Scholarship Details: The candidates who qualify for the M.Tech scholarship will be awarded INR 1,33,000 (GATE qualified candidates) and INR 1,05,000 (Non-GATE and GLAET qualified candidates)\\n\\nEligibility Criteria: The candidate must enroll in B.Tech/ B.Pharma/ M.Tech/ M.Pharma/ Ph.D. courses in GLA university. Additionally, the applicants must have cleared the entrance examinations of JEE Mains/ GATE/ GLAET with the required marks.",
+                "additional_desc": {
+                  "url": "https://www.gla.ac.in/admissions/scholorship"
+                },
+                "images": [
+                  {
+                    "url": "https://makerspace/assembly/makerspace_logo.png",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "categories": [
+                { "id": "26", "descriptor": { "name": "GLA University" } },
+                { "id": "6", "descriptor": { "name": "Management" } },
+                { "id": "5", "descriptor": { "name": "Master Degree" } },
+                { "id": "7", "descriptor": { "name": "MBA" } }
+              ],
+              "short_desc": "The GLA university grants the GLA university scholarship to the academically brilliant students studying in M.Tech courses",
+              "fulfillments": [
+                {
+                  "id": "11",
+                  "type": "scholarship",
+                  "rating": "3.4",
+                  "rateable": true,
+                  "tracking": false
+                }
+              ],
+              "locations": [
+                {
+                  "id": "9",
+                  "gps": "18.5401344, 77.5945370",
+                  "address": "17km Stone, NH-19,\\nMathura-Delhi Road\\nP.O. Chaumuhan,\\nMathura-281 406 (U.P.) India",
+                  "city": { "name": "Mathura" },
+                  "country": { "name": "India" },
+                  "state": { "name": "UP" },
+                  "area_code": "281406"
+                },
+                { "id": "undefined", "area_code": "undefined" }
+              ],
+              "rateable": true,
+              "items": [
+                {
+                  "id": "26",
+                  "descriptor": {
+                    "name": "GLA University Admission Scholarship",
+                    "short_desc": "The GLA university grants the GLA university scholarship to the academically brilliant students studying in M.Tech courses",
+                    "long_desc": "Scholarship Details: The candidates who qualify for the M.Tech scholarship will be awarded INR 1,33,000 (GATE qualified candidates) and INR 1,05,000 (Non-GATE and GLAET qualified candidates)\\n\\nEligibility Criteria: The candidate must enroll in B.Tech/ B.Pharma/ M.Tech/ M.Pharma/ Ph.D. courses in GLA university. Additionally, the applicants must have cleared the entrance examinations of JEE Mains/ GATE/ GLAET with the required marks.",
+                    "images": [
+                      {
+                        "url": "https://www.gla.ac.in/images/gla-university-logo.png"
+                      }
+                    ]
+                  },
+                  "rateable": true,
+                  "rating": "null",
+                  "price": { "value": "0" },
+                  "category_ids": ["26"],
+                  "fulfillment_ids": ["11"],
+                  "tags": [
+                    {
+                      "display": true,
+                      "descriptor": { "description": "scholarships" },
+                      "list": [
+                        {
+                          "value": "scholarship",
+                          "descriptor": { "code": "scholarship" },
+                          "display": true
+                        }
+                      ]
+                    },
+                    {
+                      "display": true,
+                      "descriptor": { "description": "scholarships" },
+                      "list": [{ "display": true }]
+                    },
+                    {
+                      "display": true,
+                      "descriptor": { "description": "DSEP" },
+                      "list": [{ "display": true }]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

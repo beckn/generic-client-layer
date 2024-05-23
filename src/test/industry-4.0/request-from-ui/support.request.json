@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "supply-chain-services:assembly",
+        "bpp_id": "{{bpp_id_strapi}}",
+        "bpp_uri": "{{bpp_uri_strapi}}",
+        "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176"
+      },
+      "message": {
+        "order_id": "570",
+        "support": {
+          "callback_phone": "+91-8858150053",
+          "ref_id": "894789-43954",
+          "phone": "+91 9988776543",
+          "email": "supportperson@gmail.com"
+        }
+      }
+    }
+  ]
+}

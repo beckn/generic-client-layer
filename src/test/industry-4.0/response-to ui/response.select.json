@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "supply-chain-services:assembly",
+        "action": "on_select",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": {
+            "name": "India",
+            "code": "IND"
+          },
+          "city": {
+            "name": "Bangalore",
+            "code": "std:080"
+          }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "b1a7e6b5-36d3-4c08-ae52-8450cdd079b2",
+        "message_id": "46ccb3d6-0fc0-42bb-89bb-d24f2e75f087",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-29T13:41:50.720Z"
+      },
+      "message": {
+        "order": {
+          "type": "DEFAULT",
+          "quote": {
+            "price": {
+              "value": "1000"
+            }
+          },
+          "provider": {
+            "id": "41",
+            "name": "Makerspace - S",
+            "short_desc": "Makerspace",
+            "long_desc": "Makerspace, Hof",
+            "rating": "4.7",
+            "images": {
+              "url": "https://i.pinimg.com/474x/42/8e/08/428e08c7c632d41fbd44d484c6c24616.jpg",
+              "size_type": "sm"
+            }
+          },
+          "items": [
+            {
+              "id": "62",
+              "xinput": {
+                "url": "https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/form?form_id=itemDetailsForm",
+                "mime_type": "text/html",
+                "html": "<html><head>\n    <title>XInput Form</title>\n</head>\n\n<body>\n    <form id=\"xinputform\">\n        <label for=\"plength\">Name: </label>\n        <input type=\"text\" name=\"name\" value=\"\">\n        <br><br>\n        <label for=\"itemCount\">Number of items: </label>\n        <input type=\"number\" name=\"number_of_items\" value=\"0\">\n        <br><br>\n        <button type=\"button\">Submit</button>\n    <input type=\"hidden\" value=\"https://bpp-unified-strapi-dev.becknprotocol.io/beckn-bpp-adapter/x-input/submit\" id=\"action\" name=\"action\"><input type=\"hidden\" value=\"post\" id=\"method\" name=\"method\"></form>\n\n\n</body></html>"
+              },
+              "name": "Packaging",
+              "short_desc": "Packaging",
+              "images": [
+                {
+                  "url": "https://i.pinimg.com/474x/42/8e/08/428e08c7c632d41fbd44d484c6c24616.jpg",
+                  "size_type": "sm"
+                }
+              ],
+              "price": {
+                "value": "1000"
+              },
+              "rating": "null",
+              "rateable": true,
+              "quantity": {
+                "available": {
+                  "measure": {
+                    "value": "0",
+                    "unit": "kWh"
+                  }
+                }
+              },
+              "tags": [
+                {
+                  "display": true,
+                  "list": [null]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

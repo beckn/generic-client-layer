@@ -33,7 +33,7 @@
                         "code": descriptor.code,
                         "name": descriptor.name,
                         "display": display,
-                        "list": list.{ "code": code, "name": name, "value": value }[]
+                       "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                     }[]
                 }[],
                 "fulfillments": message.order.fulfillments,
@@ -42,6 +42,7 @@
                 "payments": message.order.payments,
                 "cancellation_terms": message.order.cancellation_terms
             }
-        }
+        },
+        "rawResponse": $includeRawResponse ? $ :{}
     }[]
 }

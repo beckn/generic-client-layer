@@ -5,6 +5,7 @@
             "order":{
                 "id": message.order.id,
                 "status": message.order.status,
+                "created_at": message.order.created_at,
                 "provider":{
                     "id": message.order.provider.id,
                     "name": message.order.provider.descriptor.name,
@@ -55,7 +56,7 @@
                         "code": descriptor.code,
                         "name": descriptor.name,
                         "display": display,
-                        "list": list.{ "code": code, "name": name, "value": value }[]
+                       "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                     }[]
               }[],
                 "fulfillments": message.order.fulfillments,
@@ -69,10 +70,11 @@
                         "code": descriptor.code,
                         "name": descriptor.name,
                         "display": display,
-                        "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
+                       "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                     }[]
             }
-        }
+        },
+        "rawResponse": $includeRawResponse ? $ :{}
     }[]
 }
 

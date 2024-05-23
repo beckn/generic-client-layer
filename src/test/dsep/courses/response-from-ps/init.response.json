@@ -1,0 +1,178 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "init",
+    "timestamp": "2024-04-25T09:24:27.339Z",
+    "message_id": "258d31fc-ffa5-4fb1-be5d-9a86e33a71dc",
+    "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+    "domain": "dsep:courses",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dsep:courses",
+        "action": "on_init",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "message_id": "258d31fc-ffa5-4fb1-be5d-9a86e33a71dc",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T09:24:32.758Z"
+      },
+      "message": {
+        "order": {
+          "provider": {
+            "id": "17",
+            "descriptor": {
+              "name": "Udemy",
+              "short_desc": "udemy e learning platform",
+              "long_desc": "udemy e learning platform",
+              "additional_desc": { "url": "https://udemy.com" },
+              "images": [
+                {
+                  "url": "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+                  "size_type": "sm"
+                }
+              ]
+            },
+            "categories": [{ "id": "1", "descriptor": { "name": "IT" } }],
+            "short_desc": "udemy e learning platform",
+            "fulfillments": [
+              { "id": "1", "rating": "undefined", "tracking": false },
+              {
+                "id": "8",
+                "type": "RECORDED COURSE",
+                "rating": "4.5",
+                "rateable": true,
+                "tracking": false
+              }
+            ],
+            "locations": [
+              {
+                "id": "2",
+                "gps": "44.6616,111.1001",
+                "address": "Max pvt lmtd",
+                "city": { "name": "Delhi" },
+                "country": { "name": "India" },
+                "state": { "name": "Delhi" },
+                "area_code": "110000"
+              },
+              { "id": "undefined", "area_code": "undefined" }
+            ],
+            "rateable": true
+          },
+          "items": [
+            {
+              "id": "21",
+              "descriptor": {
+                "name": "Amazon Web Services (AWS) - Zero to Hero",
+                "short_desc": "A high paced hands on course on AWS, complete with in depth professional courses notes.",
+                "long_desc": "About the courses:\\nThis course will help you set up WordPress on AWS EC2, and link to RDS database, build reliable NodeJS backend using Elastic Beanstalk, manage files via AWS S3, send emails with SES, and set CloudWatch alarms. \\n\\nCourse details:\\nCourse Provider: Udemy\\nCourse Instructor: BackSpace Academy\\nCourse Length: 3 hours\\nModules: 14\\nSkills taught: AWS, NodeJS\\nLevel: Beginner\\nSchedule: Flexible\\nCourse delivery: Online",
+                "images": [
+                  {
+                    "url": "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "rating": "4.5",
+              "rateable": true,
+              "price": { "value": "4000", "currency": "INR" },
+              "quantity": {
+                "available": {
+                  "count": 100000,
+                  "measure": { "value": "100000", "unit": "kWh" }
+                }
+              },
+              "category_ids": ["20"],
+              "fulfillment_ids": ["8"],
+              "tags": [
+                {
+                  "display": true,
+                  "descriptor": { "description": "DSEP" },
+                  "list": [
+                    {
+                      "value": "Amazon",
+                      "descriptor": { "code": "course-brand-name" },
+                      "display": true
+                    }
+                  ]
+                },
+                {
+                  "display": true,
+                  "descriptor": { "description": "DSEP" },
+                  "list": [
+                    {
+                      "value": "AWS",
+                      "descriptor": { "code": "course-name" },
+                      "display": true
+                    }
+                  ]
+                },
+                {
+                  "display": true,
+                  "list": [
+                    {
+                      "value": "30 days",
+                      "descriptor": { "code": "course-duration" },
+                      "display": true
+                    }
+                  ]
+                },
+                {
+                  "display": true,
+                  "list": [
+                    {
+                      "value": "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/?couponCode=LETSLEARNNOWPP",
+                      "descriptor": { "code": "course-url" },
+                      "display": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "quote": { "price": { "value": "4000", "currency": "INR" } },
+          "categories": [
+            {
+              "id": "1",
+              "value": "IT",
+              "createdAt": "2023-09-11T16:27:00.112Z",
+              "updatedAt": "2023-09-11T16:27:01.640Z",
+              "publishedAt": "2023-09-11T16:27:01.607Z"
+            }
+          ],
+          "fulfillments": [
+            { "id": "1", "rateable": true, "tracking": false },
+            {
+              "id": "8",
+              "type": "RECORDED COURSE",
+              "rating": "4.5",
+              "rateable": true,
+              "tracking": false
+            }
+          ],
+          "type": "DEFAULT"
+        }
+      }
+    }
+  ]
+}

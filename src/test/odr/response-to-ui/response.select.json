@@ -62,6 +62,11 @@
               "name": "Arbitration Services",
               "short_desc": "Seamless resolution for disputes. Our expert arbitration services ensure fairness and harmony in legal matters, fostering peaceful settlements.",
               "long_desc": "<html><body><p>HarmonyArbitrators specializes in comprehensive arbitration services for civil, family, employment, commercial, and financial disputes.</p><p>Our seasoned arbitrators prioritize efficiency, ensuring fair and impartial resolutions. With a commitment to transparency and client satisfaction, we navigate complexities with professionalism, adhering to ethical standards. Trust HarmonyArbitrators for streamlined processes, timely outcomes, and tailored solutions. We strive not only to resolve disputes but also to leave parties with a sense of harmony and justice. Experience dedicated and effective dispute resolution with HarmonyArbitrators.</p></body></html>",
+              "images": [
+                {
+                  "url": "https://imgs.search.brave.com/HJwyZoG5OILiz5APZC6fTdryfIWTfYBw7azIWCFNOag/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdDIu/ZGVwb3NpdHBob3Rv/cy5jb20vMTcwMTY1/MS83MTkxL2kvNjAw/L2RlcG9zaXRwaG90/b3NfNzE5MTUxOTEt/c3RvY2stcGhvdG8t/YXJiaXRyYXRpb24t/Y29uY2VwdC5qcGc"
+                }
+              ],
               "categories": [
                 {
                   "id": "ODRCAT001",

@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c60008",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "domain": "dsep:jobs"
+      },
+      "message": {
+        "orders": {
+          "items": [
+            {
+              "id": "6",
+              "fulfillment_ids": ["1"]
+            }
+          ],
+          "fulfillments": [
+            {
+              "id": "1",
+              "customer": {
+                "person": {
+                  "name": "Sanjay",
+                  "gender": "M",
+                  "creds": [
+                    {
+                      "id": "claimId:af7e0b1b5c4858eb",
+                      "type": "GenderData",
+                      "url": "https://cloud-wallet-api.prod.affinity-project.org/api/v1/share/b8a2c0cbc5a02da03d2aecb59094672a8e0b16a1c845456bd18678529d6901df?key=beda347c431e02319bd31c63e5f5f5f5e14939efdb6697ce4d93c87eade27c47"
+                    },
+                    {
+                      "id": "claimId:af7e0b1b5c4858eb",
+                      "type": "ResumeVC",
+                      "url": "https://cloud-wallet-api.prod.affinity-project.org/api/v1/share/b8a2c0cbc5a02da03d2aecb59094672a8e0b16a1c845456bd18678529d6901df?key=beda347c431e02319bd31c63e5f5f5f5e14939efdb6697ce4d93c87eade27c47"
+                    }
+                  ],
+                  "tags": [
+                    {
+                      "code": "func_skills",
+                      "list": [
+                        {
+                          "code": "Android"
+                        },
+                        {
+                          "code": "AWS"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "contact": {
+                  "phone": "9999999999999",
+                  "email": "abc@abc.bc"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "includeRawResponse": true
+}

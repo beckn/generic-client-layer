@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "context": {
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "domain": "dsep:courses"
+      },
+      "message": {
+        "ratings": [
+          {
+            "id": "364",
+            "rating_category": "Item",
+            "value": "4"
+          }
+        ]
+      }
+    }
+  ]
+}

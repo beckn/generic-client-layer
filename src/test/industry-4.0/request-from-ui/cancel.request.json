@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "context": {
+        "transaction_id": "eed96a3f-c780-4157-a219-09ff871ee56c",
+        "bpp_id": "{{bpp_id_strapi}}",
+        "bpp_uri": "{{bpp_uri_strapi}}",
+        "domain": "supply-chain-services:assembly"
+      },
+      "message": {
+        "order_id": "570",
+        "cancellation_reason_id": "4",
+        "descriptor": {
+          "short_desc": "Order delayed"
+        }
+      }
+    }
+  ]
+}

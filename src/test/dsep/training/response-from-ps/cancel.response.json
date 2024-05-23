@@ -1,0 +1,134 @@
+{
+  "context": {
+    "ttl": "PT10M",
+    "action": "cancel",
+    "timestamp": "2024-04-26T09:13:56.401Z",
+    "message_id": "cbbc9eb6-5d4a-43c2-8bec-d803dd8561f2",
+    "transaction_id": "bdb5ba09-2241-4f00-b434-73466cd06228",
+    "domain": "dsep:mentoring",
+    "version": "1.1.0",
+    "bap_id": "bap-ps-network-dev.becknprotocol.io",
+    "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+    "location": {
+      "country": { "name": "India", "code": "IND" },
+      "city": { "name": "Bangalore", "code": "std:080" }
+    },
+    "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+    "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io"
+  },
+  "responses": [
+    {
+      "context": {
+        "domain": "dsep:mentoring",
+        "action": "on_cancel",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-strapi-dev.becknprotocol.io",
+        "bpp_uri": "http://bpp-ps-network-strapi-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "bdb5ba09-2241-4f00-b434-73466cd06228",
+        "message_id": "cbbc9eb6-5d4a-43c2-8bec-d803dd8561f2",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-26T09:14:01.321Z"
+      },
+      "message": {
+        "order": {
+          "id": "523",
+          "provider": {
+            "id": "43",
+            "descriptor": {
+              "name": "Upgrad",
+              "short_desc": "UpGrad is an Indian online education platform offering professional courses and degree programs in collaboration with universities, specializing in industry-relevant skills.",
+              "long_desc": " UpGrad is an Indian online education platform that specializes in offering a wide range of professional courses and degree programs in collaboration with universities and industry partners. It focuses on providing industry-relevant skills in areas such as data science, business, technology, and more. Please verify with the latest sources for any updates or changes since then.",
+              "images": [
+                {
+                  "url": "https://blog.nextideatech.com/wp-content/uploads/2022/12/1_FVtCyRdJ6KOr4YswTtwMeA-1024x586.jpeg",
+                  "size_type": "sm"
+                }
+              ]
+            },
+            "short_desc": "UpGrad is an Indian online education platform offering professional courses and degree programs in collaboration with universities, specializing in industry-relevant skills.",
+            "locations": [
+              {
+                "id": "13",
+                "gps": "50.311674, 11.90335",
+                "address": "154/9, Bannerghatta Rd, opposite IIM-B, Sahyadri Layout, Panduranga Nagar, Bengaluru, Karnataka 560076",
+                "city": { "name": "Bangalore F" },
+                "country": { "name": "India" },
+                "state": { "name": "Karnataka" },
+                "area_code": "560076"
+              }
+            ],
+            "rateable": true
+          },
+          "items": [
+            {
+              "id": "64",
+              "descriptor": {
+                "name": "MERN Stack Developer",
+                "code": "MERNSD",
+                "short_desc": "UpGrad's MERN Stack Developer course equips learners with expertise in MongoDB, Express.js, React, and Node.js, fostering proficiency in full-stack web development.",
+                "long_desc": "The MERN Stack Developer course by UpGrad is a immersive program designed to empower learners with the essential skills for full-stack web development. Covering MongoDB, Express.js, React, and Node.js, this hands-on curriculum delves into database management, server-side scripting, front-end development, and seamless integration of technologies. With a focus on real-world applications, project work, and industry-relevant tools, participants gain practical experience and the ability to build dynamic, scalable web applications. Whether you're a beginner or seeking to enhance your expertise, this course provides a comprehensive journey into the MERN stack, preparing you for a successful career in web development.",
+                "images": [
+                  {
+                    "url": "https://blog.nextideatech.com/wp-content/uploads/2022/12/1_FVtCyRdJ6KOr4YswTtwMeA-1024x586.jpeg",
+                    "size_type": "sm"
+                  }
+                ]
+              },
+              "rating": "null",
+              "rateable": true,
+              "price": { "value": "1000", "currency": "INR" }
+            }
+          ],
+          "price": { "value": "1000" },
+          "fulfillments": [
+            {
+              "id": "1",
+              "state": {
+                "descriptor": {
+                  "code": "USER CANCELLED",
+                  "short_desc": "cancelled by user"
+                },
+                "updated_at": "2024-04-26T09:14:01.253Z"
+              },
+              "customer": {
+                "contact": { "email": "sample@email.com" },
+                "person": { "name": "John" }
+              },
+              "stops": [
+                { "type": "end", "contact": { "phone": "9886098860" } }
+              ],
+              "tracking": false
+            }
+          ],
+          "billing": {
+            "name": "Van Bode III",
+            "email": "Sonny_Auera1@yahoo1.com",
+            "phone": "881-311-2951 x01508"
+          },
+          "payments": [
+            {
+              "collected_by": "BPP",
+              "params": {
+                "bank_account_number": "1234002341",
+                "bank_code": "INB0004321",
+                "bank_account_name": "Makerspace Assembly Ltd"
+              },
+              "status": "PAID",
+              "type": "PRE-ORDER"
+            }
+          ],
+          "quote": { "price": { "value": "1000" } },
+          "type": "DEFAULT"
+        }
+      }
+    }
+  ]
+}

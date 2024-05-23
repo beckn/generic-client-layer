@@ -1,0 +1,139 @@
+{
+  "data": [
+    {
+      "context": {
+        "domain": "retail:1.1.0",
+        "action": "on_status",
+        "version": "1.1.0",
+        "bpp_id": "bpp-ps-network-vendure-dev.becknprotocol.io",
+        "bpp_uri": "https://bpp-ps-network-vendure-dev.becknprotocol.io",
+        "country": "IND",
+        "city": "std:080",
+        "location": {
+          "country": { "name": "India", "code": "IND" },
+          "city": { "name": "Bangalore", "code": "std:080" }
+        },
+        "bap_id": "bap-ps-network-dev.becknprotocol.io",
+        "bap_uri": "https://bap-ps-network-dev.becknprotocol.io",
+        "transaction_id": "c1df5d3b-dfff-4f89-8b0c-5168b6ab6418",
+        "message_id": "d6acff2b-b6bb-4966-8740-1c0a6a946fe1",
+        "ttl": "PT10M",
+        "timestamp": "2024-04-25T09:30:19.831Z"
+      },
+      "message": {
+        "order": {
+          "id": "3627b3e93bebff6b46dd6edb8d0abe60a089436a4563c45e2cfaa27945c39a98",
+          "status": "ACTIVE",
+          "provider": {
+            "id": "meru-coffee",
+            "name": "Meru Coffee",
+            "short_desc": "Sellers of premium coffee products",
+            "long_desc": "The finest Chickamagalur coffee products"
+          },
+          "items": [
+            {
+              "id": "2",
+              "name": "Jayanthi Coffee",
+              "long_desc": "<p><strong>85% Coffee And 15% Chicory&nbsp;</strong></p><ul><li><p>South indian coffee contains 85% pure coffee powder with fruity aroma and nutty flavour</p></li><li><p>Serve hot with frothy milk and sugar</p></li><li><p>Perfect for those who are habituated to drinking pure coffee but would like to try south indian filter coffee</p></li><li><p>Contains 15% premium ground chicory</p></li><li><p>Suitable for automatic coffee filter, epsresso machines</p></li></ul>",
+              "images": [
+                {
+                  "url": "http://bpp-unified-vendure-dev.becknprotocol.io/assets/source/aa/janathi_coffee.webp"
+                }
+              ],
+              "price": {
+                "listed_value": "540.00",
+                "currency": "INR",
+                "value": "540.00"
+              },
+              "quantity": { "selected": { "count": 5 } }
+            }
+          ],
+          "fulfillments": [
+            {
+              "stops": [
+                {
+                  "location": {
+                    "address": "15 Rue du Soleil, Paris, France ",
+                    "city": { "name": "Ghaziabad" },
+                    "state": { "name": "Uttar Pradesh" },
+                    "country": { "code": "IN" },
+                    "area_code": "201002"
+                  },
+                  "contact": {
+                    "name": "Antoine Dubois",
+                    "phone": "0612345678",
+                    "email": "antoine.dubois@gmail.com"
+                  }
+                }
+              ],
+              "customer": {
+                "person": { "name": "Antoine Dubois" },
+                "contact": { "phone": "0612345678" }
+              },
+              "tracking": false
+            }
+          ],
+          "quote": {
+            "price": { "currency": "INR", "value": "3240.00" },
+            "breakup": [
+              {
+                "title": "base-price",
+                "price": { "currency": "INR", "value": "2700.00" }
+              },
+              {
+                "title": "shipping",
+                "price": { "currency": "INR", "value": "0.00" }
+              },
+              {
+                "title": "taxes",
+                "price": { "currency": "INR", "value": "540.00" }
+              }
+            ]
+          },
+          "billing": {
+            "name": "Antoine Dubois",
+            "phone": "0612345678",
+            "email": "antoine.dubois@gmail.com",
+            "address": "15 Rue du Soleil, Paris, France",
+            "city": { "name": "Ghaziabad" },
+            "state": { "name": "Uttar Pradesh" }
+          },
+          "payments": [
+            {
+              "type": "PRE-FULFILLMENT",
+              "params": {
+                "amount": "1973.50",
+                "currency": "INR",
+                "transaction_id": ""
+              },
+              "time": {
+                "label": "Transaction timestamp",
+                "timestamp": "2024-04-25T09:30:19.812Z"
+              }
+            }
+          ],
+          "type": "DEFAULT",
+          "tags": [
+            {
+              "code": "ShippingMethodDetails",
+              "name": "Shipping method details",
+              "display": true
+            },
+            {
+              "code": "AdditionalStatus",
+              "name": "Additional status",
+              "display": true,
+              "list": [
+                {
+                  "code": "detailedOrderStatus",
+                  "name": "Detailed Order Status",
+                  "value": "AddingItems"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
