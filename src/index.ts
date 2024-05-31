@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import express, { Application, NextFunction } from "express";
+import express, { Application } from "express";
 import { container, server } from "./inversify/inversify.config";
 import "./gcl/gcl.controller";
 import { ConfigService } from "./config/config.service";

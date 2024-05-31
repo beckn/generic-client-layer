@@ -1,5 +1,6 @@
 import { injectable } from "inversify";
 import winston, { Logger, format } from "winston";
+import "winston-daily-rotate-file";
 import { format as printf } from 'util';
 
 @injectable()
@@ -18,8 +19,29 @@ export class AppLogger {
                 new winston.transports.Console({
                     format: format.combine(format.colorize(), logFormat, format.splat()),
                 }),
-                new winston.transports.File({ filename: 'logs/error.log', level: 'error', format: format.combine(format.colorize(), format.json()) }),
-                new winston.transports.File({ filename: 'logs/combined.log', format: format.combine(format.colorize(), format.json()) }),
+                new winston.transports.DailyRotateFile({
+                    level: "info",
+                    filename: "logs/info/%DATE%.log",
+                    datePattern: "YYYY-MM-DD-HH",
+                    zippedArchive: true,
+                    maxSize: "20m",
+                    maxFiles: "30d"
+                }),
+                new winston.transports.DailyRotateFile({
+                    level: "error",
+                    filename: "logs/error/%DATE%.log",
+                    datePattern: "YYYY-MM-DD-HH",
+                    zippedArchive: true,
+                    maxSize: "20m",
+                    maxFiles: "30d"
+                }),
+                new winston.transports.DailyRotateFile({
+                    filename: 'logs/combined/%DATE%.log',
+                    datePattern: "YYYY-MM-DD-HH",
+                    zippedArchive: true,
+                    maxSize: "20m",
+                    maxFiles: "30d"
+                })
             ],
             exitOnError: false
         });

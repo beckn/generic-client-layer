@@ -9,7 +9,7 @@ import { AppLogger } from "../app/app.logger";
 
 @injectable()
 export class TLService {
-  constructor(@inject(AppLogger) private logger: AppLogger) {}
+  constructor(@inject(AppLogger) private logger: AppLogger) { }
   async transform(data: any, action: string, includeRawResponse?: boolean) {
     const expression = jsonata(
       fs.readFileSync(
@@ -19,7 +19,7 @@ export class TLService {
     );
 
     this.logger.info(
-      "Transforming %s data: \n%o",
+      "Transforming %s data: \n%o \n\n",
       action,
       JSON.stringify(data)
     );
@@ -30,7 +30,7 @@ export class TLService {
     });
     transformed = ObjectUtil.removeEmptyObjectKeys(transformed);
     this.logger.info(
-      "Transformed %s data: \n%o",
+      "Transformed %s data: \n%o \n\n",
       action,
       JSON.stringify(transformed)
     );

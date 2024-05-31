@@ -1,20 +1,29 @@
-import { inject, injectable } from "inversify";
+
+import { inject } from "inversify";
 import {
   controller,
+  httpGet,
   httpPost,
+  queryParam,
   requestBody,
   response
 } from "inversify-express-utils";
+import fs from "fs";
+import path from "path";
+import appRootPath from "app-root-path";
 import { GCLService } from "./gcl.service";
 import { XInputService } from "../x-input/x-input.service";
 import { Response } from "express";
+import { LogLevelEnum } from "../types/logs.type";
+import { AppLogger } from "../app/app.logger";
 
 @controller("/")
 export class GCLController {
   constructor(
     @inject(GCLService) private service: GCLService,
-    @inject(XInputService) private xinputService: XInputService
-  ) {}
+    @inject(XInputService) private xinputService: XInputService,
+    @inject(AppLogger) private logger: AppLogger,
+  ) { }
 
   @httpPost("search")
   public async search(
@@ -134,5 +143,29 @@ export class GCLController {
     const submitFormResp = await this.xinputService.submitXInputForm(body);
 
     return submitFormResp;
+  }
+
+  @httpGet("logs")
+  public async getLogs(
+    @queryParam("type") type: LogLevelEnum,
+    @response() res?: Response
+  ): Promise<any> {
+    try {
+      const logDirectory = path.join(appRootPath.toString(), `/logs/${type}`);
+      const files = fs.readdirSync(logDirectory);
+
+      if (files.length === 0) {
+        res?.status(404).send("No log files found");
+        return;
+      }
+
+      const latestFile = files[files.length - 1];
+      const filePath = path.join(logDirectory, latestFile);
+
+      res?.send(fs.readFileSync(filePath, "utf8"));
+    } catch (error: any) {
+      this.logger.error(error.message);
+      res?.status(500).send("Some Error Occurred");
+    }
   }
 }
