@@ -139,10 +139,16 @@ export class GCLController {
   }
 
   @httpPost("x-input/submit")
-  public async submitXInputForm(@requestBody() body: any): Promise<any> {
-    const submitFormResp = await this.xinputService.submitXInputForm(body);
-
-    return submitFormResp;
+  public async submitXInputForm(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
+    try {
+      const submitFormResp = await this.xinputService.submitXInputForm(body);
+      return submitFormResp;
+    } catch (error: any) {
+      return res?.status(400).json({ error: error?.message || 'Failed to submit x-input form' });
+    }
   }
 
   @httpGet("logs")
