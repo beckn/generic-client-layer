@@ -1,12 +1,15 @@
 import { inject, injectable } from "inversify";
 import { TLService } from "../tl/tl.service";
 import { PSClientService } from "../psclient/psclient.service";
+import { BAPWebhookService } from "../bapWebhookClient/bapwebhook.service";
+import { ConfigService } from "../config/config.service";
 
 @injectable()
 export class GCLService {
   constructor(
     @inject(TLService) private tlService: TLService,
-    @inject(PSClientService) private psClientService: PSClientService
+    @inject(PSClientService) private psClientService: PSClientService,
+    @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService,
   ) {}
 
   async search(body: any) {
@@ -126,5 +129,16 @@ export class GCLService {
     );
 
     return response;
+  }
+
+  async handleUnsolicited(body: any) {
+    const action  = body.context.action;
+    const response = await this.tlService.transform(
+      body,
+      `on_${action}`,
+      body?.includeRawResponse
+    );
+    const bapResponse = await this.bapWebhookService.post(response);
+    return bapResponse;
   }
 }

@@ -174,4 +174,17 @@ export class GCLController {
       res?.status(500).send("Some Error Occurred");
     }
   }
+
+  @httpPost("unsolicited")
+  public async handleUnsolicited(
+    @requestBody() body: any,
+    @response() res?: Response
+    ): Promise<any> {
+    try {
+      const submitFormResp = await this.service.handleUnsolicited(body);
+      return submitFormResp;
+    } catch(error: any) {
+      return res?.status(400).json({error: error.message});
+    }
+  }
 }
