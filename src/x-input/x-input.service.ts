@@ -54,7 +54,7 @@ export class XInputService {
       });
       return submitFormDataResp.data;
     } catch (error: any) {
-      return { message: error.message };
+      throw new Error(error?.response?.data?.error);
     }
   }
 }
