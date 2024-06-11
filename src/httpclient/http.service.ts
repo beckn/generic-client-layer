@@ -23,7 +23,7 @@ class HttpClient {
       (config: InternalAxiosRequestConfig) => {
         // Modify the request config if needed
         logger.info(
-          "Making network request: \n%s %s\nHEADERS %s \nDATA %o",
+          "Making network request: \n%s %s\nHEADERS %s \nDATA %o \n\n",
           config.method?.toUpperCase(),
           config.url,
           JSON.stringify(config.headers),
