@@ -9,7 +9,7 @@ export class GCLService {
   constructor(
     @inject(TLService) private tlService: TLService,
     @inject(PSClientService) private psClientService: PSClientService,
-    @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService,
+    @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService
   ) {}
 
   async search(body: any) {
@@ -132,10 +132,10 @@ export class GCLService {
   }
 
   async handleUnsolicited(body: any) {
-    const action  = body.context.action;
+    const action = body.context.action;
     const response = await this.tlService.transform(
       body,
-      `on_${action}`,
+      `${action}`,
       body?.includeRawResponse
     );
     const bapResponse = await this.bapWebhookService.post(response);
