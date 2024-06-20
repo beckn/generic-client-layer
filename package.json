@@ -11,7 +11,7 @@
   "lint-staged": {
     "*.ts": [
       "prettier --write",
-      "eslint --fix",
+      "eslint --fix --config eslint.config.js",
       "git add",
       "npm run test -- --findRelatedTests"
     ]
@@ -56,6 +56,8 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.0",
     "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
     "commitlint": "^19.3.0",
     "eslint": "^9.5.0",
     "eslint-plugin-import": "^2.29.1",

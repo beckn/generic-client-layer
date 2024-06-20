@@ -39,6 +39,7 @@ export class GCLService {
   }
 
   async init(body: any) {
+    let a, b;
     const payload = await this.tlService.transform(body, 'init');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
@@ -51,6 +52,7 @@ export class GCLService {
   }
 
   async confirm(body: any) {
+    let a, b;
     const payload = await this.tlService.transform(body, 'confirm');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(

@@ -1,4 +1,5 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/../.husky/_/husky.sh"
 
+# Run lint-staged to handle only staged files
 npx lint-staged

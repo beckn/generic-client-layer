@@ -1,0 +1,11 @@
+#!/bin/sh
+. "$(dirname "$0")/../.husky/_/husky.sh"
+
+# Run lint-staged to handle only staged files
+npx lint-staged
+
+# Run Prettier on all relevant files
+npx prettier --write "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}"
+
+# Run ESLint on all relevant files and fix issues
+npx eslint --fix --config eslint.config.js "src/**/*.{js,jsx,ts,tsx}"
