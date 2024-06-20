@@ -26,6 +26,7 @@ export class GCLService {
   }
 
   async select(body: any) {
+    let a, b;
     const payload = await this.tlService.transform(body, 'select');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
