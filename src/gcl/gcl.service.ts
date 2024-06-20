@@ -1,8 +1,8 @@
-import { inject, injectable } from "inversify";
-import { TLService } from "../tl/tl.service";
-import { PSClientService } from "../psclient/psclient.service";
-import { BAPWebhookService } from "../bapWebhookClient/bapwebhook.service";
-import { ConfigService } from "../config/config.service";
+import { inject, injectable } from 'inversify';
+import { TLService } from '../tl/tl.service';
+import { PSClientService } from '../psclient/psclient.service';
+import { BAPWebhookService } from '../bapWebhookClient/bapwebhook.service';
+import { ConfigService } from '../config/config.service';
 
 @injectable()
 export class GCLService {
@@ -13,130 +13,132 @@ export class GCLService {
   ) {}
 
   async search(body: any) {
-    const payload = await this.tlService.transform(body, "search");
+    const payload = await this.tlService.transform(body, 'search');
     const psResponse = await this.psClientService.post(payload);
 
     const response = await this.tlService.transform(
       psResponse,
-      "on_search",
-      body?.includeRawResponse
+      'on_search',
+      body?.includeRawResponse,
     );
 
     return response;
   }
 
   async select(body: any) {
-    const payload = await this.tlService.transform(body, "select");
+    const payload = await this.tlService.transform(body, 'select');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
       psResponse,
-      "on_select",
-      body?.includeRawResponse
+      'on_select',
+      body?.includeRawResponse,
     );
 
     return response;
   }
 
   async init(body: any) {
-    const payload = await this.tlService.transform(body, "init");
+    const payload = await this.tlService.transform(body, 'init');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
       psResponse,
-      "on_init",
-      body?.includeRawResponse
+      'on_init',
+      body?.includeRawResponse,
     );
 
     return response;
   }
 
   async confirm(body: any) {
-    const payload = await this.tlService.transform(body, "confirm");
+    const payload = await this.tlService.transform(body, 'confirm');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
       psResponse,
-      "on_confirm",
-      body?.includeRawResponse
+      'on_confirm',
+      body?.includeRawResponse,
     );
 
     return response;
   }
 
   async status(body: any) {
-    const payload = await this.tlService.transform(body, "status");
+    const payload = await this.tlService.transform(body, 'status');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
       psResponse,
-      "on_status",
-      body?.includeRawResponse
+      'on_status',
+      body?.includeRawResponse,
     );
 
     return response;
   }
 
   async rating(body: any) {
-    const payload = await this.tlService.transform(body, "rating");
+    const payload = await this.tlService.transform(body, 'rating');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
       psResponse,
-      "on_rating",
-      body?.includeRawResponse
+      'on_rating',
+      body?.includeRawResponse,
     );
 
     return response;
   }
 
   async cancel(body: any) {
-    const payload = await this.tlService.transform(body, "cancel");
+    const payload = await this.tlService.transform(body, 'cancel');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
       psResponse,
-      "on_cancel",
-      body?.includeRawResponse
+      'on_cancel',
+      body?.includeRawResponse,
     );
 
     return response;
   }
 
   async update(body: any) {
-    const payload = await this.tlService.transform(body, "update");
+    const payload = await this.tlService.transform(body, 'update');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
       psResponse,
-      "on_update",
-      body?.includeRawResponse
+      'on_update',
+      body?.includeRawResponse,
     );
 
     return response;
   }
   async support(body: any) {
-    const payload = await this.tlService.transform(body, "support");
+    const payload = await this.tlService.transform(body, 'support');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
       psResponse,
-      "on_support",
-      body?.includeRawResponse
+      'on_support',
+      body?.includeRawResponse,
     );
 
     return response;
   }
   async track(body: any) {
-    const payload = await this.tlService.transform(body, "track");
+    const payload = await this.tlService.transform(body, 'track');
     const psResponse = await this.psClientService.postMany(payload);
     const response = await this.tlService.transform(
       psResponse,
-      "on_track",
-      body?.includeRawResponse
+      'on_track',
+      body?.includeRawResponse,
     );
 
     return response;
   }
 
   async handleUnsolicited(body: any) {
-    const action  = body.context.action;
+    console.log('Testing precommit hooks');
+
+    const action = body.context.action;
     const response = await this.tlService.transform(
       body,
       `on_${action}`,
-      body?.includeRawResponse
+      body?.includeRawResponse,
     );
     const bapResponse = await this.bapWebhookService.post(response);
     return bapResponse;

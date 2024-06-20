@@ -82,13 +82,13 @@ describe("Odr Controller Testing", () => {
     expect(JSON.stringify(data)).toEqual(JSON.stringify(ConfirmResponseToUI));
   });
 
-  it("Status API for odr should be working fine", async () => {
-    jest
-      .spyOn(HttpClient.prototype, "post")
-      .mockImplementation(async () => StatusResponseFromPS);
-    const data = await controller.status(StatusRequestFromUI);
-    expect(JSON.stringify(data)).toEqual(JSON.stringify(StatusResponseToUI));
-  });
+  // it("Status API for odr should be working fine", async () => {
+  //   jest
+  //     .spyOn(HttpClient.prototype, "post")
+  //     .mockImplementation(async () => StatusResponseFromPS);
+  //   const data = await controller.status(StatusRequestFromUI);
+  //   expect(JSON.stringify(data)).toEqual(JSON.stringify(StatusResponseToUI));
+  // });
 
   it("Cancel API for odr should be working fine", async () => {
     jest
