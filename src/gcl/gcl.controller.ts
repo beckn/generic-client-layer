@@ -31,7 +31,7 @@ export class GCLController {
   ): Promise<any> {
     const searchResult = await this.service.search(body);
     if (!Object.keys(searchResult).length) {
-      return res?.status(400).json({});
+      return res?.status(200).json({});
     }
     return searchResult;
   }
