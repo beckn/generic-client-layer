@@ -47,13 +47,6 @@
                                     },
                                     "rating": $fulfillment.agent.rating
                                 },
-                                "vehicle": {
-                                    "category": $fulfillment.vehicle.category,
-                                    "capacity": $fulfillment.vehicle.capacity,
-                                    "make": $fulfillment.vehicle.make,
-                                    "model": $fulfillment.vehicle.model,
-                                    "color": $fulfillment.vehicle.color,
-                                },
                                 "stops": $fulfillment.stops.{
                                     "type": type,
                                     "location": {
