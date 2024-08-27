@@ -16,7 +16,8 @@
                     },
                     "media": message.order.provider.descriptor.media.{
                         "url": url
-                    }
+                    },
+                    "fulfillments":message.order.provider.fulfillments
                 },
                 "items": message.order.items.{
                     "id": id,
@@ -52,7 +53,18 @@
                         "display": display,
                    "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
                     }[],
-                    "xinput":$xInput(xinput, $action)
+                    "xinput":$xInput(xinput, $action),
+                    "fulfillments":$map(
+                        $filter(%.provider.fulfillments, function($fulfillment) { $boolean($fulfillment.id in fulfillment_ids)}),
+                        function($fulfillment) { 
+                            {
+                                "id": $fulfillment.id,
+                                "type": $fulfillment.type,
+                                "rating": $fulfillment.rating,
+                                "tags": $fulfillment.tags
+                            }
+                        }
+                    )[],
                 }[],
                 "xinput": $xInput(message.order.xinput, $action),
                 "fulfillments": message.order.fulfillments,
