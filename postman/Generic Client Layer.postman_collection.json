@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "04df9b2e-325b-49a6-b5eb-b673a225229e",
+    "_postman_id": "e0c45bfd-f29a-4eb4-ae01-c4131acd35a3",
     "name": "Generic Client Layer",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "23690031"
@@ -958,8 +958,8 @@
                 "header": [
                   {
                     "key": "Content-Type",
-                    "name": "Content-Type",
                     "value": "application/json",
+                    "name": "Content-Type",
                     "type": "text"
                   }
                 ],
@@ -1021,8 +1021,8 @@
                 "header": [
                   {
                     "key": "Content-Type",
-                    "name": "Content-Type",
                     "value": "application/json",
+                    "name": "Content-Type",
                     "type": "text"
                   }
                 ],
@@ -1084,8 +1084,8 @@
                 "header": [
                   {
                     "key": "Content-Type",
-                    "name": "Content-Type",
                     "value": "application/json",
+                    "name": "Content-Type",
                     "type": "text"
                   }
                 ],
@@ -1147,8 +1147,8 @@
                 "header": [
                   {
                     "key": "Content-Type",
-                    "name": "Content-Type",
                     "value": "application/json",
+                    "name": "Content-Type",
                     "type": "text"
                   }
                 ],
@@ -1210,8 +1210,8 @@
                 "header": [
                   {
                     "key": "Content-Type",
-                    "name": "Content-Type",
                     "value": "application/json",
+                    "name": "Content-Type",
                     "type": "text"
                   }
                 ],
@@ -10231,6 +10231,231 @@
             }
           ],
           "description": "Has Beckn API requests"
+        }
+      ]
+    },
+    {
+      "name": "Mobility",
+      "item": [
+        {
+          "name": "Search",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"context\": {\n    \"domain\": \"mobility:1.1.0\"\n  },\n  \"fulfillment\": {\n    \"stops\": [\n      {\n        \"type\": \"start\",\n        \"location\": {\n          \"city\": {\n            \"name\": \"Pune\",\n            \"code\": \"PNQ\"\n          },\n          \"state\": {\n            \"name\": \"Maharashtra\",\n            \"code\": \"MH\"\n          },\n          \"country\": {\n            \"name\": \"INDIA\",\n            \"code\": \"IND\"\n          },\n          \"address\": \"GIVA - Pune - Wakad High street\",\n          \"area_code\": \"411057\",\n          \"gps\": \"18.608640615944037, 73.75210728526258\"\n        }\n      },\n      {\n        \"type\": \"end\",\n        \"location\": {\n          \"city\": {\n            \"name\": \"Pune\",\n            \"code\": \"PNQ\"\n          },\n          \"state\": {\n            \"name\": \"Maharashtra\",\n            \"code\": \"MH\"\n          },\n          \"country\": {\n            \"name\": \"INDIA\",\n            \"code\": \"IND\"\n          },\n          \"address\": \"Westend Mall\",\n          \"area_code\": \"411007\",\n          \"gps\": \"18.565537439536033, 73.80704996158512\"\n        }\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/search",
+              "host": ["{{base_url}}"],
+              "path": ["search"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Select",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"mobility:1.1.0\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"provider\": {\n                            \"id\": \"629\"\n                        },\n                        \"items\": [\n                            {\n                                \"id\": \"86\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/select",
+              "host": ["{{base_url}}"],
+              "path": ["select"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Init",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n               \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"mobility:1.1.0\"\n            },\n            \"message\": {\n                \"orders\": {\n                    \"provider\": {\n                        \"id\": \"629\"\n                    },\n                    \"items\": [\n                        {\n                            \"id\": \"86\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/init",
+              "host": ["{{base_url}}"],
+              "path": ["init"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Confirm",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n               \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"mobility:1.1.0\"\n            },\n            \"message\": {\n                \"orders\": {\n                    \"provider\": {\n                        \"id\": \"629\"\n                    },\n                    \"items\": [\n                        {\n                            \"id\": \"86\"\n                        }\n                    ],\n                    \"fulfillments\": [\n                        {\n                            \"customer\": {\n                                \"person\": {\n                                    \"name\": \"Sanjay\",\n                                    \"gender\": \"M\"\n                                },\n                                \"contact\": {\n                                    \"phone\": \"9718339615\",\n                                    \"email\": \"abc@abc.bc\"\n                                }\n                            },\n                            \"stops\": [\n                                {\n                                    \"type\": \"start\",\n                                    \"location\": {\n                                        \"city\": {\n                                            \"name\": \"Pune\",\n                                            \"code\": \"PNQ\"\n                                        },\n                                        \"state\": {\n                                            \"name\": \"Maharashtra\",\n                                            \"code\": \"MH\"\n                                        },\n                                        \"country\": {\n                                            \"name\": \"INDIA\",\n                                            \"code\": \"IND\"\n                                        },\n                                        \"address\": \"GIVA - Pune - Wakad High street\",\n                                        \"area_code\": \"411057\",\n                                        \"gps\": \"18.608640615944037, 73.75210728526258\"\n                                    }\n                                },\n                                {\n                                    \"type\": \"end\",\n                                    \"location\": {\n                                        \"city\": {\n                                            \"name\": \"Pune\",\n                                            \"code\": \"PNQ\"\n                                        },\n                                        \"state\": {\n                                            \"name\": \"Maharashtra\",\n                                            \"code\": \"MH\"\n                                        },\n                                        \"country\": {\n                                            \"name\": \"INDIA\",\n                                            \"code\": \"IND\"\n                                        },\n                                        \"address\": \"Westend Mall\",\n                                        \"area_code\": \"411007\",\n                                        \"gps\": \"18.565537439536033, 73.80704996158512\"\n                                    }\n                                }\n                            ]\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/confirm",
+              "host": ["{{base_url}}"],
+              "path": ["confirm"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Status",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n               \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"mobility:1.1.0\"\n            },\n            \"message\": {\n                \"order_id\": \"1227\"\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/status",
+              "host": ["{{base_url}}"],
+              "path": ["status"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n               \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"mobility:1.1.0\"\n            },\n            \"message\": {\n                \"order_id\": \"1227\",\n                \"cancellation_reason_id\": \"12\"\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/cancel",
+              "host": ["{{base_url}}"],
+              "path": ["cancel"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"mobility:1.1.0\"\n            },\n            \"orderId\": \"1227\",\n            \"updateDetails\": {\n                \"updateTarget\": \"order.fulfillments[0].customer.person.name\",\n                \"fulfillments\": [\n                    {\n                        \"customer\": {\n                            \"person\": {\n                                \"name\": \"shreya vishal\"\n                            },\n                            \"contact\": {\n                                \"phone\": \"9801223567\",\n                                \"email\": \"abcd@test.com\"\n                            }\n                        }\n                    }\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/update",
+              "host": ["{{base_url}}"],
+              "path": ["update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Track",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n               \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"mobility:1.1.0\"\n            },\n            \"orderId\": \"1227\",\n            \"callbackUrl\": \"https://some-url.com\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/track",
+              "host": ["{{base_url}}"],
+              "path": ["track"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Support",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"mobility:1.1.0\"\n            },\n            \"message\": {\n                \"support\": {\n                    \"ref_id\": \"1677140405881\"\n                }\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/support",
+              "host": ["{{base_url}}"],
+              "path": ["support"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Rating",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"mobility:1.1.0\"\n            },\n            \"message\": {\n                \"ratings\": [\n                    {\n                        \"id\": \"1227\",\n                        \"rating_category\": \"Driver\",\n                        \"value\": \"4\"\n                    }\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/rating",
+              "host": ["{{base_url}}"],
+              "path": ["rating"]
+            }
+          },
+          "response": []
         }
       ]
     }
