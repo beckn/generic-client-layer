@@ -64,7 +64,7 @@
                                 "tags": $fulfillment.tags
                             }
                         }
-                    )[],
+                    )[]
                 }[],
                 "xinput": $xInput(message.order.xinput, $action),
                 "fulfillments": message.order.fulfillments,
