@@ -21,7 +21,8 @@
                     {
                         "url": url
                     },
-                    "rateable": message.order.provider.rateable
+                    "rateable": message.order.provider.rateable,
+                    "fulfillments":message.order.provider.fulfillments
                 },
                 "items": message.order.items.{
                     "id": id,
@@ -39,6 +40,17 @@
                         $filter(%.provider.categories, function($categories){$boolean($category.id in categories_ids)}),
                      function($category) {
                             { "id": $category.id, "name": $category.descriptor.name, "code": $category.descriptor.code }
+                        }
+                    )[],
+                    "fulfillments":$map(
+                        $filter(%.provider.fulfillments, function($fulfillment) { $boolean($fulfillment.id in fulfillment_ids)}),
+                        function($fulfillment) { 
+                            {
+                                "id": $fulfillment.id,
+                                "type": $fulfillment.type,
+                                "rating": $fulfillment.rating,
+                                "tags": $fulfillment.tags
+                            }
                         }
                     )[],
                     "locations": $map(
