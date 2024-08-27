@@ -60,7 +60,7 @@
                                 "tags": $fulfillment.tags
                             }
                         }
-                    )[],
+                    )[]
             }[],
                 "fulfillments": message.order.fulfillments,
                 "quote": message.order.quote,
