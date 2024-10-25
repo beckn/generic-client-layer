@@ -137,6 +137,18 @@ export class GCLController {
     return trackResult;
   }
 
+  @httpPost("cred")
+  public async cred(
+    @requestBody() body: any,
+    @response() res?: Response
+  ): Promise<any> {
+    const credResult = await this.service.cred(body);
+    if (!Object.keys(credResult).length) {
+      return res?.status(400).json({});
+    }
+    return credResult;
+  }
+
   @httpPost("x-input/submit")
   public async submitXInputForm(
     @requestBody() body: any,
@@ -178,12 +190,12 @@ export class GCLController {
   public async handleUnsolicited(
     @requestBody() body: any,
     @response() res?: Response
-    ): Promise<any> {
+  ): Promise<any> {
     try {
       const submitFormResp = await this.service.handleUnsolicited(body);
       return submitFormResp;
-    } catch(error: any) {
-      return res?.status(400).json({error: error.message});
+    } catch (error: any) {
+      return res?.status(400).json({ error: error.message });
     }
   }
 }
