@@ -3,5 +3,5 @@
         "context": context,
         "message": message,
         "rawResponse": $includeRawResponse ? $ : {}
-    }
+    }[]
 }
