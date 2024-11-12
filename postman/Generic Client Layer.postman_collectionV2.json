@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "587aa65c-339f-46bd-b517-f077082537cc",
+		"_postman_id": "422ed5ae-8029-4558-985e-5695d6c5e163",
 		"name": "Generic Client Layer",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "13127879"
@@ -12325,6 +12325,721 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Climate",
+			"item": [
+				{
+					"name": "Init",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"{{transaction_id}}\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"{{domain}}\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"provider\": {\n                            \"id\": \"804\"\n                        },\n                        \"items\": [\n                            {\n                                \"id\": \"328\",\n                                \"tags\": [\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"confidence_levels\",\n                                            \"code\": \"confidence_levels\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"90%\",\n                                                \"code\": \"70%\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"data_formats\",\n                                            \"code\": \"data_formats\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"XML\",\n                                                \"code\": \"XML\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"CSV\",\n                                                \"code\": \"CSV\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"datapoint\",\n                                            \"code\": \"datapoint\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Temperature\",\n                                                \"code\": \"Temperature\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Vertical wind speed\",\n                                                \"code\": \"Vertical wind speed\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Horizontal wind velocity\",\n                                                \"code\": \"Horizontal wind velocity\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Relative Humidity\",\n                                                \"code\": \"Relative Humidity\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Precipitation\",\n                                                \"code\": \"Precipitation\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"data_sharing_modes\",\n                                            \"code\": \"data_sharing_modes\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"FTP\",\n                                                \"code\": \"FTP\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Email\",\n                                                \"code\": \"Email\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"spatial_coverage\",\n                                            \"code\": \"spatial_coverage\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Gopalganj\",\n                                                \"code\": \"Gopalganj\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"spatial_representation\",\n                                            \"code\": \"spatial_representation\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Vector\",\n                                                \"code\": \"Vector\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"spatial_resolutions\",\n                                            \"code\": \"spatial_resolutions\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"5 km\",\n                                                \"code\": \"5 km\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"subscription_durations\",\n                                            \"code\": \"subscription_durations\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"One time\",\n                                                \"code\": \"One time\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"temporal_coverage\",\n                                            \"code\": \"temporal_coverage\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Forecast (3 moths)\",\n                                                \"code\": \"Forecast (3 moths)\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"temporal_resolutions\",\n                                            \"code\": \"temporal_resolutions\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"30 days\",\n                                                \"code\": \"30 days\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    }\n                                ]\n                            }\n                        ],\n                        \"fulfillments\": [\n                            {\n                                \"id\": \"f1\",\n                                \"customer\": {\n                                    \"contact\": {\n                                        \"email\": \"fox.judie@abc.org\",\n                                        \"phone\": \"+91-9999999999\"\n                                    },\n                                    \"person\": {\n                                        \"name\": \"Judie Fox\"\n                                    }\n                                }\n                            }\n                        ],\n                        \"billing\": {\n                            \"name\": \"Industry buyer\",\n                            \"address\": \"B005 aspire heights, Jurong East, SGP, 680230\",\n                            \"state\": {\n                                \"name\": \"Jurong East\"\n                            },\n                            \"city\": {\n                                \"name\": \"Jurong East\"\n                            },\n                            \"email\": \"nobody@nomail.com\",\n                            \"phone\": \"9886098860\"\n                        }\n                    }\n                ]\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/init",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"init"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"0bbd82ce-5a21-4e26-b402-1c1f9d954fee\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"domain\": \"dhp:pharmacy:0.1.0\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"provider\": {\n                            \"id\": \"e92e7a6e-1f20-4a8d-b343-956e0d45a48c\"\n                        },\n                        \"items\": [\n                            {\n                                \"id\": \"fb0999b7-7755-46d6-a2ed-b286b7c98436\",\n                                \"quantity\": {\n                                    \"count\": 1\n                                }\n                            }\n                        ],\n                        \"addOns\": [],\n                        \"offers\": [],\n                        \"billing\": {\n                            \"name\": \"Abee\",\n                            \"phone\": \"9191223433\",\n                            \"address\": \"Bengaluru, Bengaluru Urban, Bangalore Division, Karnataka\",\n                            \"email\": \"testemail1@mailinator.com\"\n                        }\n                    }\n                ]\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/init",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"init"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"dhp:pharmacy:0.1.0\",\n                \"action\": \"on_init\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"name\": \"India\",\n                        \"code\": \"IND\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"0bbd82ce-5a21-4e26-b402-1c1f9d954fee\",\n                \"message_id\": \"40699359-031b-480e-9a5b-75eacdfbbf81\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2023-12-06T13:21:10.441Z\"\n            },\n            \"message\": {\n                \"order\": {\n                    \"type\": \"DEFAULT\",\n                    \"provider\": {\n                        \"id\": \"e92e7a6e-1f20-4a8d-b343-956e0d45a48c\",\n                        \"name\": \"QuickPharma\",\n                        \"short_desc\": \"QuickPharma Pvt Ltd\",\n                        \"images\": {\n                            \"url\": \"https://quickPharma.in/images/logo.png\"\n                        }\n                    },\n                    \"items\": [\n                        {\n                            \"id\": \"fb0999b7-7755-46d6-a2ed-b286b7c98436\",\n                            \"name\": \"Benadryl cough syrup\",\n                            \"price\": {\n                                \"value\": \"100\",\n                                \"currency\": \"INR\"\n                            },\n                            \"quantity\": {\n                                \"selected\": {\n                                    \"measure\": {\n                                        \"value\": \"2\",\n                                        \"unit\": \"units\"\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"id\": \"1cef39d8-72d0-46f7-99ca-3f18f4bda8e3\",\n                            \"name\": \"Hycodan\",\n                            \"price\": {\n                                \"value\": \"150\",\n                                \"currency\": \"INR\"\n                            },\n                            \"quantity\": {\n                                \"selected\": {\n                                    \"measure\": {\n                                        \"value\": \"3\",\n                                        \"unit\": \"units\"\n                                    }\n                                }\n                            }\n                        }\n                    ],\n                    \"fulfillments\": [\n                        {\n                            \"id\": \"ful-02\",\n                            \"type\": \"HOME-DELIVERY\",\n                            \"customer\": {\n                                \"contact\": {\n                                    \"email\": \"fox.judie@abc.org\",\n                                    \"phone\": \"+91-9999999999\"\n                                },\n                                \"person\": {\n                                    \"name\": \"Judie Fox\"\n                                }\n                            },\n                            \"stops\": [\n                                {\n                                    \"location\": {\n                                        \"gps\": \"1.3806217468119772, 103.74636438437074\",\n                                        \"address\": \"My House #, My building\",\n                                        \"city\": {\n                                            \"name\": \"Jurong East\"\n                                        },\n                                        \"country\": {\n                                            \"code\": \"SGP\"\n                                        },\n                                        \"area_code\": \"680230\",\n                                        \"state\": {\n                                            \"name\": \"bayern\"\n                                        }\n                                    },\n                                    \"contact\": {\n                                        \"phone\": \"9886098860\"\n                                    }\n                                }\n                            ],\n                            \"tracking\": false\n                        }\n                    ],\n                    \"quote\": {\n                        \"price\": {\n                            \"value\": \"700\",\n                            \"currency\": \"INR\"\n                        },\n                        \"breakup\": [\n                            {\n                                \"title\": \"Benadryl 2 units\",\n                                \"price\": {\n                                    \"currency\": \"INR\",\n                                    \"value\": \"200\"\n                                }\n                            },\n                            {\n                                \"title\": \"hycodan 3 units\",\n                                \"price\": {\n                                    \"currency\": \"INR\",\n                                    \"value\": \"450\"\n                                }\n                            },\n                            {\n                                \"title\": \"delivery charge\",\n                                \"price\": {\n                                    \"currency\": \"INR\",\n                                    \"value\": \"50\"\n                                }\n                            }\n                        ]\n                    },\n                    \"billing\": {\n                        \"name\": \"Alice Smith\",\n                        \"address\": \"Apt 303, Maple Towers, Richmond Road, 560001\",\n                        \"state\": {\n                            \"name\": \"Jurong East\"\n                        },\n                        \"city\": {\n                            \"name\": \"Jurong East\"\n                        },\n                        \"email\": \"alice.smith@example.com\",\n                        \"phone\": \"9886098860\"\n                    },\n                    \"payments\": [\n                        {\n                            \"collected_by\": \"BPP\",\n                            \"params\": {\n                                \"amount\": \"700\",\n                                \"currency\": \"INR\",\n                                \"bank_account_number\": \"1234002341\",\n                                \"bank_code\": \"INB0004321\",\n                                \"bank_account_name\": \"Strapi BPP Limited\"\n                            },\n                            \"status\": \"NOT-PAID\",\n                            \"type\": \"PRE-ORDER\"\n                        }\n                    ],\n                    \"cancellation_terms\": [\n                        {\n                            \"fulfillment_state\": {\n                                \"descriptor\": {\n                                    \"code\": \"in-progress\"\n                                }\n                            },\n                            \"cancellation_fee\": {\n                                \"percentage\": \"30%\"\n                            },\n                            \"external_ref\": {\n                                \"mimetype\": \"text/html\",\n                                \"url\": \"https://quickPharma.in/charge/tnc.html\"\n                            }\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"context\": {\n        \"domain\": \"{{domain}}\"\n    },\n    \"searchString\": \"High Resolution\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Full Search Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"context\": {\n        \"domain\": \"dhp:pharmacy:0.1.0\"\n    },\n    \"searchString\": \"syrup\",\n    \"itemId\":\"Abcd123\",\n    \"fulfulfillment\":{\n        \"agentName\":\"Some Name\",\n        \"customerGender\":\"Male\"\n    },\n    \"provider\":{\n        \"providerName\":\"Some Provider Name\",\n        \"providerCity\":[\"Pune\", \"Bengaluru\"],\n        \"providerId\":\"Provider1234\"\n    },\n    \"category\":{\n        \"categoryCode\":\"code12334\",\n        \"categoryName\":\"Category Name\",\n        \"categoryId\":\"categoryId1234\"\n    },\n    \"location\":\"12.423423,77.325647\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/search",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"search"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"context\": {\n        \"domain\": \"dhp:pharmacy:0.1.0\"\n    },\n    \"searchString\": \"syrup\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/search",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"search"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"dhp:pharmacy:0.1.0\",\n                \"action\": \"on_search\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-strapi-sandbox-bpp\",\n                \"bpp_uri\": \"https://beckn-strapi-sandbox-bpp-network.becknprotocol.io\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"name\": \"India\",\n                        \"code\": \"IND\"\n                    },\n                    \"city\": {\n                        \"name\": \"Bangalore\",\n                        \"code\": \"std:080\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"bcf015d5-4f59-4149-a444-d5ba28678ae8\",\n                \"message_id\": \"c551faed-303f-48c1-b786-a7d1b635e368\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2023-12-08T06:50:14.588Z\"\n            },\n            \"message\": {\n                \"name\": \"BPP\"\n            }\n        },\n        {\n            \"context\": {\n                \"domain\": \"dhp:pharmacy:0.1.0\",\n                \"action\": \"on_search\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"name\": \"India\",\n                        \"code\": \"IND\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"bcf015d5-4f59-4149-a444-d5ba28678ae8\",\n                \"message_id\": \"c551faed-303f-48c1-b786-a7d1b635e368\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2023-12-08T06:50:15.958Z\"\n            },\n            \"message\": {\n                \"name\": \"Available Pharmacy Stores\",\n                \"providers\": [\n                    {\n                        \"id\": \"e92e7a6e-1f20-4a8d-b343-956e0d45a48c\",\n                        \"name\": \"QuickPharma\",\n                        \"items\": [\n                            {\n                                \"id\": \"fb0999b7-7755-46d6-a2ed-b286b7c98436\",\n                                \"name\": \"Benadryl cough syrup\",\n                                \"price\": {\n                                    \"value\": \"100\",\n                                    \"currency\": \"INR\"\n                                },\n                                \"categories\": [\n                                    {\n                                        \"id\": \"cat-01\",\n                                        \"name\": \"Pharmacy\",\n                                        \"code\": \"pharmacy\"\n                                    }\n                                ],\n                                \"locations\": [\n                                    {\n                                        \"id\": \"phr-loc-01\"\n                                    }\n                                ],\n                                \"fulfillments\": [\n                                    {\n                                        \"id\": \"ful-01\",\n                                        \"type\": \"IN-STORE-PICKUP\",\n                                        \"tracking\": false,\n                                        \"stops\": [\n                                            {\n                                                \"type\": \"start\"\n                                            },\n                                            {\n                                                \"type\": \"end\"\n                                            }\n                                        ],\n                                        \"tags\": [\n                                            {\n                                                \"code\": \"symptoms\",\n                                                \"name\": \"Works against these symptoms\",\n                                                \"display\": true,\n                                                \"list\": [\n                                                    {\n                                                        \"code\": \"symptom-list\",\n                                                        \"value\": \"cough, code, nausea, headache, phelgm\"\n                                                    }\n                                                ]\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"id\": \"ful-02\",\n                                        \"type\": \"HOME-DELIVERY\",\n                                        \"tracking\": false,\n                                        \"stops\": [\n                                            {\n                                                \"type\": \"start\"\n                                            },\n                                            {\n                                                \"type\": \"end\"\n                                            }\n                                        ],\n                                        \"tags\": [\n                                            {\n                                                \"code\": \"symptoms\",\n                                                \"name\": \"Works against these symptoms\",\n                                                \"display\": true,\n                                                \"list\": [\n                                                    {\n                                                        \"code\": \"symptom-list\",\n                                                        \"value\": \"cough, code, nausea, headache, phelgm\"\n                                                    }\n                                                ]\n                                            }\n                                        ]\n                                    }\n                                ],\n                                \"tags\": [\n                                    {\n                                        \"code\": \"symptoms\",\n                                        \"name\": \"Works against these symptoms\",\n                                        \"display\": true,\n                                        \"list\": [\n                                            {\n                                                \"code\": \"symptom-list\",\n                                                \"value\": \"cough, code, nausea, headache, phelgm\"\n                                            }\n                                        ]\n                                    }\n                                ],\n                                \"quantity\": {\n                                    \"available\": {\n                                        \"measure\": {\n                                            \"value\": \"1000\",\n                                            \"unit\": \"units\"\n                                        }\n                                    },\n                                    \"maximum\": {\n                                        \"measure\": {\n                                            \"value\": \"5\",\n                                            \"unit\": \"units\"\n                                        }\n                                    }\n                                }\n                            },\n                            {\n                                \"id\": \"1cef39d8-72d0-46f7-99ca-3f18f4bda8e3\",\n                                \"name\": \"Hycodan\",\n                                \"price\": {\n                                    \"value\": \"150\",\n                                    \"currency\": \"INR\"\n                                },\n                                \"categories\": [\n                                    {\n                                        \"id\": \"cat-01\",\n                                        \"name\": \"Pharmacy\",\n                                        \"code\": \"pharmacy\"\n                                    }\n                                ],\n                                \"locations\": [\n                                    {\n                                        \"id\": \"phr-loc-01\"\n                                    }\n                                ],\n                                \"fulfillments\": [\n                                    {\n                                        \"id\": \"ful-01\",\n                                        \"type\": \"IN-STORE-PICKUP\",\n                                        \"tracking\": false,\n                                        \"stops\": [\n                                            {\n                                                \"type\": \"start\"\n                                            },\n                                            {\n                                                \"type\": \"end\"\n                                            }\n                                        ],\n                                        \"tags\": [\n                                            {\n                                                \"code\": \"symptoms\",\n                                                \"name\": \"Works against these symptoms\",\n                                                \"display\": true,\n                                                \"list\": [\n                                                    {\n                                                        \"code\": \"symptom-list\",\n                                                        \"value\": \"cough, code, nausea, headache, phelgm\"\n                                                    }\n                                                ]\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"id\": \"ful-02\",\n                                        \"type\": \"HOME-DELIVERY\",\n                                        \"tracking\": false,\n                                        \"stops\": [\n                                            {\n                                                \"type\": \"start\"\n                                            },\n                                            {\n                                                \"type\": \"end\"\n                                            }\n                                        ],\n                                        \"tags\": [\n                                            {\n                                                \"code\": \"symptoms\",\n                                                \"name\": \"Works against these symptoms\",\n                                                \"display\": true,\n                                                \"list\": [\n                                                    {\n                                                        \"code\": \"symptom-list\",\n                                                        \"value\": \"cough, code, nausea, headache, phelgm\"\n                                                    }\n                                                ]\n                                            }\n                                        ]\n                                    }\n                                ],\n                                \"tags\": [\n                                    {\n                                        \"code\": \"symptoms\",\n                                        \"name\": \"Works against these symptoms\",\n                                        \"display\": true,\n                                        \"list\": [\n                                            {\n                                                \"code\": \"symptom-list\",\n                                                \"value\": \"cough, code, nausea, headache, phelgm\"\n                                            }\n                                        ]\n                                    }\n                                ],\n                                \"quantity\": {\n                                    \"available\": {\n                                        \"measure\": {\n                                            \"value\": \"1000\",\n                                            \"unit\": \"units\"\n                                        }\n                                    },\n                                    \"maximum\": {\n                                        \"measure\": {\n                                            \"value\": \"5\",\n                                            \"unit\": \"units\"\n                                        }\n                                    }\n                                }\n                            },\n                            {\n                                \"id\": \"5cbc6e9d-28f4-42c7-b81e-41a336ac96ea\",\n                                \"name\": \"Mucinex DM\",\n                                \"price\": {\n                                    \"value\": \"180\",\n                                    \"currency\": \"INR\"\n                                },\n                                \"categories\": [\n                                    {\n                                        \"id\": \"cat-01\",\n                                        \"name\": \"Pharmacy\",\n                                        \"code\": \"pharmacy\"\n                                    }\n                                ],\n                                \"locations\": [\n                                    {\n                                        \"id\": \"phr-loc-01\"\n                                    }\n                                ],\n                                \"fulfillments\": [\n                                    {\n                                        \"id\": \"ful-01\",\n                                        \"type\": \"IN-STORE-PICKUP\",\n                                        \"tracking\": false,\n                                        \"stops\": [\n                                            {\n                                                \"type\": \"start\"\n                                            },\n                                            {\n                                                \"type\": \"end\"\n                                            }\n                                        ],\n                                        \"tags\": [\n                                            {\n                                                \"code\": \"symptoms\",\n                                                \"name\": \"Works against these symptoms\",\n                                                \"display\": true,\n                                                \"list\": [\n                                                    {\n                                                        \"code\": \"symptom-list\",\n                                                        \"value\": \"cough, code, nausea, headache, phelgm\"\n                                                    }\n                                                ]\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"id\": \"ful-02\",\n                                        \"type\": \"HOME-DELIVERY\",\n                                        \"tracking\": false,\n                                        \"stops\": [\n                                            {\n                                                \"type\": \"start\"\n                                            },\n                                            {\n                                                \"type\": \"end\"\n                                            }\n                                        ],\n                                        \"tags\": [\n                                            {\n                                                \"code\": \"symptoms\",\n                                                \"name\": \"Works against these symptoms\",\n                                                \"display\": true,\n                                                \"list\": [\n                                                    {\n                                                        \"code\": \"symptom-list\",\n                                                        \"value\": \"cough, code, nausea, headache, phelgm\"\n                                                    }\n                                                ]\n                                            }\n                                        ]\n                                    }\n                                ],\n                                \"tags\": [\n                                    {\n                                        \"code\": \"symptoms\",\n                                        \"name\": \"Works against these symptoms\",\n                                        \"display\": true,\n                                        \"list\": [\n                                            {\n                                                \"code\": \"symptom-list\",\n                                                \"value\": \"cough, code, nausea, headache, phelgm\"\n                                            }\n                                        ]\n                                    }\n                                ],\n                                \"quantity\": {\n                                    \"available\": {\n                                        \"measure\": {\n                                            \"value\": \"1000\",\n                                            \"unit\": \"units\"\n                                        }\n                                    },\n                                    \"maximum\": {\n                                        \"measure\": {\n                                            \"value\": \"5\",\n                                            \"unit\": \"units\"\n                                        }\n                                    }\n                                }\n                            }\n                        ],\n                        \"images\": [\n                            {\n                                \"url\": \"https://QuickPharma.in/images/logo.png\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Select",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"{{transaction_id}}\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"{{domain}}\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"provider\": {\n                            \"id\": \"804\"\n                        },\n                        \"items\": [\n                            {\n                                \"id\": \"328\",\n                                \"tags\": [\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"confidence_levels\",\n                                            \"code\": \"confidence_levels\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"90%\",\n                                                \"code\": \"70%\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"data_formats\",\n                                            \"code\": \"data_formats\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"XML\",\n                                                \"code\": \"XML\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"CSV\",\n                                                \"code\": \"CSV\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"datapoint\",\n                                            \"code\": \"datapoint\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Temperature\",\n                                                \"code\": \"Temperature\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Vertical wind speed\",\n                                                \"code\": \"Vertical wind speed\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Horizontal wind velocity\",\n                                                \"code\": \"Horizontal wind velocity\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Relative Humidity\",\n                                                \"code\": \"Relative Humidity\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Precipitation\",\n                                                \"code\": \"Precipitation\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"data_sharing_modes\",\n                                            \"code\": \"data_sharing_modes\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"FTP\",\n                                                \"code\": \"FTP\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Email\",\n                                                \"code\": \"Email\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"spatial_coverage\",\n                                            \"code\": \"spatial_coverage\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Gopalganj\",\n                                                \"code\": \"Gopalganj\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"spatial_representation\",\n                                            \"code\": \"spatial_representation\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Vector\",\n                                                \"code\": \"Vector\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"spatial_resolutions\",\n                                            \"code\": \"spatial_resolutions\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"5 km\",\n                                                \"code\": \"5 km\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"subscription_durations\",\n                                            \"code\": \"subscription_durations\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"One time\",\n                                                \"code\": \"One time\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"temporal_coverage\",\n                                            \"code\": \"temporal_coverage\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Forecast (3 moths)\",\n                                                \"code\": \"Forecast (3 moths)\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"temporal_resolutions\",\n                                            \"code\": \"temporal_resolutions\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"30 days\",\n                                                \"code\": \"30 days\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    }\n                                ]\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/select",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"select"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"0bbd82ce-5a21-4e26-b402-1c1f9d954fee\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"domain\": \"dhp:pharmacy:0.1.0\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"items\": [\n                            {\n                                \"id\": \"fb0999b7-7755-46d6-a2ed-b286b7c98436\",\n                                \"quantity\": {\n                                    \"count\": 1\n                                }\n                            }\n                        ],\n                        \"provider\": {\n                            \"id\": \"e92e7a6e-1f20-4a8d-b343-956e0d45a48c\"\n                        },\n                        \"locations\": [\n                            {\n                                \"id\": \"phr-loc-01\"\n                            }\n                        ]\n                    },\n                    {\n                        \"items\": [\n                            {\n                                \"id\": \"fb0999b7-7755-46d6-a2ed-b286b7c98436\",\n                                \"quantity\": {\n                                    \"count\": 1\n                                }\n                            }\n                        ],\n                        \"provider\": {\n                            \"id\": \"e92e7a6e-1f20-4a8d-b343-956e0d45a48c\"\n                        },\n                        \"locations\": [\n                            {\n                                \"id\": \"phr-loc-01\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/select",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"select"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"dhp:pharmacy:0.1.0\",\n                \"action\": \"on_select\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"name\": \"India\",\n                        \"code\": \"IND\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"0bbd82ce-5a21-4e26-b402-1c1f9d954fee\",\n                \"message_id\": \"64a8f7bf-d531-4396-8f56-666fede3af5e\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2023-12-07T13:18:09.359Z\"\n            },\n            \"message\": {\n                \"order\": {\n                    \"type\": \"DEFAULT\",\n                    \"quote\": {\n                        \"price\": {\n                            \"value\": \"650\",\n                            \"currency\": \"INR\"\n                        },\n                        \"breakup\": [\n                            {\n                                \"title\": \"Benadryl 2 units\",\n                                \"price\": {\n                                    \"currency\": \"INR\",\n                                    \"value\": \"200\"\n                                }\n                            },\n                            {\n                                \"title\": \"hycodan 3 units\",\n                                \"price\": {\n                                    \"currency\": \"INR\",\n                                    \"value\": \"450\"\n                                }\n                            }\n                        ]\n                    },\n                    \"provider\": {\n                        \"id\": \"e92e7a6e-1f20-4a8d-b343-956e0d45a48c\",\n                        \"name\": \"QuickPharma\",\n                        \"short_desc\": \"QuickPharma Pvt Ltd\",\n                        \"images\": {\n                            \"url\": \"https://QuickPharma.in/images/logo.png\"\n                        }\n                    },\n                    \"items\": [\n                        {\n                            \"id\": \"fb0999b7-7755-46d6-a2ed-b286b7c98436\",\n                            \"name\": \"Benadryl cough syrup\",\n                            \"price\": {\n                                \"value\": \"100\",\n                                \"currency\": \"INR\"\n                            },\n                            \"quantity\": {\n                                \"selected\": {\n                                    \"measure\": {\n                                        \"value\": \"2\",\n                                        \"unit\": \"units\"\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"id\": \"1cef39d8-72d0-46f7-99ca-3f18f4bda8e3\",\n                            \"name\": \"Hycodan\",\n                            \"price\": {\n                                \"value\": \"150\",\n                                \"currency\": \"INR\"\n                            },\n                            \"quantity\": {\n                                \"selected\": {\n                                    \"measure\": {\n                                        \"value\": \"3\",\n                                        \"unit\": \"units\"\n                                    }\n                                }\n                            }\n                        }\n                    ]\n                }\n            }\n        },\n        {\n            \"context\": {\n                \"domain\": \"dhp:pharmacy:0.1.0\",\n                \"action\": \"on_select\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"name\": \"India\",\n                        \"code\": \"IND\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"0bbd82ce-5a21-4e26-b402-1c1f9d954fee\",\n                \"message_id\": \"e7e52c62-9765-4a94-8f7c-e7983fb8b143\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2023-12-07T13:18:09.261Z\"\n            },\n            \"message\": {\n                \"order\": {\n                    \"type\": \"DEFAULT\",\n                    \"quote\": {\n                        \"price\": {\n                            \"value\": \"650\",\n                            \"currency\": \"INR\"\n                        },\n                        \"breakup\": [\n                            {\n                                \"title\": \"Benadryl 2 units\",\n                                \"price\": {\n                                    \"currency\": \"INR\",\n                                    \"value\": \"200\"\n                                }\n                            },\n                            {\n                                \"title\": \"hycodan 3 units\",\n                                \"price\": {\n                                    \"currency\": \"INR\",\n                                    \"value\": \"450\"\n                                }\n                            }\n                        ]\n                    },\n                    \"provider\": {\n                        \"id\": \"e92e7a6e-1f20-4a8d-b343-956e0d45a48c\",\n                        \"name\": \"QuickPharma\",\n                        \"short_desc\": \"QuickPharma Pvt Ltd\",\n                        \"images\": {\n                            \"url\": \"https://QuickPharma.in/images/logo.png\"\n                        }\n                    },\n                    \"items\": [\n                        {\n                            \"id\": \"fb0999b7-7755-46d6-a2ed-b286b7c98436\",\n                            \"name\": \"Benadryl cough syrup\",\n                            \"price\": {\n                                \"value\": \"100\",\n                                \"currency\": \"INR\"\n                            },\n                            \"quantity\": {\n                                \"selected\": {\n                                    \"measure\": {\n                                        \"value\": \"2\",\n                                        \"unit\": \"units\"\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"id\": \"1cef39d8-72d0-46f7-99ca-3f18f4bda8e3\",\n                            \"name\": \"Hycodan\",\n                            \"price\": {\n                                \"value\": \"150\",\n                                \"currency\": \"INR\"\n                            },\n                            \"quantity\": {\n                                \"selected\": {\n                                    \"measure\": {\n                                        \"value\": \"3\",\n                                        \"unit\": \"units\"\n                                    }\n                                }\n                            }\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Confirm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"{{transaction_id}}\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"{{domain}}\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"provider\": {\n                            \"id\": \"804\"\n                        },\n                        \"items\": [\n                            {\n                                \"id\": \"328\",\n                                \"tags\": [\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"confidence_levels\",\n                                            \"code\": \"confidence_levels\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"90%\",\n                                                \"code\": \"70%\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"data_formats\",\n                                            \"code\": \"data_formats\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"XML\",\n                                                \"code\": \"XML\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"CSV\",\n                                                \"code\": \"CSV\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"datapoint\",\n                                            \"code\": \"datapoint\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Temperature\",\n                                                \"code\": \"Temperature\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Vertical wind speed\",\n                                                \"code\": \"Vertical wind speed\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Horizontal wind velocity\",\n                                                \"code\": \"Horizontal wind velocity\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Relative Humidity\",\n                                                \"code\": \"Relative Humidity\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Precipitation\",\n                                                \"code\": \"Precipitation\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"data_sharing_modes\",\n                                            \"code\": \"data_sharing_modes\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"FTP\",\n                                                \"code\": \"FTP\",\n                                                \"display\": true\n                                            },\n                                            {\n                                                \"value\": \"Email\",\n                                                \"code\": \"Email\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"spatial_coverage\",\n                                            \"code\": \"spatial_coverage\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Gopalganj\",\n                                                \"code\": \"Gopalganj\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"spatial_representation\",\n                                            \"code\": \"spatial_representation\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Vector\",\n                                                \"code\": \"Vector\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"spatial_resolutions\",\n                                            \"code\": \"spatial_resolutions\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"5 km\",\n                                                \"code\": \"5 km\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"subscription_durations\",\n                                            \"code\": \"subscription_durations\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"One time\",\n                                                \"code\": \"One time\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"temporal_coverage\",\n                                            \"code\": \"temporal_coverage\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"Forecast (3 moths)\",\n                                                \"code\": \"Forecast (3 moths)\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"descriptor\": {\n                                            \"description\": \"temporal_resolutions\",\n                                            \"code\": \"temporal_resolutions\"\n                                        },\n                                        \"list\": [\n                                            {\n                                                \"value\": \"30 days\",\n                                                \"code\": \"30 days\",\n                                                \"display\": true\n                                            }\n                                        ]\n                                    }\n                                ]\n                            }\n                        ],\n                        \"fulfillments\": [\n                            {\n                                \"id\": \"3\",\n                                \"customer\": {\n                                    \"contact\": {\n                                        \"email\": \"fox.judie@abc.org\",\n                                        \"phone\": \"+91-9999999999\"\n                                    },\n                                    \"person\": {\n                                        \"name\": \"Judie Fox\"\n                                    }\n                                }\n                            }\n                        ],\n                        \"billing\": {\n                            \"name\": \"Industry buyer\",\n                            \"address\": \"B005 aspire heights, Jurong East, SGP, 680230\",\n                            \"state\": {\n                                \"name\": \"Jurong East\"\n                            },\n                            \"city\": {\n                                \"name\": \"Jurong East\"\n                            },\n                            \"email\": \"nobody@nomail.com\",\n                            \"phone\": \"9886098860\"\n                        },\n                        \"payments\": [\n                            {\n                                \"collected_by\": \"BPP\",\n                                \"params\": {\n                                    \"amount\": \"250\",\n                                    \"currency\": \"EUR\",\n                                    \"bank_account_number\": \"1234002341\",\n                                    \"bank_code\": \"INB0004321\",\n                                    \"bank_account_name\": \"Makerspace Assembly Ltd\"\n                                },\n                                \"status\": \"PAID\",\n                                \"type\": \"PRE-ORDER\",\n                                \"transaction_id\": \"a35b56cf-e5cf-41f1-9b5d-fa99d8d5ac8c\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/confirm",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"confirm"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Request and Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"eed96a3f-c780-4157-a219-09ff871ee56c\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"domain\": \"supply-chain-services:assembly\"\n            },\n            \"message\": {\n                \"orders\": [\n                    {\n                        \"provider\": {\n                            \"id\": \"1\"\n                        },\n                        \"items\": [\n                            {\n                                \"id\": \"66b7b9bad166-4a3f-ada6-ca063dc9d321\"\n                            }\n                        ],\n                        \"fulfillments\": [\n                            {\n                                \"id\": \"f1\",\n                                \"customer\": {\n                                    \"contact\": {\n                                        \"email\": \"fox.judie@abc.org\",\n                                        \"phone\": \"+91-9999999999\"\n                                    },\n                                    \"person\": {\n                                        \"name\": \"Judie Fox\"\n                                    }\n                                },\n                                \"stops\": [\n                                    {\n                                        \"type\": \"end\",\n                                        \"location\": {\n                                            \"gps\": \"1.3806217468119772, 103.74636438437074\",\n                                            \"address\": \"My House #, My building\",\n                                            \"city\": {\n                                                \"name\": \"Jurong East\"\n                                            },\n                                            \"country\": {\n                                                \"code\": \"SGP\"\n                                            },\n                                            \"area_code\": \"680230\",\n                                            \"state\": {\n                                                \"name\": \"bayern\"\n                                            }\n                                        },\n                                        \"contact\": {\n                                            \"phone\": \"9886098860\"\n                                        }\n                                    }\n                                ]\n                            }\n                        ],\n                        \"billing\": {\n                            \"name\": \"Industry buyer\",\n                            \"address\": \"B005 aspire heights, Jurong East, SGP, 680230\",\n                            \"state\": {\n                                \"name\": \"Jurong East\"\n                            },\n                            \"city\": {\n                                \"name\": \"Jurong East\"\n                            },\n                            \"email\": \"nobody@nomail.com\",\n                            \"phone\": \"9886098860\"\n                        },\n                        \"payments\": [\n                            {\n                                \"collected_by\": \"BPP\",\n                                \"params\": {\n                                    \"amount\": \"250\",\n                                    \"currency\": \"EUR\",\n                                    \"bank_account_number\": \"1234002341\",\n                                    \"bank_code\": \"INB0004321\",\n                                    \"bank_account_name\": \"Makerspace Assembly Ltd\"\n                                },\n                                \"status\": \"PAID\",\n                                \"type\": \"PRE-ORDER\",\n                                \"transaction_id\": \"a35b56cf-e5cf-41f1-9b5d-fa99d8d5ac8c\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/confirm",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"confirm"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"supply-chain-services:assembly\",\n                \"action\": \"on_confirm\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"code\": \"DE\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"eed96a3f-c780-4157-a219-09ff871ee56c\",\n                \"message_id\": \"965af511-0ea0-4dd2-951a-9ebe27cfebf4\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2024-01-10T06:59:35.954Z\"\n            },\n            \"message\": {\n                \"orderId\": \"80c16815-46ec-49d4-b872-08f093b83a92\",\n                \"provider\": {\n                    \"id\": \"1\",\n                    \"name\": \"Makerspace\",\n                    \"short_desc\": \"Makerspace\",\n                    \"long_desc\": \"Makerspace, Hof\",\n                    \"images\": [\n                        {\n                            \"url\": \"https://images.pexels.com/photos/5532668/pexels-photo-5532668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\",\n                            \"size_type\": \"sm\"\n                        }\n                    ]\n                },\n                \"items\": {\n                    \"id\": \"66b7b9bad166-4a3f-ada6-ca063dc9d321\",\n                    \"name\": \"Intermittent assembly type\",\n                    \"short_desc\": \"This is an intermittent assembly type.\",\n                    \"long_desc\": \"<h1>Intermittent Assembly Product - Enhanced Efficiency, Unmatched Performance!</h1><p>Welcome to the future of assembly technology! Revolutionize your workflow with unparalleled efficiency and precision.</p><p>Key Features:</p><ul><li>Precise Intermittent Assembly Technology.</li><li>Advanced automation for time and resource savings.</li><li>Durable materials for longevity and reliability.</li><li>Customizable settings for various assembly requirements.</li></ul><p>Invest in the future of assembly technology. Elevate your production capabilities today!</p>\",\n                    \"price\": {\n                        \"currency\": \"EUR\",\n                        \"value\": \"starting from 200 EUR\"\n                    },\n                    \"tags\": [\n                        {\n                            \"code\": \"product-info\",\n                            \"name\": \"Product Information\",\n                            \"display\": true,\n                            \"list\": [\n                                {\n                                    \"name\": \"product-type\",\n                                    \"value\": \"electronics\"\n                                }\n                            ]\n                        },\n                        {\n                            \"code\": \"assembly-info\",\n                            \"name\": \"Assembly Information\",\n                            \"display\": true,\n                            \"list\": [\n                                {\n                                    \"name\": \"assembly-method\",\n                                    \"value\": \"automated\"\n                                }\n                            ]\n                        },\n                        {\n                            \"code\": \"scale-info\",\n                            \"name\": \"Scale Information\",\n                            \"display\": true,\n                            \"list\": [\n                                {\n                                    \"name\": \"scale-type\",\n                                    \"value\": \"industrial\"\n                                }\n                            ]\n                        },\n                        {\n                            \"code\": \"printer-info\",\n                            \"name\": \"Printer Information\",\n                            \"display\": true,\n                            \"list\": [\n                                {\n                                    \"name\": \"Resolution\",\n                                    \"value\": \"gte>20%\"\n                                },\n                                {\n                                    \"name\": \"success-rate\",\n                                    \"value\": \"gte>95%\"\n                                }\n                            ]\n                        }\n                    ]\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f1\",\n                        \"state\": {\n                            \"descriptor\": {\n                                \"code\": \"ORDER_ACCEPTED\",\n                                \"short_desc\": \"The order is accepted\"\n                            }\n                        },\n                        \"customer\": {\n                            \"contact\": {\n                                \"email\": \"fox.judie@abc.org\",\n                                \"phone\": \"+91-9999999999\"\n                            },\n                            \"person\": {\n                                \"name\": \"Judie Fox\"\n                            }\n                        },\n                        \"stops\": [\n                            {\n                                \"type\": \"end\",\n                                \"location\": {\n                                    \"gps\": \"1.3806217468119772, 103.74636438437074\",\n                                    \"address\": \"My House #, My building\",\n                                    \"city\": {\n                                        \"name\": \"Jurong East\"\n                                    },\n                                    \"country\": {\n                                        \"code\": \"SGP\"\n                                    },\n                                    \"area_code\": \"680230\",\n                                    \"state\": {\n                                        \"name\": \"bayern\"\n                                    }\n                                },\n                                \"contact\": {\n                                    \"phone\": \"9886098860\"\n                                }\n                            }\n                        ],\n                        \"tracking\": false\n                    }\n                ],\n                \"quote\": {\n                    \"breakup\": [\n                        {\n                            \"price\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"200\"\n                            },\n                            \"title\": \"Base Price\"\n                        },\n                        {\n                            \"price\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"50\"\n                            },\n                            \"title\": \"Shipping Cost\"\n                        },\n                        {\n                            \"price\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"50\"\n                            },\n                            \"title\": \"Tax\"\n                        }\n                    ],\n                    \"price\": {\n                        \"currency\": \"EUR\",\n                        \"value\": \"300\"\n                    }\n                },\n                \"billing\": {\n                    \"name\": \"Industry buyer\",\n                    \"address\": \"B005 aspire heights, Jurong East, SGP, 680230\",\n                    \"state\": {\n                        \"name\": \"Jurong East\"\n                    },\n                    \"city\": {\n                        \"name\": \"Jurong East\"\n                    },\n                    \"email\": \"nobody@nomail.com\",\n                    \"phone\": \"9886098860\"\n                },\n                \"payments\": [\n                    {\n                        \"collected_by\": \"BPP\",\n                        \"params\": {\n                            \"amount\": \"300\",\n                            \"currency\": \"EUR\",\n                            \"bank_account_number\": \"1234002341\",\n                            \"bank_code\": \"INB0004321\",\n                            \"bank_account_name\": \"Makerspace Assembly Ltd\"\n                        },\n                        \"status\": \"PAID\",\n                        \"type\": \"PRE-ORDER\",\n                        \"transaction_id\": \"a35b56cf-e5cf-41f1-9b5d-fa99d8d5ac8c\"\n                    }\n                ],\n                \"cancellation_terms\": [\n                    {\n                        \"cancellation_fee\": {\n                            \"amount\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"100\"\n                            }\n                        }\n                    }\n                ]\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"{{transaction_id}}\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"{{domain}}\"\n            },\n            \"message\": {\n                \"order_id\": \"2224\"\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/status",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Request and Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"eed96a3f-c780-4157-a219-09ff871ee56c\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"domain\": \"supply-chain-services:assembly\"\n            },\n            \"message\": {\n                \"order_id\": \"80c16815-46ec-49d4-b872-08f093b83a92\"\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/status",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"status"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"supply-chain-services:assembly\",\n                \"action\": \"on_status\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"code\": \"DE\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"eed96a3f-c780-4157-a219-09ff871ee56c\",\n                \"message_id\": \"10477a6e-fb65-4c25-a8df-28b12d5d88f9\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2024-01-10T07:02:33.401Z\"\n            },\n            \"message\": {\n                \"order\": {\n                    \"id\": \"80c16815-46ec-49d4-b872-08f093b83a92\",\n                    \"provider\": {\n                        \"id\": \"1\",\n                        \"name\": \"Makerspace\",\n                        \"short_desc\": \"Makerspace\",\n                        \"long_desc\": \"Makerspace, Hof\",\n                        \"images\": {\n                            \"url\": \"https://images.pexels.com/photos/5532668/pexels-photo-5532668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\",\n                            \"size_type\": \"sm\"\n                        }\n                    },\n                    \"items\": [\n                        {\n                            \"id\": \"66b7b9bad166-4a3f-ada6-ca063dc9d321\",\n                            \"name\": \"Intermittent assembly type\",\n                            \"short_desc\": \"This is an intermittent assembly type.\",\n                            \"long_desc\": \"<h1>Intermittent Assembly Product - Enhanced Efficiency, Unmatched Performance!</h1><p>Welcome to the future of assembly technology! Revolutionize your workflow with unparalleled efficiency and precision.</p><p>Key Features:</p><ul><li>Precise Intermittent Assembly Technology.</li><li>Advanced automation for time and resource savings.</li><li>Durable materials for longevity and reliability.</li><li>Customizable settings for various assembly requirements.</li></ul><p>Invest in the future of assembly technology. Elevate your production capabilities today!</p>\",\n                            \"price\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"starting from 200 EUR\"\n                            },\n                            \"tags\": [\n                                {\n                                    \"code\": \"product-info\",\n                                    \"name\": \"Product Information\",\n                                    \"display\": true,\n                                    \"list\": [\n                                        {\n                                            \"name\": \"product-type\",\n                                            \"value\": \"electronics\"\n                                        }\n                                    ]\n                                },\n                                {\n                                    \"code\": \"assembly-info\",\n                                    \"name\": \"Assembly Information\",\n                                    \"display\": true,\n                                    \"list\": [\n                                        {\n                                            \"name\": \"assembly-method\",\n                                            \"value\": \"automated\"\n                                        }\n                                    ]\n                                },\n                                {\n                                    \"code\": \"scale-info\",\n                                    \"name\": \"Scale Information\",\n                                    \"display\": true,\n                                    \"list\": [\n                                        {\n                                            \"name\": \"scale-type\",\n                                            \"value\": \"industrial\"\n                                        }\n                                    ]\n                                },\n                                {\n                                    \"code\": \"printer-info\",\n                                    \"name\": \"Printer Information\",\n                                    \"display\": true,\n                                    \"list\": [\n                                        {\n                                            \"name\": \"Resolution\",\n                                            \"value\": \"gte>20%\"\n                                        },\n                                        {\n                                            \"name\": \"success-rate\",\n                                            \"value\": \"gte>95%\"\n                                        }\n                                    ]\n                                }\n                            ]\n                        }\n                    ],\n                    \"fulfillments\": [\n                        {\n                            \"id\": \"f1\",\n                            \"state\": {\n                                \"descriptor\": {\n                                    \"code\": \"IN_ASSEMBLY_LINE\",\n                                    \"short_desc\": \"The item is in assembly line\"\n                                },\n                                \"updated_at\": \"2024-01-10T07:02:31.389Z\"\n                            },\n                            \"customer\": {\n                                \"contact\": {\n                                    \"email\": \"fox.judie@abc.org\",\n                                    \"phone\": \"+91-9999999999\"\n                                },\n                                \"person\": {\n                                    \"name\": \"Judie Fox\"\n                                }\n                            },\n                            \"stops\": [\n                                {\n                                    \"type\": \"end\",\n                                    \"location\": {\n                                        \"gps\": \"1.3806217468119772, 103.74636438437074\",\n                                        \"address\": \"My House #, My building\",\n                                        \"city\": {\n                                            \"name\": \"Jurong East\"\n                                        },\n                                        \"country\": {\n                                            \"code\": \"SGP\"\n                                        },\n                                        \"area_code\": \"680230\",\n                                        \"state\": {\n                                            \"name\": \"bayern\"\n                                        }\n                                    },\n                                    \"contact\": {\n                                        \"phone\": \"9886098860\"\n                                    }\n                                }\n                            ],\n                            \"tracking\": false\n                        }\n                    ],\n                    \"quote\": {\n                        \"breakup\": [\n                            {\n                                \"price\": {\n                                    \"currency\": \"EUR\",\n                                    \"value\": \"200\"\n                                },\n                                \"title\": \"Base Price\"\n                            },\n                            {\n                                \"price\": {\n                                    \"currency\": \"EUR\",\n                                    \"value\": \"50\"\n                                },\n                                \"title\": \"Shipping Cost\"\n                            },\n                            {\n                                \"price\": {\n                                    \"currency\": \"EUR\",\n                                    \"value\": \"50\"\n                                },\n                                \"title\": \"Tax\"\n                            }\n                        ],\n                        \"price\": {\n                            \"currency\": \"EUR\",\n                            \"value\": \"300\"\n                        }\n                    },\n                    \"billing\": {\n                        \"name\": \"Industry buyer\",\n                        \"address\": \"B005 aspire heights, Jurong East, SGP, 680230\",\n                        \"state\": {\n                            \"name\": \"Jurong East\"\n                        },\n                        \"city\": {\n                            \"name\": \"Jurong East\"\n                        },\n                        \"email\": \"nobody@nomail.com\",\n                        \"phone\": \"9886098860\"\n                    },\n                    \"payments\": [\n                        {\n                            \"collected_by\": \"BPP\",\n                            \"params\": {\n                                \"amount\": \"300\",\n                                \"currency\": \"EUR\",\n                                \"bank_account_number\": \"1234002341\",\n                                \"bank_code\": \"INB0004321\",\n                                \"bank_account_name\": \"Makerspace assembly Ltd\"\n                            },\n                            \"status\": \"PAID\",\n                            \"type\": \"PRE-ORDER\",\n                            \"transaction_id\": \"a35b56cf-e5cf-41f1-9b5d-fa99d8d5ac8c\"\n                        }\n                    ],\n                    \"cancellation_terms\": [\n                        {\n                            \"cancellation_fee\": {\n                                \"amount\": {\n                                    \"currency\": \"EUR\",\n                                    \"value\": \"100\"\n                                }\n                            }\n                        }\n                    ],\n                    \"type\": \"DEFAULT\"\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Track",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"{{domain}}\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"transaction_id\": \"{{transaction_id}}\"\n            },\n            \"orderId\": \"2224\",\n            \"callbackUrl\": \"https://dhp-network-bap.becknprotocol.io/track/callback\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/track",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"track"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Request and Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"name": "Content-Type",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"supply-chain-services:assembly\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"transaction_id\": \"6743e9e2-4fb5-487c-92b7-13ba8018f176\"\n            },\n            \"orderId\": \"759b905c-5a30-4d18-a6af-0decbac9282f\",\n            \"callbackUrl\": \"https://dhp-network-bap.becknprotocol.io/track/callback\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/track",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"track"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"supply-chain-services:assembly\",\n                \"action\": \"on_track\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"code\": \"DE\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"6743e9e2-4fb5-487c-92b7-13ba8018f176\",\n                \"message_id\": \"ff2d22a9-d23b-4a78-9cec-6579d87985d7\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2024-01-10T07:03:56.850Z\"\n            },\n            \"message\": {\n                \"tracking\": {\n                    \"url\": \"https://merkspace/tracking/201f6fa2-a2f7-42e7-a2e5-8947398747\",\n                    \"status\": \"active\",\n                    \"id\": \"38473fhjd7sriyr8\"\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Rating",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"{{transaction_id}}\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"{{domain}}\"\n            },\n            \"message\": {\n                \"ratings\": [\n                    {\n                        \"id\": \"62\",\n                        \"rating_category\": \"Item\",\n                        \"value\": \"8\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/rating",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rating"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Rating",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"name": "Content-Type",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"eed96a3f-c780-4157-a219-09ff871ee56c\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"domain\": \"supply-chain-services:assembly\"\n            },\n            \"message\": {\n                \"id\": \"b989c9a9-f603-4d44-b38d-26fd72286b38\",\n                \"rating_category\": \"Order\",\n                \"value\": \"8\"\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/rating",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"rating"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"supply-chain-services:assembly\",\n                \"action\": \"on_rating\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"code\": \"DE\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"eed96a3f-c780-4157-a219-09ff871ee56c\",\n                \"message_id\": \"101571df-c258-4c80-b780-6e543da324cb\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2024-01-10T07:05:51.090Z\"\n            },\n            \"message\": {\n                \"feedback_form\": {\n                    \"xinput\": {\n                        \"form\": {\n                            \"url\": \"https://inds-network-bpp.becknprotocol.io/feedback/portal\"\n                        },\n                        \"required\": \"false\"\n                    }\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Cancel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"{{transaction_id}}\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"domain\": \"{{domain}}\"\n            },\n            \"message\": {\n                \"order_id\": \"2224\",\n                \"cancellation_reason_id\": \"4\",\n                \"descriptor\": {\n                    \"short_desc\": \"Order delayed\"\n                }\n            }\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/cancel",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cancel"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Request and Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"name": "Content-Type",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"transaction_id\": \"eed96a3f-c780-4157-a219-09ff871ee56c\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"domain\": \"supply-chain-services:assembly\"\n            },\n            \"message\": {\n                \"order_id\": \"04389d8c-6a50-4664-9c08-4ee45fef44e8\",\n                \"cancellation_reason_id\": \"4\",\n                \"descriptor\": {\n                    \"short_desc\": \"Order delayed\"\n                }\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/cancel",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cancel"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"supply-chain-services:assembly\",\n                \"action\": \"on_cancel\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"code\": \"DE\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"eed96a3f-c780-4157-a219-09ff871ee56c\",\n                \"message_id\": \"63c2076a-5180-41fd-9cc5-a70413ca6298\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2024-01-10T07:07:10.295Z\"\n            },\n            \"message\": {\n                \"order\": {\n                    \"type\": \"DEFAULT\",\n                    \"provider\": {\n                        \"id\": \"1\"\n                    },\n                    \"items\": [\n                        {\n                            \"id\": \"66b7b9bad166-4a3f-ada6-ca063dc9d321\",\n                            \"name\": \"Intermittent assembly type\",\n                            \"short_desc\": \"This is an intermittent assembly type.\",\n                            \"long_desc\": \"<h1>Intermittent Assembly Product - Enhanced Efficiency, Unmatched Performance!</h1><p>Welcome to the future of assembly technology! Revolutionize your workflow with unparalleled efficiency and precision.</p><p>Key Features:</p><ul><li>Precise Intermittent Assembly Technology.</li><li>Advanced automation for time and resource savings.</li><li>Durable materials for longevity and reliability.</li><li>Customizable settings for various assembly requirements.</li></ul><p>Invest in the future of assembly technology. Elevate your production capabilities today!</p>\",\n                            \"price\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"starting from 200 EUR\"\n                            }\n                        }\n                    ],\n                    \"fulfillments\": [\n                        {\n                            \"customer\": {\n                                \"contact\": {\n                                    \"email\": \"fox.judie@abc.org\",\n                                    \"phone\": \"+91-81347776660\"\n                                },\n                                \"person\": {\n                                    \"name\": \"Judie Fox\"\n                                }\n                            },\n                            \"id\": \"fid1\",\n                            \"state\": {\n                                \"descriptor\": {\n                                    \"code\": \"CANCELLED\",\n                                    \"short_desc\": \"cancellation reason...\"\n                                },\n                                \"updated_at\": \"2023-05-25T05:23:04.443Z\"\n                            },\n                            \"tracking\": false\n                        }\n                    ],\n                    \"quote\": {\n                        \"breakup\": [\n                            {\n                                \"price\": {\n                                    \"currency\": \"EUR\",\n                                    \"value\": \"200\"\n                                },\n                                \"title\": \"Base Price\"\n                            },\n                            {\n                                \"price\": {\n                                    \"currency\": \"EUR\",\n                                    \"value\": \"50\"\n                                },\n                                \"title\": \"Shipping Cost\"\n                            },\n                            {\n                                \"price\": {\n                                    \"currency\": \"EUR\",\n                                    \"value\": \"50\"\n                                },\n                                \"title\": \"Tax\"\n                            }\n                        ],\n                        \"price\": {\n                            \"currency\": \"EUR\",\n                            \"value\": \"300\"\n                        }\n                    },\n                    \"billing\": {\n                        \"name\": \"Industry buyer\",\n                        \"address\": \"B005 aspire heights, Jurong East, SGP, 680230\",\n                        \"state\": {\n                            \"name\": \"Jurong East\"\n                        },\n                        \"city\": {\n                            \"name\": \"Jurong East\"\n                        },\n                        \"email\": \"nobody@nomail.com\",\n                        \"phone\": \"9886098860\"\n                    },\n                    \"payments\": [\n                        {\n                            \"collected_by\": \"BPP\",\n                            \"params\": {\n                                \"amount\": \"300\",\n                                \"currency\": \"EUR\",\n                                \"bank_account_number\": \"1234002341\",\n                                \"bank_code\": \"INB0004321\",\n                                \"bank_account_name\": \"Makerspace assembly Ltd\"\n                            },\n                            \"status\": \"PAID\",\n                            \"type\": \"PRE-ORDER\",\n                            \"transaction_id\": \"a35b56cf-e5cf-41f1-9b5d-fa99d8d5ac8c\"\n                        }\n                    ],\n                    \"cancellation_terms\": [\n                        {\n                            \"cancellation_fee\": {\n                                \"amount\": {\n                                    \"currency\": \"EUR\",\n                                    \"value\": \"100\"\n                                }\n                            }\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\":\"{{domain}}\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"transaction_id\": \"{{transaction_id}}\"\n            },\n            \"orderId\": \"2224\",\n            \"updateDetails\": {\n                \"updateTarget\": \"order.billing\",\n                \"billing\": {\n                    \"name\": \"John Doe\",\n                    \"address\": \"Villa 5, Green Valley, Malleshwaram, 560012\",\n                    \"email\": \"john.doe@example.com\",\n                    \"phone\": \"+91-9999999999\"\n                }\n            }\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Request and Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"name": "Content-Type",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\":\"supply-chain-services:assembly\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"transaction_id\": \"6743e9e2-4fb5-487c-92b7-13ba8018f176\"\n            },\n            \"orderId\": \"853c7593-f4bf-4557-8832-118a591787ba\",\n            \"updateDetails\": {\n                \"updateTarget\": \"order.fulfillments[0].stops[0]\",\n                \"fulfillments\": [\n                    {\n                        \"stops\": [\n                            {\n                                \"location\": {\n                                    \"gps\": \"1.3806217468119772, 103.74636438437074\",\n                                    \"address\": \"My House #, My building\",\n                                    \"city\": {\n                                        \"name\": \"Jurong East\"\n                                    },\n                                    \"country\": {\n                                        \"code\": \"SGP\"\n                                    },\n                                    \"area_code\": \"680230\",\n                                    \"state\": {\n                                        \"name\": \"bayern\"\n                                    }\n                                },\n                                \"contact\": {\n                                    \"phone\": \"9886098860\"\n                                }\n                            }\n                        ]\n                    }\n                ],\n                \"billing\": {\n                    \"name\": \"John Doe\",\n                    \"address\": \"Villa 5, Green Valley, Malleshwaram, 560012\",\n                    \"email\": \"john.doe@example.com\",\n                    \"phone\": \"+91-9999999999\"\n                }\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"supply-chain-services:assembly\",\n                \"action\": \"on_update\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"code\": \"DE\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"6743e9e2-4fb5-487c-92b7-13ba8018f176\",\n                \"message_id\": \"9b25f86d-7a70-4cab-9e30-de70637e0691\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2024-01-10T07:10:41.921Z\"\n            },\n            \"message\": {\n                \"orderId\": \"b989c9a9-f603-4d44-b38d-26fd72286b38\",\n                \"provider\": {\n                    \"id\": \"1\",\n                    \"name\": \"Makerspace\",\n                    \"short_desc\": \"Makerspace\",\n                    \"long_desc\": \"Makerspace, Hof\",\n                    \"images\": [\n                        {\n                            \"url\": \"https://images.pexels.com/photos/5532668/pexels-photo-5532668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\",\n                            \"size_type\": \"sm\"\n                        }\n                    ]\n                },\n                \"items\": {\n                    \"id\": \"66b7b9bad166-4a3f-ada6-ca063dc9d321\",\n                    \"name\": \"Intermittent assembly type\",\n                    \"short_desc\": \"This is an intermittent assembly type.\",\n                    \"long_desc\": \"<h1>Intermittent Assembly Product - Enhanced Efficiency, Unmatched Performance!</h1><p>Welcome to the future of assembly technology! Revolutionize your workflow with unparalleled efficiency and precision.</p><p>Key Features:</p><ul><li>Precise Intermittent Assembly Technology.</li><li>Advanced automation for time and resource savings.</li><li>Durable materials for longevity and reliability.</li><li>Customizable settings for various assembly requirements.</li></ul><p>Invest in the future of assembly technology. Elevate your production capabilities today!</p>\",\n                    \"price\": {\n                        \"currency\": \"EUR\",\n                        \"value\": \"starting from 200 EUR\"\n                    },\n                    \"tags\": [\n                        {\n                            \"code\": \"product-info\",\n                            \"name\": \"Product Information\",\n                            \"display\": true,\n                            \"list\": [\n                                {\n                                    \"name\": \"product-type\",\n                                    \"value\": \"electronics\"\n                                }\n                            ]\n                        },\n                        {\n                            \"code\": \"assembly-info\",\n                            \"name\": \"Assembly Information\",\n                            \"display\": true,\n                            \"list\": [\n                                {\n                                    \"name\": \"assembly-method\",\n                                    \"value\": \"automated\"\n                                }\n                            ]\n                        },\n                        {\n                            \"code\": \"scale-info\",\n                            \"name\": \"Scale Information\",\n                            \"display\": true,\n                            \"list\": [\n                                {\n                                    \"name\": \"scale-type\",\n                                    \"value\": \"industrial\"\n                                }\n                            ]\n                        },\n                        {\n                            \"code\": \"printer-info\",\n                            \"name\": \"Printer Information\",\n                            \"display\": true,\n                            \"list\": [\n                                {\n                                    \"name\": \"Resolution\",\n                                    \"value\": \"gte>20%\"\n                                },\n                                {\n                                    \"name\": \"success-rate\",\n                                    \"value\": \"gte>95%\"\n                                }\n                            ]\n                        }\n                    ]\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f1\",\n                        \"state\": {\n                            \"descriptor\": {\n                                \"code\": \"ORDER_ACCEPTED\",\n                                \"short_desc\": \"Order has been confirmed...\"\n                            }\n                        },\n                        \"customer\": {\n                            \"contact\": {\n                                \"email\": \"fox.judie@abc.org\",\n                                \"phone\": \"+91-8056475647\"\n                            },\n                            \"person\": {\n                                \"name\": \"Judie Fox\"\n                            }\n                        },\n                        \"stops\": [\n                            {\n                                \"type\": \"end\",\n                                \"location\": {\n                                    \"gps\": \"1.3806217468119772, 103.74636438437074\",\n                                    \"address\": \"My House #, My building\",\n                                    \"city\": {\n                                        \"name\": \"Jurong East\"\n                                    },\n                                    \"country\": {\n                                        \"code\": \"SGP\"\n                                    },\n                                    \"area_code\": \"680230\",\n                                    \"state\": {\n                                        \"name\": \"bayern\"\n                                    }\n                                },\n                                \"contact\": {\n                                    \"phone\": \"9886098860\"\n                                }\n                            }\n                        ],\n                        \"tracking\": false\n                    }\n                ],\n                \"quote\": {\n                    \"breakup\": [\n                        {\n                            \"price\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"200\"\n                            },\n                            \"title\": \"Base Price\"\n                        },\n                        {\n                            \"price\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"50\"\n                            },\n                            \"title\": \"Shipping Cost\"\n                        },\n                        {\n                            \"price\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"50\"\n                            },\n                            \"title\": \"Tax\"\n                        }\n                    ],\n                    \"price\": {\n                        \"currency\": \"EUR\",\n                        \"value\": \"300\"\n                    }\n                },\n                \"billing\": {\n                    \"name\": \"Industry buyer\",\n                    \"address\": \"B005 aspire heights, Jurong East, SGP, 680230\",\n                    \"state\": {\n                        \"name\": \"Jurong East\"\n                    },\n                    \"city\": {\n                        \"name\": \"Jurong East\"\n                    },\n                    \"email\": \"nobody@nomail.com\",\n                    \"phone\": \"9886098860\"\n                },\n                \"payments\": [\n                    {\n                        \"collected_by\": \"BPP\",\n                        \"params\": {\n                            \"amount\": \"300\",\n                            \"currency\": \"EUR\",\n                            \"bank_account_number\": \"1234002341\",\n                            \"bank_code\": \"INB0004321\",\n                            \"bank_account_name\": \"Makerspace Assembly Ltd\"\n                        },\n                        \"status\": \"PAID\",\n                        \"type\": \"PRE-ORDER\",\n                        \"transaction_id\": \"a35b56cf-e5cf-41f1-9b5d-fa99d8d5ac8c\"\n                    }\n                ],\n                \"cancellation_terms\": [\n                    {\n                        \"cancellation_fee\": {\n                            \"amount\": {\n                                \"currency\": \"EUR\",\n                                \"value\": \"100\"\n                            }\n                        }\n                    }\n                ]\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Support",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"{{domain}}\",\n                \"bpp_id\": \"{{bpp_id_strapi}}\",\n                \"bpp_uri\": \"{{bpp_uri_strapi}}\",\n                \"transaction_id\": \"{{transaction_id}}\"\n            },\n            \"message\": {\n                \"order_id\": \"2224\",\n                \"support\": {\n                    \"callback_phone\": \"+91-8858150053\",\n                    \"ref_id\": \"894789-43954\",\n                    \"phone\": \"+91 9988776543\",\n                    \"email\": \"supportperson@gmail.com\"\n                }\n            }\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/support",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"support"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Request and Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"name": "Content-Type",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"supply-chain-services:assembly\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"transaction_id\": \"6743e9e2-4fb5-487c-92b7-13ba8018f176\"\n            },\n            \"message\": {\n                \"order_id\": \"759b905c-5a30-4d18-a6af-0decbac9282f\",\n                \"support\": {\n                    \"callback_phone\": \"+91-8858150053\",\n                    \"ref_id\": \"894789-43954\",\n                    \"phone\": \"+91 9988776543\",\n                    \"email\": \"supportperson@gmail.com\"\n                }\n            }\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/support",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"support"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"context\": {\n                \"domain\": \"supply-chain-services:assembly\",\n                \"action\": \"on_support\",\n                \"version\": \"1.1.0\",\n                \"bpp_id\": \"beckn-sandbox-bpp.becknprotocol.io\",\n                \"bpp_uri\": \"https://sandbox-bpp-network.becknprotocol.io/\",\n                \"country\": \"IND\",\n                \"city\": \"std:080\",\n                \"location\": {\n                    \"country\": {\n                        \"code\": \"DE\"\n                    }\n                },\n                \"bap_id\": \"ps-bap-network.becknprotocol.io\",\n                \"bap_uri\": \"https://ps-bap-network.becknprotocol.io\",\n                \"transaction_id\": \"6743e9e2-4fb5-487c-92b7-13ba8018f176\",\n                \"message_id\": \"114e582e-ab3f-4d23-b8b8-9f05742f1444\",\n                \"ttl\": \"PT10M\",\n                \"timestamp\": \"2024-01-10T07:13:10.632Z\"\n            },\n            \"message\": {\n                \"support\": {\n                    \"ref_id\": \"d4975df5-b18c-4772-80ad\",\n                    \"callback_phone\": \"+91 8765495826\",\n                    \"phone\": \"+91 9876543298\",\n                    \"email\": \"abcd.makerspace@support.com\"\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
 		}
 	],
 	"event": [
@@ -12391,6 +13106,16 @@
 		{
 			"key": "bpp_sandbox_uri",
 			"value": "https://bpp-ps-network-sandbox-dev.becknprotocol.io",
+			"type": "string"
+		},
+		{
+			"key": "domain",
+			"value": "supply-chain-services:assembly",
+			"type": "string"
+		},
+		{
+			"key": "transaction_id",
+			"value": "3b26d752-360c-4c9b-8dec-47595e41bb39",
 			"type": "string"
 		}
 	]
