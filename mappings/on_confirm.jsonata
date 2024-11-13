@@ -45,11 +45,12 @@
                             }
                         )[],
                         "tags": tags.{
-                        "code": descriptor.code,
-                        "name": descriptor.name,
-                        "display": display,
-                 "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                    }[],
+                            "code": descriptor.code,
+                            "name": descriptor.name,
+                            "description": descriptor.description,
+                            "display": display,
+                            "list": list.{ "code": code, "name": name, "value": value, "display": display }[]
+                        }[],
                     "fulfillments":$map(
                         $filter(%.provider.fulfillments, function($fulfillment) { $boolean($fulfillment.id in fulfillment_ids)}),
                         function($fulfillment) { 
@@ -62,18 +63,18 @@
                         }
                     )[]
             }[],
-                "fulfillments": message.order.fulfillments,
-                "quote": message.order.quote,
-                "billing": message.order.billing,
-                "payments": message.order.payments,
-                "cancellation_terms": message.order.cancellation_terms,
-
-                "tags": message.order.tags.{
-                        "code": descriptor.code,
-                        "name": descriptor.name,
-                        "display": display,
-                        "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                    }[]
+            "fulfillments": message.order.fulfillments,
+            "quote": message.order.quote,
+            "billing": message.order.billing,
+            "payments": message.order.payments,
+            "cancellation_terms": message.order.cancellation_terms,
+            "tags": message.order.tags.{
+                "code": descriptor.code,
+                "name": descriptor.name,
+                "description": descriptor.description,
+                "display": display,
+                "list": list.{ "code": code, "name": name, "value": value }[]
+            }[]
         },
         "rawResponse": $includeRawResponse ? $ :{}
     }[]
