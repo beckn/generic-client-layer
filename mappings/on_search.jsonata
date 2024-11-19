@@ -93,7 +93,8 @@
                     "quantity": quantity
                 }[],
                 "images": descriptor.images.{"url": url}[],
-                "media": descriptor.media.{"url": url, "mimetype": mimetype}[]
+                "media": descriptor.media.{"url": url, "mimetype": mimetype}[],
+                "tags": tags
             }[]
         },
         "rawResponse": $includeRawResponse ? $ :{}
