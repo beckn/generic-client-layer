@@ -1,44 +1,47 @@
 {
     "context": $context(context, $action), 
     "message":{
-        "intent":{
-            "item":{
-                "descriptor":{
-                    "name":searchString
+        "intent": {
+            "item": {
+                "descriptor": {
+                    "name": searchString
                 },
-                "id":itemId
+                "id": itemId,
+                "quantity": quantity
             },
-            "fulfillment":{
+            "fulfillment": {
                 "type": fulfillment.type,
-                "stops": $map( fulfillment.stops, function($gps) {
+                "stops": $map(fulfillment.stops, function($gps) {
                     {
                         "type": $gps.type,
                         "location": {
                             "gps":$gps.location
-                        }
+                        },
+                        "time": $gps.time
                     }
                 })[],
                 "agent":{
                     "person":{
-                        "name":fulfillment.agentName
+                        "name": fulfillment.agentName
                     }
                     
                 },
                 "customer":{
                     "person":{
-                        "gender":fulfillment.customerGender
+                        "gender": fulfillment.customerGender
                     }
                 }
             },
             "provider":{
                 "descriptor":{
-                    "name":provider.providerName
+                    "name": provider.providerName
                 },
                 "locations":$map( provider.providerCity, function($location) {
                     {
-                        "city":{
-                        "name":$location
-                    }}
+                        "city": {
+                            "name": $location
+                        }
+                    }
                 })[],
                 "id":provider.providerId
             },

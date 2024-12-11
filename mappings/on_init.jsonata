@@ -50,8 +50,9 @@
                     "tags": tags.{
                         "code": descriptor.code,
                         "name": descriptor.name,
+                        "description": descriptor.description,
                         "display": display,
-                   "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
+                        "list": list.{ "code": code, "name": name, "value": value, "display": display }[]
                     }[],
                     "xinput":$xInput(xinput, $action),
                     "fulfillments":$map(
@@ -74,11 +75,12 @@
                 "cancellation_terms": message.order.cancellation_terms,
 
                 "tags": message.order.tags.{
-                        "code": descriptor.code,
-                        "name": descriptor.name,
-                        "display": display,
-                        "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                    }[]
+                    "code": descriptor.code,
+                    "name": descriptor.name,
+                    "display": display,
+                    "description": descriptor.description,
+                    "list": list.{ "code": code, "name": name, "value": value }[]
+                }[]
             }
         },
         "rawResponse": $includeRawResponse ? $ :{}

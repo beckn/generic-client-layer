@@ -10,7 +10,7 @@ export class GCLService {
     @inject(TLService) private tlService: TLService,
     @inject(PSClientService) private psClientService: PSClientService,
     @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService
-  ) {}
+  ) { }
 
   async search(body: any) {
     const payload = await this.tlService.transform(body, "search");
@@ -125,6 +125,18 @@ export class GCLService {
     const response = await this.tlService.transform(
       psResponse,
       "on_track",
+      body?.includeRawResponse
+    );
+
+    return response;
+  }
+
+  async cred(body: any) {
+    const payload = await this.tlService.transform(body, "cred");
+    const psResponse = await this.psClientService.post(payload);
+    const response = await this.tlService.transform(
+      psResponse,
+      "on_cred",
       body?.includeRawResponse
     );
 

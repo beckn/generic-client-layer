@@ -30,11 +30,12 @@
                     "rateable": rateable,
                     "time": time,
                     "quantity": quantity,
-                     "tags": tags.{
+                    "tags": tags.{
                         "code": descriptor.code,
                         "name": descriptor.name,
+                        "description": descriptor.description,
                         "display": display,
-                       "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
+                        "list": list.{ "code": code, "name": name, "value": value, "display": display }[]
                     }[],
                     "fulfillments":$map(
                         $filter(%.provider.fulfillments, function($fulfillment) { $boolean($fulfillment.id in fulfillment_ids)}),
