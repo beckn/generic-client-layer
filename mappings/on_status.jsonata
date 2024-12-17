@@ -79,7 +79,7 @@
                 "cancellation_terms": message.order.cancellation_terms,
                 "type": message.order.type,
 
-                "tags": tags.{
+                "tags": message.order.tags.{
                     "code": descriptor.code,
                     "name": descriptor.name,
                     "description": descriptor.description,
