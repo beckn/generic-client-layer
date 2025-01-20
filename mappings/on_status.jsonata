@@ -65,12 +65,12 @@
                         }
                     )[],
                     "tags": tags.{
-                        "code": descriptor.code,
-                        "name": descriptor.name,
-                        "description": descriptor.description,
-                        "display": display,
-                        "list": list.{ "code": code, "name": name, "value": value, "display": display }[]
-                    }[]
+                            "code": descriptor.code,
+                            "name": descriptor.name,
+                            "description": descriptor.description,
+                            "display": display,
+                            "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value, "display": display }[]
+                        }[],
                 }[],
                 "fulfillments": message.order.fulfillments,
                 "quote": message.order.quote,
@@ -84,7 +84,7 @@
                     "name": descriptor.name,
                     "description": descriptor.description,
                     "display": display,
-                    "list": list.{ "code": code, "name": name, "value": value, "display": display }[]
+                    "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value, "display": display }[]
                 }[]
             }
         },
