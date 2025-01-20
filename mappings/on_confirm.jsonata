@@ -44,12 +44,12 @@
                                 }
                             }
                         )[],
-                        "tags": tags.{
+                         "tags": tags.{
                             "code": descriptor.code,
                             "name": descriptor.name,
                             "description": descriptor.description,
                             "display": display,
-                            "list": list.{ "code": code, "name": name, "value": value, "display": display }[]
+                            "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value, "display": display }[]
                         }[],
                     "fulfillments":$map(
                         $filter(%.provider.fulfillments, function($fulfillment) { $boolean($fulfillment.id in fulfillment_ids)}),
@@ -73,7 +73,7 @@
                 "name": descriptor.name,
                 "description": descriptor.description,
                 "display": display,
-                "list": list.{ "code": code, "name": name, "value": value }[]
+                "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value, "display": display }[]
             }[]
         },
         "rawResponse": $includeRawResponse ? $ :{}
