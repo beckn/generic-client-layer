@@ -70,7 +70,7 @@
                             "description": descriptor.description,
                             "display": display,
                             "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value, "display": display }[]
-                        }[],
+                        }[]
                 }[],
                 "fulfillments": message.order.fulfillments,
                 "quote": message.order.quote,
