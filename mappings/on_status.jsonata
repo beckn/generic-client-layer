@@ -26,6 +26,7 @@
                 },
                 "items": message.order.items.{
                     "id": id,
+                    "code":descriptor.code,
                     "name": descriptor.name,
                     "short_desc": descriptor.short_desc,
                     "long_desc": descriptor.long_desc,
@@ -65,12 +66,13 @@
                         }
                     )[],
                     "tags": tags.{
-                        "code": descriptor.code,
-                        "name": descriptor.name,
-                        "display": display,
-                       "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                    }[]
-              }[],
+                            "code": descriptor.code,
+                            "name": descriptor.name,
+                            "description": descriptor.description,
+                            "display": display,
+                            "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value, "display": display }[]
+                        }[]
+                }[],
                 "fulfillments": message.order.fulfillments,
                 "quote": message.order.quote,
                 "billing": message.order.billing,
@@ -79,11 +81,12 @@
                 "type": message.order.type,
 
                 "tags": message.order.tags.{
-                        "code": descriptor.code,
-                        "name": descriptor.name,
-                        "display": display,
-                       "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                    }[]
+                    "code": descriptor.code,
+                    "name": descriptor.name,
+                    "description": descriptor.description,
+                    "display": display,
+                    "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value, "display": display }[]
+                }[]
             }
         },
         "rawResponse": $includeRawResponse ? $ :{}

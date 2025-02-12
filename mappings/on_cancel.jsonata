@@ -21,6 +21,7 @@
                 },
                 "items": message.order.items.{
                     "id": id,
+                    "code":descriptor.code,
                     "name": descriptor.name,
                     "short_desc": descriptor.short_desc,
                     "long_desc": descriptor.long_desc,
@@ -30,12 +31,13 @@
                     "rateable": rateable,
                     "time": time,
                     "quantity": quantity,
-                     "tags": tags.{
-                        "code": descriptor.code,
-                        "name": descriptor.name,
-                        "display": display,
-                       "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value }[]
-                    }[],
+                    "tags": tags.{
+                            "code": descriptor.code,
+                            "name": descriptor.name,
+                            "description": descriptor.description,
+                            "display": display,
+                            "list": list.{ "code": descriptor.code, "name": descriptor.name, "value": value, "display": display }[]
+                        }[],
                     "fulfillments":$map(
                         $filter(%.provider.fulfillments, function($fulfillment) { $boolean($fulfillment.id in fulfillment_ids)}),
                         function($fulfillment) { 
