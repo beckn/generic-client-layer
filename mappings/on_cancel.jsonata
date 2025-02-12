@@ -21,6 +21,7 @@
                 },
                 "items": message.order.items.{
                     "id": id,
+                    "code":code,
                     "name": descriptor.name,
                     "short_desc": descriptor.short_desc,
                     "long_desc": descriptor.long_desc,
