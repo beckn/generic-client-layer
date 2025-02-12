@@ -12,7 +12,7 @@
                 "locations":locations,
                 "items": items.{
                     "id": id,
-                    "code":code,
+                   "code":descriptor.code,
                     "short_desc": descriptor.short_desc,
                     "long_desc": descriptor.long_desc,
                     "name": descriptor.name,
