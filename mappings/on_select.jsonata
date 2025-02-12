@@ -22,6 +22,7 @@
                 },
                 "items": message.order.items.{
                     "id": id,
+                    "code":code,
                     "xinput": $xInput(xinput, $action),
                     "name": descriptor.name,
                     "short_desc": descriptor.short_desc,
