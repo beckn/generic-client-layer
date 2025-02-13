@@ -17,7 +17,6 @@
             },
             "items":message.order.items.{
                 "id":id,
-               "code":descriptor.code,
                 "name":descriptor.name,
                 "code":descriptor.code,
                 "short_desc":descriptor.short_desc,
