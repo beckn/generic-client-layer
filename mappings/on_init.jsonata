@@ -63,7 +63,11 @@
                                 "id": $fulfillment.id,
                                 "type": $fulfillment.type,
                                 "rating": $fulfillment.rating,
-                                "tags": $fulfillment.tags
+                                "tags": $fulfillment.tags,
+                                "state": {
+                                    "code": $fulfillment.state.descriptor.code,
+                                    "name": $fulfillment.state.descriptor.name
+                                }
                             }
                         }
                     )[]
