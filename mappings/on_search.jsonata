@@ -37,6 +37,10 @@
                                 "type": $fulfillment.type,
                                 "tracking": $fulfillment.tracking,
                                 "contact": { "phone": $fulfillment.contact.phone, "email": $fulfillment.contact.email },
+                                "state": {
+                                    "code": $fulfillment.state.descriptor.code,
+                                    "name": $fulfillment.state.descriptor.name
+                                },
                                 "agent": {
                                     "person": {
                                         "id": $fulfillment.agent.person.id,
