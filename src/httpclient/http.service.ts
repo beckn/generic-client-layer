@@ -6,9 +6,10 @@ import axios, {
 } from "axios";
 import { inject, injectable } from "inversify";
 import { AppLogger } from "../app/app.logger";
+import { WritableStream } from "stream/web";
 
 @injectable()
-class HttpClient {
+export class HttpClient {
   public readonly client: AxiosInstance;
 
   constructor(@inject(AppLogger) private logger: AppLogger) {
@@ -69,6 +70,38 @@ class HttpClient {
       config
     );
     return response.data;
+  }
+
+  async postFetch<T>(
+    url: string,
+    data: any,
+    callBack: ({ chunk, isEnd }: { chunk: any; isEnd: boolean }) => void
+  ): Promise<T> {
+    const response = await fetch(url, {
+      body: JSON.stringify(data),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    if (!response.ok) {
+    }
+    const writableStream = new WritableStream({
+      write(chunk) {
+        callBack
+          ? callBack({ chunk: new TextDecoder().decode(chunk), isEnd: false })
+          : null;
+      },
+      close() {
+        console.log("Connection Closed");
+        callBack({ chunk: null, isEnd: true });
+      },
+      abort(err) {
+        console.log("Error Occured===>", err);
+        callBack({ chunk: null, isEnd: true });
+      }
+    });
+    return (await response.body?.pipeTo(writableStream)) as any;
   }
 
   async put<T>(

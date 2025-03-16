@@ -2,15 +2,16 @@ import { inject, injectable } from "inversify";
 import { TLService } from "../tl/tl.service";
 import { PSClientService } from "../psclient/psclient.service";
 import { BAPWebhookService } from "../bapWebhookClient/bapwebhook.service";
-import { ConfigService } from "../config/config.service";
-
+import { HttpClient } from "../httpclient/http.service";
+import { Response } from "express";
 @injectable()
 export class GCLService {
   constructor(
     @inject(TLService) private tlService: TLService,
     @inject(PSClientService) private psClientService: PSClientService,
-    @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService
-  ) { }
+    @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService,
+    @inject(HttpClient) private httpClient: HttpClient
+  ) {}
 
   async search(body: any) {
     const payload = await this.tlService.transform(body, "search");
@@ -23,6 +24,38 @@ export class GCLService {
     );
 
     return response;
+  }
+
+  async searchAsStream(body: any, res: Response) {
+    const payload = await this.tlService.transform(body, "search");
+    res.writeHead(200, { "Content-Type": "application/json" });
+    const streamResponse = async ({
+      chunk,
+      isEnd
+    }: {
+      chunk: any;
+      isEnd: boolean;
+    }) => {
+      if (chunk) {
+        try {
+          const response = await this.tlService.transform(
+            JSON.parse(chunk),
+            "on_search",
+            body?.includeRawResponse
+          );
+
+          return res.write(JSON.stringify(response));
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      if (isEnd) res.end();
+    };
+    const psResponse = await this.httpClient.postFetch(
+      this.psClientService.buildUri("search"),
+      payload,
+      streamResponse
+    );
   }
 
   async select(body: any) {
