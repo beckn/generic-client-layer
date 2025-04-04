@@ -10,12 +10,12 @@
     "message_id": message_id ? message_id : $uuid(),
     "location": {
       "country": {
-        "name": $env.PS_COUNTRY_NAME,
-        "code": $env.PS_COUNTRY_CODE
+        "name": location.country.name ? location.country.name : $env.PS_COUNTRY_NAME,
+        "code": location.country.code ? location.country.code : $env.PS_COUNTRY_CODE
       },
       "city": {
-        "name": $env.PS_CITY_NAME,
-        "code": $env.PS_CITY_CODE
+        "name": location.city.name ? location.city.name : $env.PS_CITY_NAME,
+        "code": location.city.code ? location.city.code : $env.PS_CITY_CODE
       }
     },
     "ttl": "PT10M",
