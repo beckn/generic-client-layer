@@ -46,7 +46,9 @@
                                 "id": $location.id,
                                 "city": $location.city.name,
                                 "state": $location.state.name,
-                                "country": $location.country.name
+                                "country": $location.country.name,
+                                "gps":$location.gps, 
+                                "address":$location.address
                             }
                         }
                     )[],

@@ -26,7 +26,7 @@
                     "locations": $map(
                         $filter(%.locations, function($location) { $boolean($location.id in location_ids)}),
                         function($location) { 
-                            { "id": $location.id, "city": $location.city.name, "state": $location.state.name, "country": $location.country.name }
+                            { "id": $location.id, "city": $location.city.name, "state": $location.state.name, "country": $location.country.name, "gps":$location.gps, "address":$location.address}
                         }
                     )[],
                     "fulfillments": $map(
