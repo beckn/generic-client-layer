@@ -7,7 +7,8 @@
                     "name": searchString
                 },
                 "id": itemId,
-                "quantity": quantity
+                "quantity": quantity,
+                "tags": item.tags
             },
             "fulfillment": {
                 "type": fulfillment.type,
