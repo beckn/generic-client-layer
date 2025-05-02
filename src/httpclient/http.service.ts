@@ -6,9 +6,10 @@ import axios, {
 } from "axios";
 import { inject, injectable } from "inversify";
 import { AppLogger } from "../app/app.logger";
+import { WritableStream } from "stream/web";
 
 @injectable()
-class HttpClient {
+export class HttpClient {
   public readonly client: AxiosInstance;
 
   constructor(@inject(AppLogger) private logger: AppLogger) {
@@ -69,6 +70,66 @@ class HttpClient {
       config
     );
     return response.data;
+  }
+
+  postFetch(
+    url: string,
+    data: any,
+    callBack: ({ chunk, isEnd }: { chunk: any, isEnd: boolean }) => void
+  ) {
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const transferEncoding = response.headers.get('transfer-encoding');
+        const contentType = response.headers.get('content-type');
+
+        // If not chunked, assume full JSON response
+        if (transferEncoding !== 'chunked' && contentType?.includes('application/json')) {
+          return response.json().then((data) => {
+            callBack({ chunk: data, isEnd: true });
+          });
+        }
+
+        const reader = response.body?.getReader();
+        if (!reader) {
+          throw new Error('No reader available');
+        }
+
+        const decoder = new TextDecoder();
+
+        const read = () => {
+          reader.read().then(({ done, value }) => {
+            if (done) {
+              callBack({ chunk: null, isEnd: true });
+              reader.releaseLock();
+              return;
+            }
+
+            const chunk = decoder.decode(value, { stream: true });
+            callBack({ chunk, isEnd: false });
+            read(); // Read next chunk
+          }).catch((error) => {
+            this.logger?.error?.('Error reading stream:', error);
+            callBack({ chunk: null, isEnd: true });
+            reader.releaseLock();
+          });
+        };
+
+        read(); // Start reading
+      })
+      .catch((error) => {
+        this.logger?.error?.('Fetch failed:', error);
+        callBack({ chunk: null, isEnd: true });
+      });
   }
 
   async put<T>(

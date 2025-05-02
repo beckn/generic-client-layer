@@ -15,6 +15,7 @@ import { XInputService } from "../x-input/x-input.service";
 import { Response } from "express";
 import { LogLevelEnum } from "../types/logs.type";
 import { AppLogger } from "../app/app.logger";
+import { ConfigService } from "../config/config.service";
 
 @controller("/")
 export class GCLController {
@@ -22,6 +23,7 @@ export class GCLController {
     @inject(GCLService) private service: GCLService,
     @inject(XInputService) private xinputService: XInputService,
     @inject(AppLogger) private logger: AppLogger,
+    @inject(ConfigService) private configService: ConfigService
   ) { }
 
   @httpPost("search")
@@ -29,11 +31,15 @@ export class GCLController {
     @requestBody() body: any,
     @response() res?: Response
   ): Promise<any> {
-    const searchResult = await this.service.search(body);
-    if (!Object.keys(searchResult).length) {
-      return res?.status(200).json({});
+    if (this.configService.shouldStreamSearch()) {
+      await this.service.searchAsStream(body, res as Response);
+    } else {
+      const searchResult = await this.service.search(body);
+      if (!Object.keys(searchResult).length) {
+        return res?.status(200).json({});
+      }
+      return searchResult;
     }
-    return searchResult;
   }
 
   @httpPost("select")
@@ -158,7 +164,9 @@ export class GCLController {
       const submitFormResp = await this.xinputService.submitXInputForm(body);
       return submitFormResp;
     } catch (error: any) {
-      return res?.status(400).json({ error: error?.message || 'Failed to submit x-input form' });
+      return res
+        ?.status(400)
+        .json({ error: error?.message || "Failed to submit x-input form" });
     }
   }
 

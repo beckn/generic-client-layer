@@ -9,8 +9,7 @@ import { AppLogger } from "../app/app.logger";
 
 @injectable()
 export class TLService {
-
-  constructor(@inject(AppLogger) private logger: AppLogger) { }
+  constructor(@inject(AppLogger) private logger: AppLogger) {}
 
   async transform(data: any, action: string, includeRawResponse?: boolean) {
     const expression = jsonata(
@@ -20,13 +19,8 @@ export class TLService {
       )
     );
 
-    this.logger.info(
+    this.logger.info(`Transforming ${action} data: \n${JSON.stringify(data)}`);
 
-      "Transforming %s data: \n%o \n\n",
-
-      action,
-      JSON.stringify(data)
-    );
     let transformed = await expression.evaluate(data, {
       action,
       includeRawResponse,
@@ -34,7 +28,6 @@ export class TLService {
     });
     transformed = ObjectUtil.removeEmptyObjectKeys(transformed);
     this.logger.info(
-
       "Transformed %s data: \n%o \n\n",
 
       action,
