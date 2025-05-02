@@ -2,14 +2,17 @@ import { inject, injectable } from "inversify";
 import { TLService } from "../tl/tl.service";
 import { PSClientService } from "../psclient/psclient.service";
 import { BAPWebhookService } from "../bapWebhookClient/bapwebhook.service";
+import { DEGWebhookService } from "../degWebhookClient/degwebhook.service";
 import { ConfigService } from "../config/config.service";
+import { DEG_DOMAINS } from "../constant/constant";
 
 @injectable()
 export class GCLService {
   constructor(
     @inject(TLService) private tlService: TLService,
     @inject(PSClientService) private psClientService: PSClientService,
-    @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService
+    @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService,
+    @inject(DEGWebhookService) private degWebhookService: DEGWebhookService
   ) { }
 
   async search(body: any) {
@@ -144,13 +147,20 @@ export class GCLService {
   }
 
   async handleUnsolicited(body: any) {
-    const action = body.context.action;
+    const { action, domain } = body.context;
     const response = await this.tlService.transform(
       body,
       `${action}`,
       body?.includeRawResponse
     );
-    const bapResponse = await this.bapWebhookService.post(response);
+    let bapResponse;
+    if(DEG_DOMAINS?.includes(domain)) {
+      //call DEG webhook
+      bapResponse = await this.degWebhookService.post(response);
+    } else {
+      //call BAP webhook
+      bapResponse = await this.bapWebhookService.post(response);
+    }
     return bapResponse;
   }
 }

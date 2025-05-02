@@ -19,6 +19,7 @@ export class ConfigService {
     private readonly psCountryName;
     private readonly psCountryCode;
     private readonly bapWebhookUri;
+    private readonly degWebhookUri;
 
 
     constructor() {
@@ -41,6 +42,7 @@ export class ConfigService {
         this.psCountryName = process.env.PS_COUNTRY_NAME || '';
         this.psCountryCode = process.env.PS_COUNTRY_CODE || '';
         this.bapWebhookUri = process.env.BAP_WEBHOOK_URI || '';
+        this.degWebhookUri = process.env.DEG_WEBHOOK_URI || '';
     }
 
     getApiKey(): string {
@@ -101,5 +103,9 @@ export class ConfigService {
 
     getBapWebhookUri(): string {
         return this.bapWebhookUri;
+    };
+
+    getDegWebhookUri(): string {
+        return this.degWebhookUri;
     };
 }
