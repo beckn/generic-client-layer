@@ -10,6 +10,7 @@ import HttpClient from "../httpclient/http.service";
 import { ErrorHandlerMiddleware } from "../middleware/errorhandler.middleware";
 import { XInputService } from "../x-input/x-input.service";
 import { BAPWebhookService } from "../bapWebhookClient/bapwebhook.service";
+import { DEGWebhookService } from "../degWebhookClient/degwebhook.service";
 
 const container = new Container();
 const server = new InversifyExpressServer(container);
@@ -23,5 +24,5 @@ container.bind<HttpClient>(HttpClient).to(HttpClient);
 container.bind<XInputService>(XInputService).to(XInputService);
 container.bind<ErrorHandlerMiddleware>(ErrorHandlerMiddleware).toSelf();
 container.bind<BAPWebhookService>(BAPWebhookService).to(BAPWebhookService);
-
+container.bind<DEGWebhookService>(DEGWebhookService).to(DEGWebhookService);
 export { server, container };

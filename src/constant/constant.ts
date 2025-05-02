@@ -1,0 +1,1 @@
+export const DEG_DOMAINS = ['deg:retail','deg:rental','deg:ev','deg:finance','uei:p2p_trading'];

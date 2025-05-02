@@ -5,6 +5,9 @@ import { BAPWebhookService } from "../bapWebhookClient/bapwebhook.service";
 import { HttpClient } from "../httpclient/http.service";
 import { Response } from "express";
 import { AppLogger } from "../app/app.logger";
+import { DEGWebhookService } from "../degWebhookClient/degwebhook.service";
+import { DEG_DOMAINS } from "../constant/constant";
+
 @injectable()
 export class GCLService {
   constructor(
@@ -12,7 +15,8 @@ export class GCLService {
     @inject(PSClientService) private psClientService: PSClientService,
     @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService,
     @inject(HttpClient) private httpClient: HttpClient,
-    @inject(AppLogger) private logger: AppLogger
+    @inject(AppLogger) private logger: AppLogger,
+    @inject(DEGWebhookService) private degWebhookService: DEGWebhookService
   ) { }
 
   async search(body: any) {
@@ -192,13 +196,20 @@ export class GCLService {
   }
 
   async handleUnsolicited(body: any) {
-    const action = body.context.action;
+    const { action, domain } = body.context;
     const response = await this.tlService.transform(
       body,
       `${action}`,
       body?.includeRawResponse
     );
-    const bapResponse = await this.bapWebhookService.post(response);
+    let bapResponse;
+    if (DEG_DOMAINS?.includes(domain)) {
+      //call DEG webhook
+      bapResponse = await this.degWebhookService.post(response);
+    } else {
+      //call BAP webhook
+      bapResponse = await this.bapWebhookService.post(response);
+    }
     return bapResponse;
   }
 }
