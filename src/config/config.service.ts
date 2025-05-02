@@ -103,7 +103,7 @@ export class ConfigService {
   getBapWebhookUri(): string {
     return this.bapWebhookUri;
   }
-  getStreamOnSearch(): boolean {
+  shouldStreamSearch(): boolean {
     return this.streamOnSearch;
   }
 }

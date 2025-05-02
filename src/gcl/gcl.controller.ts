@@ -24,14 +24,14 @@ export class GCLController {
     @inject(XInputService) private xinputService: XInputService,
     @inject(AppLogger) private logger: AppLogger,
     @inject(ConfigService) private configService: ConfigService
-  ) {}
+  ) { }
 
   @httpPost("search")
   public async search(
     @requestBody() body: any,
     @response() res?: Response
   ): Promise<any> {
-    if (this.configService.getStreamOnSearch()) {
+    if (this.configService.shouldStreamSearch()) {
       await this.service.searchAsStream(body, res as Response);
     } else {
       const searchResult = await this.service.search(body);

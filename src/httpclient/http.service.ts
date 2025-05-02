@@ -72,36 +72,64 @@ export class HttpClient {
     return response.data;
   }
 
-  async postFetch<T>(
+  postFetch(
     url: string,
     data: any,
-    callBack: ({ chunk, isEnd }: { chunk: any; isEnd: boolean }) => void
-  ): Promise<T> {
-    const response = await fetch(url, {
-      body: JSON.stringify(data),
+    callBack: ({ chunk, isEnd }: { chunk: any, isEnd: boolean }) => void
+  ) {
+    fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
-      }
-    });
-    if (!response.ok) {
-    }
-    const writableStream = new WritableStream({
-      write(chunk) {
-        callBack
-          ? callBack({ chunk: new TextDecoder().decode(chunk), isEnd: false })
-          : null;
       },
-      close() {
-        console.log("Connection Closed");
+      body: JSON.stringify(data)
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const transferEncoding = response.headers.get('transfer-encoding');
+        const contentType = response.headers.get('content-type');
+
+        // If not chunked, assume full JSON response
+        if (transferEncoding !== 'chunked' && contentType?.includes('application/json')) {
+          return response.json().then((data) => {
+            callBack({ chunk: data, isEnd: true });
+          });
+        }
+
+        const reader = response.body?.getReader();
+        if (!reader) {
+          throw new Error('No reader available');
+        }
+
+        const decoder = new TextDecoder();
+
+        const read = () => {
+          reader.read().then(({ done, value }) => {
+            if (done) {
+              callBack({ chunk: null, isEnd: true });
+              reader.releaseLock();
+              return;
+            }
+
+            const chunk = decoder.decode(value, { stream: true });
+            callBack({ chunk, isEnd: false });
+            read(); // Read next chunk
+          }).catch((error) => {
+            this.logger?.error?.('Error reading stream:', error);
+            callBack({ chunk: null, isEnd: true });
+            reader.releaseLock();
+          });
+        };
+
+        read(); // Start reading
+      })
+      .catch((error) => {
+        this.logger?.error?.('Fetch failed:', error);
         callBack({ chunk: null, isEnd: true });
-      },
-      abort(err) {
-        console.log("Error Occured===>", err);
-        callBack({ chunk: null, isEnd: true });
-      }
-    });
-    return (await response.body?.pipeTo(writableStream)) as any;
+      });
   }
 
   async put<T>(
