@@ -227,3 +227,35 @@ app.post('/api/search', (req, res) => {
 
 // Other endpoints and application logic
 ```
+
+## Release Notes
+
+### v1.0.0 - Initial Release
+- First public release of the BB Generic Client Layer
+- Core architecture implementation with domain-agnostic components
+- Basic building blocks for UI and BFF layers
+- Initial feature flag service integration
+- Support for basic JSON transformation utilities
+
+### v1.1.0 - Beckn Protocol Integration
+- Implemented full support for Beckn protocol endpoints
+- Added standardized API endpoints for search, select, init, confirm, status, track, update, cancel, and support operations
+- Enhanced JSON transformation capabilities for Beckn protocol compliance
+- Improved request/response handling for Beckn network interactions
+
+### v1.2.0 - Enhanced Input Handling
+- Added support for x-input in all Beckn protocol requests
+- Implemented flexible input validation and transformation
+- Enhanced error handling for input processing
+- Updated documentation for x-input usage across domains
+
+### v1.3.0 - Tag Management System
+- Introduced comprehensive tag support for items and providers
+- Added tag-based filtering and categorization capabilities
+- Enhanced search functionality with tag-based queries
+- Implemented tag management APIs for dynamic tag updates
+
+### v1.4.0 - Unsolicited Status Updates
+- Added support for unsolicited order status updates across all domains
+- Enhanced order tracking capabilities with push-based updates
+- Added webhook support for status change updates
