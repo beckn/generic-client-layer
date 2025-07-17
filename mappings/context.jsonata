@@ -1,5 +1,5 @@
 {
-    "domain": domain & ":" &  $env.APP_ENV,
+    "domain": $substring(domain, $length(domain) - $length($env.APP_ENV)) = $env.APP_ENV ? domain : domain & ":" & $env.APP_ENV,
     "bpp_id": bpp_id,
     "bpp_uri": bpp_uri,
     "bap_id": $env.PS_BAP_ID,
