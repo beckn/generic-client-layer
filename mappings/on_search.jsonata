@@ -17,7 +17,7 @@
                     "long_desc": descriptor.long_desc,
                     "name": descriptor.name,
                     "price": { "value": price.value, "currency": price.currency },
-                    "xinput": $xInput(xinput, $action)
+                    "xinput": $xInput(xinput, $action),
                     "categories": $map(
                         $filter(%.categories, function($category) { $boolean($category.id in category_ids)}),
                         function($category) {
