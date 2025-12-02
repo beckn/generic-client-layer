@@ -2,20 +2,27 @@ import { inject, injectable } from "inversify";
 import { TLService } from "../tl/tl.service";
 import { PSClientService } from "../psclient/psclient.service";
 import { BAPWebhookService } from "../bapWebhookClient/bapwebhook.service";
-import { ConfigService } from "../config/config.service";
+import { HttpClient } from "../httpclient/http.service";
+import { Response } from "express";
+import { AppLogger } from "../app/app.logger";
+import { DEGWebhookService } from "../degWebhookClient/degwebhook.service";
+import { DEG_DOMAINS } from "../constant/constant";
 
 @injectable()
 export class GCLService {
   constructor(
     @inject(TLService) private tlService: TLService,
     @inject(PSClientService) private psClientService: PSClientService,
-    @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService
+    @inject(BAPWebhookService) private bapWebhookService: BAPWebhookService,
+    @inject(HttpClient) private httpClient: HttpClient,
+    @inject(AppLogger) private logger: AppLogger,
+    @inject(DEGWebhookService) private degWebhookService: DEGWebhookService
   ) { }
 
   async search(body: any) {
     const payload = await this.tlService.transform(body, "search");
     const psResponse = await this.psClientService.post(payload);
-
+    this.logger.info("[GCL] PS Response:", JSON.stringify(psResponse, null, 2));
     const response = await this.tlService.transform(
       psResponse,
       "on_search",
@@ -23,6 +30,51 @@ export class GCLService {
     );
 
     return response;
+  }
+
+  async searchAsStream(body: any, res: Response) {
+    const payload = await this.tlService.transform(body, "search");
+    res.writeHead(200, { "Content-Type": "application/json" });
+
+    const streamResponse = async ({ chunk, isEnd }: any) => {
+      if (chunk) {
+        try {
+          const parsedChunk = JSON.parse(chunk);
+
+          const transformedResponse = await this.tlService.transform(
+            parsedChunk,
+            "on_search",
+            body?.includeRawResponse
+          );
+
+          this.logger.info("[GCL] Transformed response:", JSON.stringify(transformedResponse));
+
+          // Send the transformed response to the client
+          res.write(JSON.stringify(transformedResponse) + "\n");
+        } catch (error) {
+          this.logger.error("[GCL] Error processing chunk:", error);
+          // Send error response to client
+          res.write(JSON.stringify({ error: "Error processing response chunk" }) + "\n");
+        }
+      }
+
+      if (isEnd) {
+        this.logger.info("[GCL] Stream ended");
+        res.end();
+      }
+    };
+
+    try {
+      this.httpClient.postFetch(
+        this.psClientService.buildUri("search"),
+        payload,
+        streamResponse
+      );
+    } catch (error) {
+      this.logger.error("[GCL] Error in postFetch:", error);
+      res.write(JSON.stringify({ error: "Error making request to server" }) + "\n");
+      res.end();
+    }
   }
 
   async select(body: any) {
@@ -144,13 +196,20 @@ export class GCLService {
   }
 
   async handleUnsolicited(body: any) {
-    const action = body.context.action;
+    const { action, domain } = body.context;
     const response = await this.tlService.transform(
       body,
       `${action}`,
       body?.includeRawResponse
     );
-    const bapResponse = await this.bapWebhookService.post(response);
+    let bapResponse;
+    if (DEG_DOMAINS?.includes(domain)) {
+      //call DEG webhook
+      bapResponse = await this.degWebhookService.post(response);
+    } else {
+      //call BAP webhook
+      bapResponse = await this.bapWebhookService.post(response);
+    }
     return bapResponse;
   }
 }
