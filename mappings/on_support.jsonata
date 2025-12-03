@@ -1,5 +1,5 @@
 {
-    "data": $.responses.{
+    "data": $.{
         "context": context,
         "message": message,
         "rawResponse": $includeRawResponse ? $ : {}
