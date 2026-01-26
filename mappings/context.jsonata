@@ -1,7 +1,7 @@
 {
     "domain": domain,
-    "bpp_id": bpp_id,
-    "bpp_uri": bpp_uri,
+    "bpp_id": bpp_id ? bpp_id : "ev-charging.sandbox2.com",
+    "bpp_uri": bpp_uri ? bpp_uri : "http://34.93.211.238:8081/bpp/receiver",
     "bap_id": $env.PS_BAP_ID,
     "action": $action,
     "bap_uri": $env.PS_BAP_URI,
